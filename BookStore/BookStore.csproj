@@ -89,6 +89,7 @@
     <Content Include="CODE\KhachHang\ucCapNhatTaiKhoan.ascx" />
     <Content Include="CODE\KhachHang\ucChiTiet.ascx" />
     <Content Include="CODE\KhachHang\ucDonHang.ascx" />
+    <Content Include="CODE\KhachHang\ucGioHang.ascx" />
     <Content Include="CODE\KhachHang\ucTaiKhoan.ascx" />
     <Content Include="CODE\KhachHang\ucTimKiem.ascx" />
     <Content Include="CODE\KhachHang\ucTrangChinh.ascx" />
@@ -196,7 +197,6 @@
     <Compile Include="CODE\DuLieu\GioHang.cs" />
     <Compile Include="CODE\DuLieu\KhuyenMai.cs" />
     <Compile Include="CODE\DuLieu\SanPham.cs" />
-    <Compile Include="CODE\KhachHang\GioHang.cs" />
     <Compile Include="CODE\KhachHang\SendMail.cs" />
     <Compile Include="CODE\KhachHang\ucCapNhatTaiKhoan.ascx.cs">
       <DependentUpon>ucCapNhatTaiKhoan.ascx</DependentUpon>
@@ -218,6 +218,13 @@
     </Compile>
     <Compile Include="CODE\KhachHang\ucDonHang.ascx.designer.cs">
       <DependentUpon>ucDonHang.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CODE\KhachHang\ucGioHang.ascx.cs">
+      <DependentUpon>ucGioHang.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CODE\KhachHang\ucGioHang.ascx.designer.cs">
+      <DependentUpon>ucGioHang.ascx</DependentUpon>
     </Compile>
     <Compile Include="CODE\KhachHang\ucTaiKhoan.ascx.cs">
       <DependentUpon>ucTaiKhoan.ascx</DependentUpon>

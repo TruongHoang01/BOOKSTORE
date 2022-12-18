@@ -277,7 +277,7 @@ namespace BookStore.CODE.KhachHang
 
         protected void linkGioHang_Click(object sender, EventArgs e)
         {
-            Response.Redirect("TrangChu.aspx?modul=TaiKhoan&modulphu=GioHang");
+            Response.Redirect("TrangChu.aspx?modul=GioHang");
         }
     }
 }

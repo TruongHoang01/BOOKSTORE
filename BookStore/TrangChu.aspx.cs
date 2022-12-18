@@ -18,6 +18,5 @@ namespace BookStore
                 Session["idtk"] = r.Next(1000, 10000).ToString();
             }
         }
-    }
+    } 
 }
-//aaaaaaaa

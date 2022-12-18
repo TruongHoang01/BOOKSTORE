@@ -85,10 +85,8 @@ namespace BookStore.CODE.KhachHang
             dbGioHang = new DuLieu.GioHang();
             string soLuong = tbsoluong.Text;
             string idtk = Session["idtk"].ToString();
-            if (dbGioHang.ThemVaoGioHang(idtk, idSP, soLuong))
-            {
-               
-            }
+            bool check = dbGioHang.ThemVaoGioHang(idtk, idSP, soLuong);
+           
         }
     }
 }
