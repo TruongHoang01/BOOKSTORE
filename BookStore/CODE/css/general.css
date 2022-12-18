@@ -1,0 +1,50 @@
+.container {
+    /* 1140px */
+    max-width: 60rem;
+
+    margin: 0 auto;
+}
+
+.swiper-button-next {
+    right: 0;
+}
+
+.swiper-button-prev {
+    left: 0;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    width: 3rem;
+    height: 3rem;
+    opacity: 0.5;
+    transition: 0.3s;
+    color: #333;
+    border-radius: 5px;
+    border: none;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    opacity: 1;
+}
+
+.swiper-button-next::before,
+.swiper-button-next::after {
+    font-size: 2rem;
+    width: 3rem;
+}
+
+.swiper-button-prev::before,
+.swiper-button-prev::after {
+    font-size: 2rem;
+}
+.row {
+    display: flex;
+    width: 100%;
+    gap: 3rem;
+}
+.col-footer {
+    flex: 1;
+    gap: 0;
+}

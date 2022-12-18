@@ -1,0 +1,339 @@
+﻿.kbh_header {
+    padding: 0 60px;
+    height: 80px;
+    background-color: #58AAF3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+}
+.divcenter{
+    display: flex;
+    align-items: center;
+}
+.kbh_header .logo{
+    width: 200px;
+    height: 80px;
+}
+
+.kbh_header .title{
+    font-size: 32px;
+    color: #fff;
+    line-height: 80px;
+    margin-left: -20px;
+}
+.kbh_divtaikhoan {
+    padding: 2px 4px;
+    min-width: 240px;
+}
+.kbh_divtaikhoan:hover {
+    background-color: #ccc;
+    border-radius: 47px;
+}
+.kbh_header  .logotaikhoan{
+    width: 40px;
+    height: 40px;
+    line-height: 80px;
+    border-radius: 50%;
+}
+
+.kbh_header .lbtaikhoan{
+    display: inline-block;
+    font-size: 18px;
+    color: #fff;
+    margin-left: 4px;
+}
+
+.kbh_divtrai {
+    padding: 16px;
+    background-color: #88c2fd59;
+}
+
+
+.uldonhang{
+    display: none;
+    list-style: none;
+}
+.divdonhang:hover .divsanpham {
+    color: red;
+}
+.divdonhang:hover {
+    background-color: #ccc;
+}
+
+
+
+.dropbtn {
+    display: block;
+    padding: 8px 0;
+    color: #333;
+    width: 100%;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 40px;
+    margin-top: 2px;
+    background-color: #88c2fd59;
+    border-top: 2px solid #ccc;
+}
+
+.dropdown-content {
+    margin-top: -40px;
+    display: block;
+    background-color: #88c2fd59;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 24px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover{
+    background-color: #f1f1f1
+}
+
+
+.divthanhden {
+    width: 100%;
+    height: 20px;
+    background-color: #F6F6F6;
+}
+.containerdonhang {
+    background-color: #F6F6F6;
+    height: 100vh;
+}
+.divdonhangphai{
+    width: 80%;
+    margin:0 auto;
+    background-color: #fff;
+}
+.navbardonhang{
+    height: 62px;
+    background-color: #fff;
+    border-bottom: 2px solid #ccc;
+}
+.linkdonhang {
+    color: #333;
+    font-size: 18px;
+    display: inline-block;
+    padding: 18px 43px;
+}
+.linkdonhang:hover {
+    background-color: #f1f1f1;
+    color: red;
+}
+.divtimkiemdonhang{
+    margin: 20px;
+}
+.btnthemmoikm {
+    float: right;
+    background-color: #58AAF3;
+    color: #FFF;
+    font-size: 18px;
+    display: inline-block;
+    padding: 18px 47px;
+}
+.btnthemmoikm:hover{
+    opacity: 0.8;
+}
+
+.divtimkiemdonhang select, .divtimkiemsanpham select {
+    width: 20%;
+    padding: 4px 8px;
+    font-size: 16px;
+    color: #333;
+}
+
+.divtimkiemdonhang input[type="search"], .divtimkiemsanpham input[type="search"] {
+    width: 60%;
+    padding: 4px 8px;
+    font-size: 16px;
+    color: #333;
+}
+.divtimkiemdonhang a, .divtimkiemsanpham a {
+    display: inline-block;
+    padding: 4px 8px;
+    background-color: #58AAF3;
+    color: #fff;
+    margin-left: 4px;
+    border-radius: 4px;
+}
+.divdonhangphai .lbsoluong {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #58AAF3;
+}
+.divtimkiemsanpham {
+    padding: 10px 0 30px;
+    border-bottom: 2px solid #ccc;
+}
+.divtimkiemsanpham .themmoisanpham {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #58AAF3;
+    color: #fff;
+    border-radius: 4px;
+}
+
+table.kbhtable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table.kbhtable td, table.kbhtable th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+table.kbhtable tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table.kbhtable tr:hover {
+    background-color: #ddd;
+}
+table.kbhtable th {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: #4faafb;
+    color: white;
+}
+
+table.kbhtable input[type="image"] {
+    width: 30px;
+    height: 30px;
+}
+input[type="image"] + input[type="image"] {
+    margin-left: 16px;
+}
+.divthemmoi {
+    width: 100%;
+    margin: 0 auto;
+
+}
+.divthemmoi .divtitle{
+    text-align: center;
+}
+
+.divthemmoi .divtitle span {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.divthemmoi span {
+    display: inline-block;
+    min-width: 120px;
+    color: #333;
+    margin-left: 20px;
+}
+.divthemmoi .rowthemmoi{
+    margin-bottom: 12px;
+    position: relative;
+}
+
+.divthemmoi input[type="text"], .divthemmoi select {
+    font-size: 20px;
+    width: 70%;
+    padding: 2px 4px;
+    color: #333030;
+}
+
+.divflexcon {
+    flex: 1;
+}
+.divthemmoi .linkbutton{
+    text-align: center;
+}
+.divthemmoi .linkbutton a {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #58AAF3;
+    color: #fff;
+    border-radius: 6px;
+    margin: 20px 40px 80px;
+    min-width: 100px;
+}
+
+.divthemmoi .textArea {
+    margin-left: 4px;
+    width: 70%;
+    height: 200px;
+    font-size: 20px;
+    padding: 2px 4px;
+    color: #333030;
+}
+.divthemmoi .divcalendar {
+    position: absolute;
+    top: 0px;
+    right: 8px;
+    z-index: 10;
+}
+.divthemmoi .lbcalendar {
+    text-align: right;
+    width: 160px;   
+    padding: 6px 10px;
+    background-color: #ccc;
+    margin-left: 0px;
+}
+.divthemmoi .btncalendar {
+    display: inline-block;
+    width: 190px;
+    padding: 6px 10px;
+    color: #fff;
+    background-color: #58AAF3;
+}
+
+.divthemmoi .divsanphamkhuyenmai {
+    font-size: 18px;
+    background-color: #8dc1f566;
+    text-align: center;
+    padding: 6px;
+}
+
+.titlechitiet {
+    text-align: center;
+    font-weight: bold;
+    background-color: #8dc1f566;
+    padding: 6px;
+}
+.btnchitiethoadon {
+    margin-top: 20px;
+    text-align: center;
+}
+.btnchitiethoadon a {
+    font-size: 20px;
+    display: inline-block;
+    padding: 6px 12px;
+    background-color: #4FAAFB;
+    color: #fff;
+    margin-right: 32px;
+    border-radius: 6px;
+}
+
+.tongtien{
+    text-align: left;
+    font-weight: bold;
+    color: red;
+    font-size: 20px;
+}
+
+.titleloaidonhang span {
+    display: block;
+    padding: 6px;
+    margin: 0 auto;
+    background-color: #58AAF3;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff;
+}

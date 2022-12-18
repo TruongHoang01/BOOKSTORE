@@ -1,0 +1,280 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto,Helvetica,Arial,sans-serif;
+}
+
+body {
+    position: relative;
+}
+
+:root {
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.flex{
+    display: flex;
+}
+
+.divflex {
+    display: flex;
+    justify-content: space-between;
+}
+.divflexevenly{
+    display: flex;
+    justify-content: space-evenly;
+}
+.div1300px {
+    width: 1200px;
+    margin: 0 auto
+}
+
+.mt20 {
+    margin-top: 20px;
+}
+
+.ml20 {
+    margin-left: 20px;
+}
+.width15 {
+    flex: 1.5;
+}
+.width85 {
+    flex: 8.5;
+}
+.width20 {
+    flex: 2;
+}
+.width30 {
+    width: 230px;
+}
+.width70 {
+    flex: 1;
+}
+.width80 {
+    flex: 8;
+}
+
+.width40 {
+    flex: 4;
+}
+
+.width60 {
+    flex: 6;
+}
+
+.col5 {
+    width: 5%;
+}
+
+.col10 {
+    width: 10%;
+}
+.col15 {
+    width: 15%;
+}
+.col20 {
+    width: 20%;
+}
+.col25 {
+    width: 25%;
+}
+.col30 {
+    width: 30%;
+}
+
+.col40 {
+    width: 40%;
+}
+
+.col50 {
+    width: 50%;
+}
+
+.col60 {
+    width: 60%;
+}
+
+.col70 {
+    width: 70%;
+}
+
+
+
+.dialog {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    background-color: red;
+}
+
+.overlay-close {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: default;
+}
+
+.dialog:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.dialog-body {
+    width: 500px;
+    height: 600px;
+    position: relative;
+    background-color: #ededed;
+}
+
+.ThongBao {
+    padding-left: 6px;
+    position: absolute;
+    top: 0;
+    width: 300px;
+    height: 130px;
+    left: 40%;
+    background-color: #f9fafb;
+    border-radius: 10px;
+    animation: thongBao 0.2s linear none;
+    z-index:10;
+}
+
+.content {
+    margin-left: 12px;
+}
+
+.flexThongBao {
+    align-items: center;
+    height: 70%;
+    justify-content: flex-start;
+}
+
+.chuDeThongBao {
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.btnOK {
+    float: right;
+}
+
+.btnOK a {
+    display: inline-block;
+    color: #fff;
+    margin-right: 20px;
+    padding: 6px 10px;
+    background-color: #4FAAFB;
+    border-radius: 4px;
+    width: 60px;
+}
+
+@keyframes thongBao {
+    0% {
+        top: -300px
+    }
+
+    100% {
+        top: 0
+    }
+}
+
+
+.TextCenter {
+    text-align: center;
+}
+
+.TextRight {
+    text-align: right;
+}
+
+.divbaocao {
+    padding: 2px;
+    background-color: lavender;
+    margin-top: 20px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+    .divbaocao .col {
+        background-color: #fff;
+        padding: 20px;
+        border: 2px solid lavender;
+    }
+
+        .divbaocao .col:first-child {
+            border-radius: 20px 0 0 20px;
+        }
+
+        .divbaocao .col:last-child {
+            border-radius: 0 20px 20px 0;
+        }
+
+        .divbaocao .col i {
+            font-size: 30px;
+            color: #4FAAFB;
+        }
+
+        .divbaocao .col span {
+            display: block;
+            margin: 8px 0;
+            font-size: 40px;
+            font-weight: bold;
+            color: black;
+        }
+
+        .divbaocao .col .danhmuc {
+            font-size: 16px;
+            font-weight: bold;
+            color: #aaa;
+        }
+
+.divdate {
+    margin-bottom: 12px;
+    position: relative;
+}
+
+.divdate .divcalendar {
+    position: absolute;
+    z-index: 10;
+}
+
+.divdate .divcalendar1 {
+    left: 10px;
+}
+
+.divdate .divcalendar2 {
+    left: 380px;
+}
+
+.divdate .lbcalendar {
+    text-align: right;
+    width: 160px;
+    padding: 6px 10px;
+    background-color: #ccc;
+    margin-left: 0px;
+}
+
+.divdate .btncalendar {
+    display: inline-block;
+    width: 190px;
+    padding: 6px 10px;
+    color: #fff;
+    background-color: #58AAF3;
+}

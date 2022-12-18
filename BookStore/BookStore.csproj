@@ -1,0 +1,435 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A1873697-9C08-45DF-B5DA-8CBFB40E42C0}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BookStore</RootNamespace>
+    <AssemblyName>BookStore</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44388</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin.aspx" />
+    <Content Include="App_Data\dbBookStore.mdf" />
+    <Content Include="App_Data\dbBookStore_log.ldf">
+      <DependentUpon>dbBookStore.mdf</DependentUpon>
+    </Content>
+    <Content Include="CODE\ChuCuaHang\DonHang\ucDuyetDonHang.ascx" />
+    <Content Include="CODE\ChuCuaHang\KhuyenMai\ucKhuyenMai.ascx" />
+    <Content Include="CODE\ChuCuaHang\KhuyenMai\ucThemMoiCapNhatKhuyenMai.ascx" />
+    <Content Include="CODE\ChuCuaHang\SanPham\ucThemMoiCapNhatSanPham.ascx" />
+    <Content Include="CODE\ChuCuaHang\DonHang\ucDonHang.ascx" />
+    <Content Include="CODE\ChuCuaHang\ThongKeBaoCao\ucThongKeBaoCao.ascx" />
+    <Content Include="CODE\ChuCuaHang\ucKenhBanHang.ascx" />
+    <Content Include="CODE\ChuCuaHang\SanPham\ucSanPham.ascx" />
+    <Content Include="CODE\ChuCuaHang\YeuCau\ucGuiYeuCau.ascx" />
+    <Content Include="CODE\css\general.css" />
+    <Content Include="CODE\css\js\index.js" />
+    <Content Include="CODE\css\js\swiper-bundle.min.js" />
+    <Content Include="CODE\css\styleus.css" />
+    <Content Include="CODE\css\swiper-bundle.min.css" />
+    <Content Include="CODE\KhachHang\ucCapNhatTaiKhoan.ascx" />
+    <Content Include="CODE\KhachHang\ucChiTiet.ascx" />
+    <Content Include="CODE\KhachHang\ucDonHang.ascx" />
+    <Content Include="CODE\KhachHang\ucTaiKhoan.ascx" />
+    <Content Include="CODE\KhachHang\ucTimKiem.ascx" />
+    <Content Include="CODE\KhachHang\ucTrangChinh.ascx" />
+    <Content Include="Image\anhdaidien.png" />
+    <Content Include="Image\anhdaidien\anhdaidien.png" />
+    <Content Include="KenhBanHang.aspx" />
+    <Content Include="CODE\css\admin.css" />
+    <Content Include="CODE\css\chucuahang.css" />
+    <Content Include="CODE\css\style.css" />
+    <Content Include="CODE\css\user.css" />
+    <Content Include="CODE\KhachHang\ucDangKyBanHang.ascx" />
+    <Content Include="CODE\KhachHang\ucFooter.ascx" />
+    <Content Include="CODE\KhachHang\ucHeader.ascx" />
+    <Content Include="CODE\KhachHang\ucTrangChu.ascx" />
+    <Content Include="CODE\KhachHang\UserControl.ascx" />
+    <Content Include="CODE\QuanTriVien\SanPham\ucChuDe.ascx" />
+    <Content Include="CODE\QuanTriVien\SanPham\ucDanhMuc.ascx" />
+    <Content Include="CODE\QuanTriVien\QuanLyThue\ucThue.ascx" />
+    <Content Include="CODE\QuanTriVien\SanPham\ucNhaXuatBan.ascx" />
+    <Content Include="CODE\QuanTriVien\SanPham\ucTacGia.ascx" />
+    <Content Include="CODE\QuanTriVien\TaiKhoan\ucDanhSachTaiKhoan.ascx" />
+    <Content Include="CODE\QuanTriVien\TaiKhoan\ucTaiKhoan.ascx" />
+    <Content Include="CODE\QuanTriVien\TaiKhoan\ucThemMoiTaiKhoan.ascx" />
+    <Content Include="CODE\QuanTriVien\ThongKeBaoCao\ucThongKeBaoCao.ascx" />
+    <Content Include="CODE\QuanTriVien\ucQuanTriVien.ascx" />
+    <Content Include="CODE\QuanTriVien\YeuCau\ucYeuCau.ascx" />
+    <Content Include="Global.asax" />
+    <Content Include="TrangChu.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin.aspx.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin.aspx.designer.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CODE\ChuCuaHang\DonHang\ucDuyetDonHang.ascx.cs">
+      <DependentUpon>ucDuyetDonHang.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CODE\ChuCuaHang\DonHang\ucDuyetDonHang.ascx.designer.cs">
+      <DependentUpon>ucDuyetDonHang.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CODE\ChuCuaHang\KhuyenMai\ucKhuyenMai.ascx.cs">
+      <DependentUpon>ucKhuyenMai.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CODE\ChuCuaHang\KhuyenMai\ucKhuyenMai.ascx.designer.cs">
+      <DependentUpon>ucKhuyenMai.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CODE\ChuCuaHang\KhuyenMai\ucThemMoiCapNhatKhuyenMai.ascx.cs">
+      <DependentUpon>ucThemMoiCapNhatKhuyenMai.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CODE\ChuCuaHang\KhuyenMai\ucThemMoiCapNhatKhuyenMai.ascx.designer.cs">
+      <DependentUpon>ucThemMoiCapNhatKhuyenMai.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CODE\ChuCuaHang\SanPham\ucThemMoiCapNhatSanPham.ascx.cs">
+      <DependentUpon>ucThemMoiCapNhatSanPham.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CODE\ChuCuaHang\SanPham\ucThemMoiCapNhatSanPham.ascx.designer.cs">
+      <DependentUpon>ucThemMoiCapNhatSanPham.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CODE\ChuCuaHang\DonHang\ucDonHang.ascx.cs">
+      <DependentUpon>ucDonHang.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CODE\ChuCuaHang\DonHang\ucDonHang.ascx.designer.cs">
+      <DependentUpon>ucDonHang.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CODE\ChuCuaHang\ThongKeBaoCao\ucThongKeBaoCao.ascx.cs">
+      <DependentUpon>ucThongKeBaoCao.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CODE\ChuCuaHang\ThongKeBaoCao\ucThongKeBaoCao.ascx.designer.cs">
+      <DependentUpon>ucThongKeBaoCao.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CODE\ChuCuaHang\ucKenhBanHang.ascx.cs">
+      <DependentUpon>ucKenhBanHang.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CODE\ChuCuaHang\ucKenhBanHang.ascx.designer.cs">
+      <DependentUpon>ucKenhBanHang.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CODE\ChuCuaHang\SanPham\ucSanPham.ascx.cs">
+      <DependentUpon>ucSanPham.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CODE\ChuCuaHang\SanPham\ucSanPham.ascx.designer.cs">
+      <DependentUpon>ucSanPham.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CODE\ChuCuaHang\YeuCau\ucGuiYeuCau.ascx.cs">
+      <DependentUpon>ucGuiYeuCau.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CODE\ChuCuaHang\YeuCau\ucGuiYeuCau.ascx.designer.cs">
+      <DependentUpon>ucGuiYeuCau.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CODE\DuLieu\ChiTietDonHang.cs" />
+    <Compile Include="CODE\DuLieu\CuaHang.cs" />
+    <Compile Include="CODE\DuLieu\DonHang.cs" />
+    <Compile Include="CODE\DuLieu\GioHang.cs" />
+    <Compile Include="CODE\DuLieu\KhuyenMai.cs" />
+    <Compile Include="CODE\DuLieu\SanPham.cs" />
+    <Compile Include="CODE\KhachHang\GioHang.cs" />
+    <Compile Include="CODE\KhachHang\SendMail.cs" />
+    <Compile Include="CODE\KhachHang\ucCapNhatTaiKhoan.ascx.cs">
+      <DependentUpon>ucCapNhatTaiKhoan.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CODE\KhachHang\ucCapNhatTaiKhoan.ascx.designer.cs">
+      <DependentUpon>ucCapNhatTaiKhoan.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CODE\KhachHang\ucChiTiet.ascx.cs">
+      <DependentUpon>ucChiTiet.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CODE\KhachHang\ucChiTiet.ascx.designer.cs">
+      <DependentUpon>ucChiTiet.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CODE\KhachHang\ucDonHang.ascx.cs">
+      <DependentUpon>ucDonHang.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CODE\KhachHang\ucDonHang.ascx.designer.cs">
+      <DependentUpon>ucDonHang.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CODE\KhachHang\ucTaiKhoan.ascx.cs">
+      <DependentUpon>ucTaiKhoan.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CODE\KhachHang\ucTaiKhoan.ascx.designer.cs">
+      <DependentUpon>ucTaiKhoan.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CODE\KhachHang\ucTimKiem.ascx.cs">
+      <DependentUpon>ucTimKiem.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CODE\KhachHang\ucTimKiem.ascx.designer.cs">
+      <DependentUpon>ucTimKiem.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CODE\KhachHang\ucTrangChinh.ascx.cs">
+      <DependentUpon>ucTrangChinh.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CODE\KhachHang\ucTrangChinh.ascx.designer.cs">
+      <DependentUpon>ucTrangChinh.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="KenhBanHang.aspx.cs">
+      <DependentUpon>KenhBanHang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KenhBanHang.aspx.designer.cs">
+      <DependentUpon>KenhBanHang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CODE\DuLieu\ChuDe.cs" />
+    <Compile Include="CODE\DuLieu\DanhMuc.cs" />
+    <Compile Include="CODE\DuLieu\KetNoi.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CODE\DuLieu\NhaXuatBan.cs" />
+    <Compile Include="CODE\DuLieu\Quyen.cs" />
+    <Compile Include="CODE\DuLieu\TacGia.cs" />
+    <Compile Include="CODE\DuLieu\TaiKhoan.cs" />
+    <Compile Include="CODE\DuLieu\YeuCau.cs" />
+    <Compile Include="CODE\KhachHang\ucDangKyBanHang.ascx.cs">
+      <DependentUpon>ucDangKyBanHang.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CODE\KhachHang\ucDangKyBanHang.ascx.designer.cs">
+      <DependentUpon>ucDangKyBanHang.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CODE\KhachHang\ucFooter.ascx.cs">
+      <DependentUpon>ucFooter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CODE\KhachHang\ucFooter.ascx.designer.cs">
+      <DependentUpon>ucFooter.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CODE\KhachHang\ucHeader.ascx.cs">
+      <DependentUpon>ucHeader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CODE\KhachHang\ucHeader.ascx.designer.cs">
+      <DependentUpon>ucHeader.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CODE\KhachHang\ucTrangChu.ascx.cs">
+      <DependentUpon>ucTrangChu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CODE\KhachHang\ucTrangChu.ascx.designer.cs">
+      <DependentUpon>ucTrangChu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CODE\KhachHang\UserControl.ascx.cs">
+      <DependentUpon>UserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CODE\KhachHang\UserControl.ascx.designer.cs">
+      <DependentUpon>UserControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CODE\QuanTriVien\SanPham\ucChuDe.ascx.cs">
+      <DependentUpon>ucChuDe.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CODE\QuanTriVien\SanPham\ucChuDe.ascx.designer.cs">
+      <DependentUpon>ucChuDe.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CODE\QuanTriVien\SanPham\ucDanhMuc.ascx.cs">
+      <DependentUpon>ucDanhMuc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CODE\QuanTriVien\SanPham\ucDanhMuc.ascx.designer.cs">
+      <DependentUpon>ucDanhMuc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CODE\QuanTriVien\QuanLyThue\ucThue.ascx.cs">
+      <DependentUpon>ucThue.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CODE\QuanTriVien\QuanLyThue\ucThue.ascx.designer.cs">
+      <DependentUpon>ucThue.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CODE\QuanTriVien\SanPham\ucNhaXuatBan.ascx.cs">
+      <DependentUpon>ucNhaXuatBan.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CODE\QuanTriVien\SanPham\ucNhaXuatBan.ascx.designer.cs">
+      <DependentUpon>ucNhaXuatBan.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CODE\QuanTriVien\SanPham\ucTacGia.ascx.cs">
+      <DependentUpon>ucTacGia.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CODE\QuanTriVien\SanPham\ucTacGia.ascx.designer.cs">
+      <DependentUpon>ucTacGia.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CODE\QuanTriVien\TaiKhoan\ucDanhSachTaiKhoan.ascx.cs">
+      <DependentUpon>ucDanhSachTaiKhoan.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CODE\QuanTriVien\TaiKhoan\ucDanhSachTaiKhoan.ascx.designer.cs">
+      <DependentUpon>ucDanhSachTaiKhoan.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CODE\QuanTriVien\TaiKhoan\ucTaiKhoan.ascx.cs">
+      <DependentUpon>ucTaiKhoan.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CODE\QuanTriVien\TaiKhoan\ucTaiKhoan.ascx.designer.cs">
+      <DependentUpon>ucTaiKhoan.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CODE\QuanTriVien\TaiKhoan\ucThemMoiTaiKhoan.ascx.cs">
+      <DependentUpon>ucThemMoiTaiKhoan.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CODE\QuanTriVien\TaiKhoan\ucThemMoiTaiKhoan.ascx.designer.cs">
+      <DependentUpon>ucThemMoiTaiKhoan.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CODE\QuanTriVien\ThongKeBaoCao\ucThongKeBaoCao.ascx.cs">
+      <DependentUpon>ucThongKeBaoCao.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CODE\QuanTriVien\ThongKeBaoCao\ucThongKeBaoCao.ascx.designer.cs">
+      <DependentUpon>ucThongKeBaoCao.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CODE\QuanTriVien\ucQuanTriVien.ascx.cs">
+      <DependentUpon>ucQuanTriVien.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CODE\QuanTriVien\ucQuanTriVien.ascx.designer.cs">
+      <DependentUpon>ucQuanTriVien.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CODE\QuanTriVien\YeuCau\ucYeuCau.ascx.cs">
+      <DependentUpon>ucYeuCau.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CODE\QuanTriVien\YeuCau\ucYeuCau.ascx.designer.cs">
+      <DependentUpon>ucYeuCau.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TrangChu.aspx.cs">
+      <DependentUpon>TrangChu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TrangChu.aspx.designer.cs">
+      <DependentUpon>TrangChu.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CODE\UserControl\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>65014</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44388/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
