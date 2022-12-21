@@ -12,11 +12,7 @@ namespace BookStore
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["idtk"] == null)
-            {
-                Random r = new Random();
-                Session["idtk"] = r.Next(1000, 10000).ToString();
-            }
+          
         }
     } 
 }

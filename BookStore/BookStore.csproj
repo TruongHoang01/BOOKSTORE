@@ -43,6 +43,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=20.1.0.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxControlToolkit.20.1.0\lib\net40\AjaxControlToolkit.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -95,6 +98,11 @@
     <Content Include="CODE\KhachHang\ucTrangChinh.ascx" />
     <Content Include="Image\anhdaidien.png" />
     <Content Include="Image\anhdaidien\anhdaidien.png" />
+    <Content Include="Image\emptystar.png" />
+    <Content Include="Image\FilledStar.gif" />
+    <Content Include="Image\Star.gif" />
+    <Content Include="Image\WaitingStar.gif" />
+    <Content Include="Image\yellowstar.png" />
     <Content Include="KenhBanHang.aspx" />
     <Content Include="CODE\css\admin.css" />
     <Content Include="CODE\css\chucuahang.css" />

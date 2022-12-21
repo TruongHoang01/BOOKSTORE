@@ -143,6 +143,13 @@
     width: 600px;
     height: 300px;
 }
+.dialog-body_danhgia {
+    margin-top: 60px;
+    border-radius: 4px;
+    width: 500px;
+    height: 600px;
+    padding: 20px;
+}
 .FormDangKy {
     text-align: center;
     padding: 20px;
@@ -920,4 +927,103 @@
     font-size: 14px;
     color: #ccc;
     text-decoration: line-through;
+}
+
+
+.star-widget label {
+    font-size: 40px;
+    color: #444;
+    padding: 10px;
+    float: right;
+    transition: all 0.2s ease;
+}
+
+input:not(:checked) ~ label:hover,
+input:not(:checked) ~ label:hover ~ label {
+    color: #fd4;
+}
+
+input:checked ~ label {
+    color: #fd4;
+}
+
+input#rate-5:checked ~ label {
+    color: #fe7;
+    text-shadow: 0 0 20px #952;
+}
+
+input:checked ~ form {
+    display: block;
+}
+
+
+.textarea {
+    height: 100px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.textarea textarea {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: #333;
+    border: 1px solid #333;
+    background: #fff;
+    padding: 10px;
+    font-size: 17px;
+    resize: none;
+}
+
+.textarea textarea:focus {
+    border-color: #444;
+}
+
+.btn {
+    height: 45px;
+    width: 100%;
+    margin: 15px 0;
+}
+
+.btn input[type="submit"] {
+    height: 100%;
+    width: 100%;
+    border: 1px solid #444;
+    outline: none;
+    background: #26afee;
+    opacity: 0.8;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn input[type="submit"]:hover {
+    opacity: 1;
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+
+
+.Star {
+    background-image: url('../../Image/Star.gif');
+    height: 17px;
+    width: 17px;
+}
+
+.WaitingStar {
+    background-image: url('../../Image/WaitingStar.gif');
+    height: 17px;
+    width: 17px;
+}
+
+.FilledStar {
+    background-image: url('../../Image/FilledStar.gif');
+    height: 17px;
+    width: 17px;
 }

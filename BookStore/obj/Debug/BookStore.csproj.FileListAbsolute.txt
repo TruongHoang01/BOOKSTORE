@@ -57,3 +57,4 @@ C:\Users\Acer\source\repos\BookStore\BookStore\obj\Debug\BookStore.csproj.CoreCo
 C:\Users\Acer\source\repos\BookStore\BookStore\obj\Debug\BookStore.csproj.CopyComplete
 C:\Users\Acer\source\repos\BookStore\BookStore\obj\Debug\BookStore.dll
 C:\Users\Acer\source\repos\BookStore\BookStore\obj\Debug\BookStore.pdb
+C:\Users\Acer\source\repos\BookStore\BookStore\bin\AjaxControlToolkit.dll

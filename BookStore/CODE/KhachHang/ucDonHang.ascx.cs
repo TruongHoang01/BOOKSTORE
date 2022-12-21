@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AjaxControlToolkit;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -26,7 +27,8 @@ namespace BookStore.CODE.KhachHang
             {
                 tinhTrang = Request.QueryString["tinhtrang"].ToString();
             }
-            LoadGiaoDien();
+            if(!IsPostBack)
+                LoadGiaoDien();
         }
         public void LoadGiaoDien()
         {
@@ -74,5 +76,20 @@ namespace BookStore.CODE.KhachHang
                 ltr = "";
             }
         }
+
+        protected void btnXacNhanOTP_Click(object sender, EventArgs e)
+        {
+        
+   
+        }
+
+        protected void btnGui_Click(object sender, EventArgs e)
+        {
+            string soSao = lbStar.Text;
+            string danhGia = txtDanhGia.Text;
+
+        }
+     
     }
+
 }
