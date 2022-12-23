@@ -868,32 +868,32 @@
     background-color: #ccc;
     color: #fff;
 }
-.DonHang .ThongTin{
+.ThongTin{
     background-color: #fff;
     border-radius: 12px;
     padding: 0 20px;
     margin-bottom: 20px;
 }
-.DonHang .ThongTin .DivCuaHang{
+ .DivCuaHang{
     padding: 4px;
     border-bottom: 1px solid #ccc;
 }
-.DonHang .ThongTin h1 {
+.ThongTin h1 {
     font-size: 18px;
     color: #333;
     padding: 8px;
 
 }
-.DonHang .ThongTin .AnhSanPham{
+ .ThongTin .AnhSanPham{
     width: 100px;
     height: 100px;
 }
-.DonHang .ThongTin .DivChiTietDonHang {
+ .ThongTin .DivChiTietDonHang {
     padding-top: 12px;
     border-bottom: 1px solid #ccc;
     margin-bottom: 8px;
 }
-.DivChiTietDonHang .TenSanPham{
+ .TenSanPham{
     font-weight: bold;
     color: #333;
 }
@@ -1026,4 +1026,46 @@ input[type="radio"]{
     background-image: url('../../Image/FilledStar.gif');
     height: 17px;
     width: 17px;
+}
+
+.GioHang {
+    margin: 0 auto;
+}
+.GioHang .divflex{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.GioHang .divheader{
+    margin-top: 20px;
+    background-color: #c6f2f5;
+    padding: 10px;
+}
+.GioHang .checkbox input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+}
+.GioHang .checkbox label{
+    font-size: 20px;
+}
+.GioHang .title span{
+    margin-right: 80px;
+}
+
+.GioHang .divchitiet {
+    border: 1px solid #6dc3f6;
+    padding: 6px 6px 6px 12px;
+    border-radius: 6px;
+}
+.GioHang .divThongTin {
+    background-color: #c6f2f5;
+    margin-top: 20px;
+}
+.column{
+    margin-right:80px;
+}
+.divThongTin .checkbox input[type="checkbox"]{
+    width: 16px;
+    height: 16px;
 }

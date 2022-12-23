@@ -98,6 +98,7 @@
     <Content Include="CODE\KhachHang\ucTrangChinh.ascx" />
     <Content Include="Image\anhdaidien.png" />
     <Content Include="Image\anhdaidien\anhdaidien.png" />
+    <Content Include="Image\bg6.png" />
     <Content Include="Image\emptystar.png" />
     <Content Include="Image\FilledStar.gif" />
     <Content Include="Image\Star.gif" />
