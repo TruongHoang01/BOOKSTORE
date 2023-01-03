@@ -16,8 +16,7 @@ namespace BookStore.CODE.DuLieu
         public DataTable LayDanhSachDonHang(string idCH, string tinhTrang)
         {
             string sql = "select ID, HoTen, SDT, DiaChi, format(NgayTao,'dd-MM-yyyy') as NgayTao from DonHang where ID_CH=" + idCH ;
-            if (tinhTrang != "0")
-                sql += " and TinhTrang=" + tinhTrang;
+            sql += " and TinhTrang=" + tinhTrang;
             return ketNoi.getDataTable(sql);
         }
         public int LaySoLuongDonHang(string idCH, string tinhTrang)

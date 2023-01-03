@@ -28,7 +28,7 @@ namespace BookStore.CODE.ChuCuaHang.DonHang
         }
         public void LoadGiaoDien()
         {
-            if (tinhtrang != "1")
+            if (tinhtrang != "0")
             {
                 btnDuyet.Visible = false;
                 btnHuy.Visible = false;

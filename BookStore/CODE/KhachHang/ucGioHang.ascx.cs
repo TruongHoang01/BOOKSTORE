@@ -37,5 +37,57 @@ namespace BookStore.CODE.KhachHang
                 i++;
             }
         }
+
+        protected void cbkSelectAll_CheckedChanged(object sender, EventArgs e)
+        {
+            foreach(DataListItem row in dlCuaHang.Items)
+            {
+                CheckBox cbCuaHang = row.FindControl("cbkSelectAllStore") as CheckBox;
+              
+                if(((CheckBox)sender).Checked == true)
+                    cbCuaHang.Checked = true;
+                else
+                    cbCuaHang.Checked = false;
+                cbkSelectAllStore_CheckedChanged(cbCuaHang, e);
+            }
+        }
+
+        protected void cbkSelectAllStore_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox cbk = (CheckBox)sender;
+            DataListItem dlCuaHang = ((CheckBox)sender).Parent as DataListItem;
+            DataList dlSP = dlCuaHang.FindControl("dlSanPham") as DataList;
+            foreach(DataListItem rowsp in dlSP.Items)
+            {
+                CheckBox cbkSanPham = rowsp.FindControl("cbkSanPham") as CheckBox;
+                if (cbk.Checked == true)
+                    cbkSanPham.Checked = true;
+                else
+                    cbkSanPham.Checked = false;
+            }
+        }
+
+        protected void btnTruSL_Click(object sender, EventArgs e)
+        {
+            DataListItem dlSanPham = ((Button)sender).Parent as DataListItem;
+            TextBox tbSL = dlSanPham.FindControl("textSL")as TextBox;
+            if(tbSL.Text != "1")
+            {
+                int count = Int32.Parse(tbSL.Text) - 1;
+                tbSL.Text = count +"";
+            }
+        }
+
+        protected void btnCongSL_Click(object sender, EventArgs e)
+        {
+             
+            DataListItem dlSanPham = ((Button)sender).Parent as DataListItem;
+            TextBox tbSL = dlSanPham.FindControl("textSL") as TextBox;
+            if (tbSL.Text != "10")
+            {
+                int count = Int32.Parse(tbSL.Text) + 1;
+                tbSL.Text = count + "";
+            }
+        }
     }
 }

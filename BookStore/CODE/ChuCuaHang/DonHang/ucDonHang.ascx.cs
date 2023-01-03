@@ -30,30 +30,27 @@ namespace BookStore.CODE.ChuCuaHang.DonHang
         {
             switch (tinhTrang)
             {
-                case "0": lbloaidonhang.Text = "tất cả đơn hàng";
-                    break;
-                case "1":
+               
+                case "0":
                     lbloaidonhang.Text = "đơn hàng mới";
                     break;
-                case "2":
+                case "1":
                     lbloaidonhang.Text = "đơn hàng đã duyệt";
                     break;
-                case "3":
+                case "2":
                     lbloaidonhang.Text = "đơn hàng đang giao";
                     break;
-                case "4":
+                case "3":
                     lbloaidonhang.Text = "đơn hàng đã giao";
                     break;
-                case "5":
+                case "4":
                     lbloaidonhang.Text = "đơn hàng bị hủy";
                     break;
             }
             grDonHang.DataSource = dbDonHang.LayDanhSachDonHang(idCH, tinhTrang);
             grDonHang.DataBind();
-            if(tinhTrang == "1")
+            if(tinhTrang == "0")
                 HienThiButtonHuy();
-            int count = dbDonHang.LaySoLuongDonHang(idCH, tinhTrang);
-            lbsoluong.Text = "Số đơn hàng: "+ count;
         }
 
         private void HienThiButtonHuy()

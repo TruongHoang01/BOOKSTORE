@@ -15,7 +15,7 @@ namespace BookStore.CODE.DuLieu
         }
         public DataTable LayChiTietDonHang(string idDH)
         {
-            string sql = "select S.HinhAnh, TenTG, S.TenSach, CT.SoLuong,S.GiaBia, CT.GiaBan as GiaKM, CT.SoLuong*CT.GiaBan as ThanhTien from ChiTietDonHang CT, Sach S, TacGia T where T.ID=S.MaTG and  S.ID=CT.ID_Sach and ID_DH=" + idDH;
+            string sql = "select S.HinhAnh, TenTG, S.TenSach, CT.SoLuong,S.GiaBia, CT.GiaBan, CT.SoLuong*CT.GiaBan as ThanhTien from ChiTietDonHang CT, Sach S, TacGia T where T.ID=S.MaTG and  S.ID=CT.ID_Sach and ID_DH=" + idDH;
             return ketNoi.getDataTable(sql);
         }
     }

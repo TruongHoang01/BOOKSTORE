@@ -1,8 +1,8 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ucGioHang.ascx.cs" Inherits="BookStore.CODE.KhachHang.ucGioHang" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ucGioHang.ascx.cs" EnableViewState="true" Inherits="BookStore.CODE.KhachHang.ucGioHang" %>
 
     <div  class="GioHang">
         <div class="divflex divheader">
-            <div class="checkbox"><asp:CheckBox Text="Sản phẩm" runat="server" /></div>
+            <div class="checkbox"><asp:CheckBox ID="cbkSelectAll" OnCheckedChanged="cbkSelectAll_CheckedChanged" Text="Sản phẩm" runat="server" AutoPostBack="true"/></div>
             <div class="title">
                 <span>Đơn Giá</span>
                 <span>Số Lượng</span>
@@ -16,7 +16,7 @@
                     <div class="ThongTin divThongTin">
                         <div class='center DivCuaHang'>
                             <h1 class="checkbox">
-                                <asp:CheckBox Text='<%#Eval("TenCuaHang") %>' runat="server" />
+                                <asp:CheckBox ID="cbkSelectAllStore" AutoPostBack="true" OnCheckedChanged="cbkSelectAllStore_CheckedChanged" Text='<%#Eval("TenCuaHang") %>' runat="server" />
                             </h1>
                         </div>
                         <asp:DataList runat="server" ID="dlSanPham" Width="100%">
@@ -24,12 +24,12 @@
                                 <div class='center DivChiTietDonHang'>
                                     <div class=" divflex divchitiet">
                                         <div class="center checkbox">
-                                             <asp:CheckBox Text="" runat="server" />
+                                             <asp:CheckBox ID="cbkSanPham" AutoPostBack="true" Text="" runat="server" />
                                             <div>
                                                 <img class="AnhSanPham" src='<%#"../../Image/product/"+Eval("HinhAnh") %>'/>
                                             </div>
                                             <div>
-                                                <p> 
+                                                <p style="max-width:300px"> 
                                                     <span class="TenSanPham"><%#Eval("TenSach") %></span>
                                                 </p>   
                                                 <p>
@@ -43,9 +43,9 @@
                                                  <span><%#Eval("GiaKM") %>đ</span>
                                              </div>
                                              <div class="column SoLuong">
-                                                <input type="submit" runat="server" value="-" />
-                                                <input type="text" name="text" value='<%#Eval("SoLuong") %>' />
-                                                <input type="submit" runat="server" value="+" />
+                                                 <asp:Button Text="-" ID="btnTruSL" OnClick="btnTruSL_Click" runat="server" />
+                                                 <asp:TextBox runat="server" ID="textSL" Text='<%#Eval("SoLuong") %>'></asp:TextBox>
+                                                 <asp:Button Text="+" OnClick="btnCongSL_Click" ID="btnCongSL" runat="server" />
                                             </div>
                                             <div  class=" column Gia"><span><%#Eval("ThanhTien") %>đ</span></div>
                                             <div class="column ThaoTac"> <asp:Button Text="Xóa" runat="server" /></div>
@@ -58,4 +58,3 @@
             </asp:DataList>
         </div>
     </div>
-

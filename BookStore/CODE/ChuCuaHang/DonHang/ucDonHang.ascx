@@ -6,11 +6,11 @@
         <div class="titleloaidonhang">
             <asp:Label ID="lbloaidonhang" Text="Tất cả đơn hàng" runat="server" /></div>
          <div class="navbardonhang">
-             <a class="linkdonhang" href="KenhBanHang.aspx?modul=DonHang&tinhtrang=1">Đơn hàng mới</a>
-             <a class="linkdonhang" href="KenhBanHang.aspx?modul=DonHang&tinhtrang=2"> Chờ lấy hàng</a>
-             <a class="linkdonhang" href="KenhBanHang.aspx?modul=DonHang&tinhtrang=3"> Đang giao</a>
-             <a class="linkdonhang" href="KenhBanHang.aspx?modul=DonHang&tinhtrang=4"> Đã giao</a>
-             <a class="linkdonhang" href="KenhBanHang.aspx?modul=DonHang&tinhtrang=5"> Đơn hủy</a>
+             <a class="linkdonhang" href="KenhBanHang.aspx?modul=DonHang&tinhtrang=0">Đơn hàng mới</a>
+             <a class="linkdonhang" href="KenhBanHang.aspx?modul=DonHang&tinhtrang=1"> Chờ lấy hàng</a>
+             <a class="linkdonhang" href="KenhBanHang.aspx?modul=DonHang&tinhtrang=2"> Đang giao</a>
+             <a class="linkdonhang" href="KenhBanHang.aspx?modul=DonHang&tinhtrang=3"> Đã giao</a>
+             <a class="linkdonhang" href="KenhBanHang.aspx?modul=DonHang&tinhtrang=4"> Đơn hủy</a>
         </div>
         <div>
             <div class="flex divtimkiemdonhang">
@@ -23,9 +23,7 @@
                 <asp:linkbutton text="Tìm kiếm" runat="server" />
             </div>
         </div>
-        <div>
-            <asp:Label CssClass="lbsoluong" ID="lbsoluong" Text="0 Đơn hàng" runat="server" />
-        </div>
+    
         <div>
             <asp:GridView ID="grDonHang" CssClass="kbhtable" runat="server" AutoGenerateColumns="false">
                 <Columns>

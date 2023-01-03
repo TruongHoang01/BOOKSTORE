@@ -29,9 +29,9 @@
                  <div class="dropdown">
                      <asp:LinkButton  class="dropbtn" Text="Quản Lý Đơn Hàng" runat="server"></asp:LinkButton>
                        <ul class="dropdown-content">
-                            <li> <a href="KenhBanHang.aspx?modul=DonHang&tinhtrang=1"> Mới</a></li>
-                            <li> <a href="KenhBanHang.aspx?modul=DonHang&tinhtrang=2"> Chờ lấy hàng</a></li>
-                            <li> <a href="KenhBanHang.aspx?modul=DonHang&tinhtrang=4"> Đã giao</a></li>
+                            <li> <a href="KenhBanHang.aspx?modul=DonHang&tinhtrang=0"> Mới</a></li>
+                            <li> <a href="KenhBanHang.aspx?modul=DonHang&tinhtrang=1"> Chờ lấy hàng</a></li>
+                            <li> <a href="KenhBanHang.aspx?modul=DonHang&tinhtrang=3"> Đã giao</a></li>
                      </ul>
                 </div>
                    <div class="dropdown">

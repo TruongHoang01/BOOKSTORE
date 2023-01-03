@@ -65,7 +65,7 @@
                           <asp:Label CssClass="lableCapCha" ID="lbCapCha" Text="123456" runat="server" />
                       </div>
                     
-                    <asp:Label CssClass="lbThongBao" ID="lbThongBao" runat="server" />
+                    <div><asp:Label CssClass="lbThongBao" ID="lbThongBao" runat="server" />  </div>
                       <div >
                         <asp:LinkButton OnClick="btnCheckLog_Click" CssClass="button btnDangKy" ID="btnCheckLog" Text="Đăng nhập" runat="server" />
                     </div>

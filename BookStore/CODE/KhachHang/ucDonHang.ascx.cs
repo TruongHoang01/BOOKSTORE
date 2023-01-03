@@ -61,7 +61,7 @@ namespace BookStore.CODE.KhachHang
                             <div>
                                 <p class='Gia'>
                                     <span>" + r2["GiaBia"].ToString() + @"đ</span>
-                                    <span>" + r2["GiaKM"].ToString() + @"đ</span>
+                                    <span>" + r2["GiaBan"].ToString() + @"đ</span>
                                 </p>
                             </div>
                         </div>"; 

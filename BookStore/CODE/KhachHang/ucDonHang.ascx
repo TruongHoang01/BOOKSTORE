@@ -24,7 +24,7 @@
         </ItemTemplate>
     </asp:DataList>
 </div>
-<div class="dialog overlay " id="DivXacNhanEmail" runat="server" visible="true">
+<div class="dialog overlay " id="DivXacNhanEmail" runat="server" visible="false">
             <div class="dialog-body dialog-body_danhgia ">
                 <h1>Đánh giá sản phẩm</h1>
                 <div>
