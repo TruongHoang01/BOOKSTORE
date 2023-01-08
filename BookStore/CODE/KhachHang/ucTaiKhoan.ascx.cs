@@ -22,7 +22,7 @@ namespace BookStore.CODE.KhachHang
                     plTaiKhoan.Controls.Add(LoadControl("ucCapNhatTaiKhoan.ascx"));
                     break;
                 case "DonHang":
-                    plTaiKhoan.Controls.Add(LoadControl("ucDonHang.ascx"));
+                    plTaiKhoan.Controls.Add(LoadControl("WebUserControl1.ascx"));
                     break;
             }
         }

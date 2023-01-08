@@ -23,7 +23,6 @@ namespace BookStore.CODE.ChuCuaHang.KhuyenMai
             }
             dbSanPham = new DuLieu.SanPham();
             dbKhuyenMai = new DuLieu.KhuyenMai();
-            calendar1.SelectedDate = DateTime.Today;
             if (Request.QueryString["thaotac"] != null)
             {
                 thaoTac = Request.QueryString["thaotac"].ToString();
@@ -59,10 +58,8 @@ namespace BookStore.CODE.ChuCuaHang.KhuyenMai
                 DataRow row = tbKhuyenMai.Rows[0];
                 tbNoiDung.Text = row["NoiDung"].ToString();
                 tbTiLe.Text = row["TiLe"].ToString();
-                calendar1.SelectedDate = DateTime.Parse(row["NgayBatDau"].ToString());
-                calendar2.SelectedDate = DateTime.Parse(row["NgayKetThuc"].ToString());
-                lbcalendar1.Text = calendar1.SelectedDate.ToString("dd-MM-yyyy");
-                lbcalendar2.Text = calendar2.SelectedDate.ToString("dd-MM-yyyy");
+                from_date.Text = row["NgayBatDau"].ToString();
+                end_date.Text = row["NgayKetThuc"].ToString();
                 btnThemMoi.Text = "Cập nhật";
                 btnDatLai.Text = "Hủy";
 
@@ -78,39 +75,13 @@ namespace BookStore.CODE.ChuCuaHang.KhuyenMai
                 }
             }
         }
-        protected void btnCalendar1_Click(object sender, EventArgs e)
-        {
-            divcaledar1.Visible = true;
-            divcaledar2.Visible = false;
-        }
-
-        protected void btnCalendar2_Click(object sender, EventArgs e)
-        {
-            divcaledar2.Visible = true;
-        }
-
-        protected void calendar1_SelectionChanged(object sender, EventArgs e)
-        {
-          
-            DateTime dt = calendar1.SelectedDate;
-            lbcalendar1.Text = dt.ToString("dd-MM-yyyy");
-            divcaledar1.Visible = false;
-        }
-
-        protected void calendar2_SelectionChanged(object sender, EventArgs e)
-        {
-
-            DateTime dt = calendar2.SelectedDate;
-            lbcalendar2.Text = dt.ToString("dd-MM-yyyy");
-            divcaledar2.Visible = false;
-        }
-
+      
         protected void btnThemMoi_Click(object sender, EventArgs e)
         {
             string noiDung = tbNoiDung.Text;
             string tiLe = tbTiLe.Text;
-            string ngayBD = calendar1.SelectedDate.ToString();
-            string ngayKT = calendar2.SelectedDate.ToString();
+            string ngayBD = from_date.Text;
+            string ngayKT = end_date.Text;
             if (thaoTac == "ThemMoi")
             {
                 if(dbKhuyenMai.ThemKhuyenMai(noiDung, tiLe, ngayBD, ngayKT, idCH))

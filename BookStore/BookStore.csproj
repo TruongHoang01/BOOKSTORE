@@ -46,7 +46,29 @@
     <Reference Include="AjaxControlToolkit, Version=20.1.0.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
       <HintPath>..\packages\AjaxControlToolkit.20.1.0\lib\net40\AjaxControlToolkit.dll</HintPath>
     </Reference>
+    <Reference Include="Google.Apis, Version=1.58.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.1.58.0\lib\net45\Google.Apis.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Admin.Directory.directory_v1, Version=1.58.0.2924, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Admin.Directory.directory_v1.1.58.0.2924\lib\net45\Google.Apis.Admin.Directory.directory_v1.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth, Version=1.58.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Auth.1.58.0\lib\net461\Google.Apis.Auth.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth.PlatformServices, Version=1.58.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Auth.1.58.0\lib\net461\Google.Apis.Auth.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Core, Version=1.58.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Core.1.58.0\lib\net45\Google.Apis.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.PlatformServices, Version=1.58.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.1.58.0\lib\net45\Google.Apis.PlatformServices.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -87,11 +109,11 @@
     <Content Include="CODE\css\general.css" />
     <Content Include="CODE\css\js\index.js" />
     <Content Include="CODE\css\js\swiper-bundle.min.js" />
-    <Content Include="CODE\css\styleus.css" />
+    <Content Include="CODE\css\js\pikaday.js" />
+    <Content Include="CODE\css\pikaday.css" />
     <Content Include="CODE\css\swiper-bundle.min.css" />
     <Content Include="CODE\KhachHang\ucCapNhatTaiKhoan.ascx" />
     <Content Include="CODE\KhachHang\ucChiTiet.ascx" />
-    <Content Include="CODE\KhachHang\ucDonHang.ascx" />
     <Content Include="CODE\KhachHang\ucGioHang.ascx" />
     <Content Include="CODE\KhachHang\ucTaiKhoan.ascx" />
     <Content Include="CODE\KhachHang\ucTimKiem.ascx" />
@@ -99,9 +121,11 @@
     <Content Include="Image\anhdaidien.png" />
     <Content Include="Image\anhdaidien\anhdaidien.png" />
     <Content Include="Image\bg6.png" />
+    <Content Include="Image\calendar.png" />
+    <Content Include="Image\delete.png" />
     <Content Include="Image\emptystar.png" />
-    <Content Include="Image\FilledStar.gif" />
-    <Content Include="Image\Star.gif" />
+    <Content Include="Image\starcolor.png" />
+    <Content Include="Image\starempty.png" />
     <Content Include="Image\WaitingStar.gif" />
     <Content Include="Image\yellowstar.png" />
     <Content Include="KenhBanHang.aspx" />
@@ -128,6 +152,8 @@
     <Content Include="Global.asax" />
     <Content Include="TrangChu.aspx" />
     <Content Include="Web.config" />
+    <Content Include="CODE\KhachHang\ucDonHangCaNhan.ascx" />
+    <Content Include="TaiKhoan.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Admin.aspx.cs">
@@ -220,13 +246,6 @@
     </Compile>
     <Compile Include="CODE\KhachHang\ucChiTiet.ascx.designer.cs">
       <DependentUpon>ucChiTiet.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="CODE\KhachHang\ucDonHang.ascx.cs">
-      <DependentUpon>ucDonHang.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="CODE\KhachHang\ucDonHang.ascx.designer.cs">
-      <DependentUpon>ucDonHang.ascx</DependentUpon>
     </Compile>
     <Compile Include="CODE\KhachHang\ucGioHang.ascx.cs">
       <DependentUpon>ucGioHang.ascx</DependentUpon>
@@ -395,6 +414,20 @@
     </Compile>
     <Compile Include="TrangChu.aspx.designer.cs">
       <DependentUpon>TrangChu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CODE\KhachHang\ucDonHangCaNhan.ascx.cs">
+      <DependentUpon>ucDonHangCaNhan.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CODE\KhachHang\ucDonHangCaNhan.ascx.designer.cs">
+      <DependentUpon>ucDonHangCaNhan.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="TaiKhoan.aspx.cs">
+      <DependentUpon>TaiKhoan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TaiKhoan.aspx.designer.cs">
+      <DependentUpon>TaiKhoan.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

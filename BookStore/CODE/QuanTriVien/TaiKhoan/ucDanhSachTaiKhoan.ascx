@@ -1,5 +1,8 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ucDanhSachTaiKhoan.ascx.cs" Inherits="BookStore.CODE.QuanTriVien.QuanLyThue.ucDanhSachTaiKhoan" %>
-<div class="divTop divflex mt20">
+
+
+
+        <div class="divTop divflex mt20">
     <div class="divTimKiem divflex">
         <asp:TextBox ID="tbTimKiem" CssClass="inputTimKiem" runat="server" PlaceHolder="Nhập email hoặc sdt"/>
         <asp:Button ID="btnTiemKiem" OnClick="btnTiemKiem_Click" CssClass="btnTimKiem btnThem" Text="Tìm kiếm" runat="server" />
@@ -46,3 +49,4 @@
             <asp:LinkButton Visible="false" OnClick="btnCancel_Click" ID="btnCancel" Text="Hủy" runat="server" />
         </div>
 </div>
+

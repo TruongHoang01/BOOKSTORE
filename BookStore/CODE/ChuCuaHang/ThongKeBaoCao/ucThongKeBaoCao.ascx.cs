@@ -14,24 +14,6 @@ namespace BookStore.CODE.ChuCuaHang.ThongKeBaoCao
 
         }
 
-        protected void btnCalendar1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void calendar1_SelectionChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void btnCalendar2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void calendar2_SelectionChanged(object sender, EventArgs e)
-        {
-
-        }
+      
     }
 }

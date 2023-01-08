@@ -21,7 +21,7 @@ namespace BookStore.CODE.KhachHang
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton imglogo;
+        public global::System.Web.UI.WebControls.ImageButton imglogo;
 
         /// <summary>
         /// tukhoa control.
@@ -30,7 +30,7 @@ namespace BookStore.CODE.KhachHang
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tukhoa;
+        public global::System.Web.UI.WebControls.TextBox tukhoa;
 
         /// <summary>
         /// btnTimKiem control.
@@ -39,7 +39,7 @@ namespace BookStore.CODE.KhachHang
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnTimKiem;
+        public global::System.Web.UI.WebControls.LinkButton btnTimKiem;
 
         /// <summary>
         /// divhiden control.
@@ -48,7 +48,7 @@ namespace BookStore.CODE.KhachHang
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divhiden;
+        public global::System.Web.UI.HtmlControls.HtmlGenericControl divhiden;
 
         /// <summary>
         /// btnDangKy control.
@@ -57,7 +57,7 @@ namespace BookStore.CODE.KhachHang
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnDangKy;
+        public global::System.Web.UI.WebControls.LinkButton btnDangKy;
 
         /// <summary>
         /// btnDangNhap control.
@@ -66,7 +66,7 @@ namespace BookStore.CODE.KhachHang
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnDangNhap;
+        public global::System.Web.UI.WebControls.LinkButton btnDangNhap;
 
         /// <summary>
         /// lbName control.
@@ -75,7 +75,7 @@ namespace BookStore.CODE.KhachHang
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbName;
+        public global::System.Web.UI.WebControls.Label lbName;
 
         /// <summary>
         /// linkDonHang control.
@@ -84,7 +84,7 @@ namespace BookStore.CODE.KhachHang
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton linkDonHang;
+        public global::System.Web.UI.WebControls.LinkButton linkDonHang;
 
         /// <summary>
         /// linkTaiKhoan control.
@@ -93,7 +93,7 @@ namespace BookStore.CODE.KhachHang
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton linkTaiKhoan;
+        public global::System.Web.UI.WebControls.LinkButton linkTaiKhoan;
 
         /// <summary>
         /// btnDangXuat control.
@@ -102,7 +102,7 @@ namespace BookStore.CODE.KhachHang
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnDangXuat;
+        public global::System.Web.UI.WebControls.LinkButton btnDangXuat;
 
         /// <summary>
         /// linkGioHang control.
@@ -111,7 +111,7 @@ namespace BookStore.CODE.KhachHang
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton linkGioHang;
+        public global::System.Web.UI.WebControls.LinkButton linkGioHang;
 
         /// <summary>
         /// btnKenhNguoiBan control.
@@ -120,7 +120,7 @@ namespace BookStore.CODE.KhachHang
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnKenhNguoiBan;
+        public global::System.Web.UI.WebControls.LinkButton btnKenhNguoiBan;
 
         /// <summary>
         /// modelDangNhapDangKy control.
@@ -129,7 +129,7 @@ namespace BookStore.CODE.KhachHang
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl modelDangNhapDangKy;
+        public global::System.Web.UI.HtmlControls.HtmlGenericControl modelDangNhapDangKy;
 
         /// <summary>
         /// imgCloseDN control.
@@ -138,7 +138,7 @@ namespace BookStore.CODE.KhachHang
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton imgCloseDN;
+        public global::System.Web.UI.WebControls.ImageButton imgCloseDN;
 
         /// <summary>
         /// lbFormTitle control.
@@ -147,7 +147,7 @@ namespace BookStore.CODE.KhachHang
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbFormTitle;
+        public global::System.Web.UI.WebControls.Label lbFormTitle;
 
         /// <summary>
         /// tbTaiKhoan control.
@@ -156,7 +156,7 @@ namespace BookStore.CODE.KhachHang
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbTaiKhoan;
+        public global::System.Web.UI.WebControls.TextBox tbTaiKhoan;
 
         /// <summary>
         /// tbMatKhau control.
@@ -165,7 +165,7 @@ namespace BookStore.CODE.KhachHang
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbMatKhau;
+        public global::System.Web.UI.WebControls.TextBox tbMatKhau;
 
         /// <summary>
         /// tbCaptCha control.
@@ -174,7 +174,7 @@ namespace BookStore.CODE.KhachHang
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbCaptCha;
+        public global::System.Web.UI.WebControls.TextBox tbCaptCha;
 
         /// <summary>
         /// lbCapCha control.
@@ -183,7 +183,7 @@ namespace BookStore.CODE.KhachHang
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbCapCha;
+        public global::System.Web.UI.WebControls.Label lbCapCha;
 
         /// <summary>
         /// lbThongBao control.
@@ -192,7 +192,7 @@ namespace BookStore.CODE.KhachHang
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbThongBao;
+        public global::System.Web.UI.WebControls.Label lbThongBao;
 
         /// <summary>
         /// btnCheckLog control.
@@ -201,7 +201,7 @@ namespace BookStore.CODE.KhachHang
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnCheckLog;
+        public global::System.Web.UI.WebControls.LinkButton btnCheckLog;
 
         /// <summary>
         /// lbFormQuestion control.
@@ -210,7 +210,7 @@ namespace BookStore.CODE.KhachHang
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbFormQuestion;
+        public global::System.Web.UI.WebControls.Label lbFormQuestion;
 
         /// <summary>
         /// btnChuyeNDoi control.
@@ -219,7 +219,7 @@ namespace BookStore.CODE.KhachHang
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnChuyeNDoi;
+        public global::System.Web.UI.WebControls.LinkButton btnChuyeNDoi;
 
         /// <summary>
         /// DivXacNhanEmail control.
@@ -228,7 +228,7 @@ namespace BookStore.CODE.KhachHang
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl DivXacNhanEmail;
+        public global::System.Web.UI.HtmlControls.HtmlGenericControl DivXacNhanEmail;
 
         /// <summary>
         /// ImageButton1 control.
@@ -237,7 +237,7 @@ namespace BookStore.CODE.KhachHang
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ImageButton1;
+        public global::System.Web.UI.WebControls.ImageButton ImageButton1;
 
         /// <summary>
         /// tbOtp control.
@@ -246,7 +246,7 @@ namespace BookStore.CODE.KhachHang
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbOtp;
+        public global::System.Web.UI.WebControls.TextBox tbOtp;
 
         /// <summary>
         /// btnXacNhanOTP control.
@@ -255,7 +255,7 @@ namespace BookStore.CODE.KhachHang
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnXacNhanOTP;
+        public global::System.Web.UI.WebControls.LinkButton btnXacNhanOTP;
 
         /// <summary>
         /// lbThongBaoXacNhanEmail control.
@@ -264,7 +264,7 @@ namespace BookStore.CODE.KhachHang
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbThongBaoXacNhanEmail;
+        public global::System.Web.UI.WebControls.Label lbThongBaoXacNhanEmail;
 
         /// <summary>
         /// btnguilaima control.
@@ -273,7 +273,7 @@ namespace BookStore.CODE.KhachHang
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnguilaima;
+        public global::System.Web.UI.WebControls.LinkButton btnguilaima;
 
         /// <summary>
         /// btnBaoLoi control.
@@ -282,7 +282,7 @@ namespace BookStore.CODE.KhachHang
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnBaoLoi;
+        public global::System.Web.UI.WebControls.LinkButton btnBaoLoi;
 
         /// <summary>
         /// ThongBao control.
@@ -291,7 +291,7 @@ namespace BookStore.CODE.KhachHang
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ThongBao;
+        public global::System.Web.UI.HtmlControls.HtmlGenericControl ThongBao;
 
         /// <summary>
         /// imgThongBao control.
@@ -300,7 +300,7 @@ namespace BookStore.CODE.KhachHang
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image imgThongBao;
+        public global::System.Web.UI.WebControls.Image imgThongBao;
 
         /// <summary>
         /// chuDeThongBao control.
@@ -309,7 +309,7 @@ namespace BookStore.CODE.KhachHang
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl chuDeThongBao;
+        public global::System.Web.UI.HtmlControls.HtmlGenericControl chuDeThongBao;
 
         /// <summary>
         /// noiDungThongBao control.
@@ -318,7 +318,7 @@ namespace BookStore.CODE.KhachHang
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl noiDungThongBao;
+        public global::System.Web.UI.HtmlControls.HtmlGenericControl noiDungThongBao;
 
         /// <summary>
         /// btnOK control.
@@ -327,6 +327,6 @@ namespace BookStore.CODE.KhachHang
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnOK;
+        public global::System.Web.UI.WebControls.LinkButton btnOK;
     }
 }

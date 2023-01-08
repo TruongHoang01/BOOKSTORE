@@ -39,7 +39,7 @@ namespace BookStore.CODE.DuLieu
         }
         public bool HuyDonHang(string idDH)
         {
-            string sql = "update DonHang set TinhTrang=5 where ID=" + idDH;
+            string sql = "update DonHang set TinhTrang=4 where ID=" + idDH;
             return ketNoi.EditData(sql);
         }
         public DataTable LayDonHangTheoKhachHang(string idtk, string tinhTrang)
@@ -49,7 +49,7 @@ namespace BookStore.CODE.DuLieu
         }
         public int TinhTongDonHang(string iddh)
         {
-            string sql = "Select SUM(C.SoLuong*C.GiaBan)  from DONHANG D, CHITIETDONHANG C where  C.ID_DH=D.ID  and D.TinhTrang=0 and D.ID="+iddh + " GROUP BY D.ID";
+            string sql = "Select SUM(C.SoLuong*C.GiaBan) from DONHANG D, CHITIETDONHANG C where  C.ID_DH=D.ID  and D.ID="+iddh + " GROUP BY D.ID";
             return (int)ketNoi.getScalar(sql);
         }
     }

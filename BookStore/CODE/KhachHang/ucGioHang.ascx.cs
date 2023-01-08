@@ -89,5 +89,14 @@ namespace BookStore.CODE.KhachHang
                 tbSL.Text = count + "";
             }
         }
+
+        protected void btnTangSL_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnGiamSL_Click(object sender, EventArgs e)
+        {
+        }
     }
 }

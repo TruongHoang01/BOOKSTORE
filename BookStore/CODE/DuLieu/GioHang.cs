@@ -15,7 +15,7 @@ namespace BookStore.CODE.DuLieu
         }
         public bool ThemVaoGioHang(string id, string idSach, string soLuong)
         {
-            string sql = "insert into GioHang values(" + id + "," + idSach + "," + soLuong + ")";
+            string sql = "insert into GioHang values(" + id + "," + idSach + "," + soLuong + ", 0)";
             return ketNoi.AddDataToTable(sql);
         }
         public DataTable LayDanhSachGioHang(string idch)

@@ -33,6 +33,15 @@ namespace BookStore.CODE.KhachHang
         protected global::System.Web.UI.WebControls.Literal ltChiTiet;
 
         /// <summary>
+        /// btnGiamSL control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnGiamSL;
+
+        /// <summary>
         /// tbsoluong control.
         /// </summary>
         /// <remarks>
@@ -40,6 +49,15 @@ namespace BookStore.CODE.KhachHang
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tbsoluong;
+
+        /// <summary>
+        /// btnTangSL control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnTangSL;
 
         /// <summary>
         /// btnThemVaoGioHang control.

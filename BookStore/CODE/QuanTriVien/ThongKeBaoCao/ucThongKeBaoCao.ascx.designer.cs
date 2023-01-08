@@ -15,75 +15,57 @@ namespace BookStore.CODE.QuanTriVien.ThongKeBaoCao
     {
 
         /// <summary>
-        /// lbcalendar1 control.
+        /// from_date control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbcalendar1;
+        protected global::System.Web.UI.WebControls.TextBox from_date;
 
         /// <summary>
-        /// btnCalendar1 control.
+        /// btn_fromdate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnCalendar1;
+        protected global::System.Web.UI.WebControls.ImageButton btn_fromdate;
 
         /// <summary>
-        /// divcaledar1 control.
+        /// CalendarExtender1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divcaledar1;
+        protected global::AjaxControlToolkit.CalendarExtender CalendarExtender1;
 
         /// <summary>
-        /// calendar1 control.
+        /// date_end control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar calendar1;
+        protected global::System.Web.UI.WebControls.TextBox date_end;
 
         /// <summary>
-        /// lbcalendar2 control.
+        /// btn_enddate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbcalendar2;
+        protected global::System.Web.UI.WebControls.ImageButton btn_enddate;
 
         /// <summary>
-        /// btnCalendar2 control.
+        /// CalendarExtender2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnCalendar2;
-
-        /// <summary>
-        /// divcaledar2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divcaledar2;
-
-        /// <summary>
-        /// calendar2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar calendar2;
+        protected global::AjaxControlToolkit.CalendarExtender CalendarExtender2;
     }
 }

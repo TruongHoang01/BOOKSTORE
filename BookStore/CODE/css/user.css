@@ -148,7 +148,8 @@
     border-radius: 4px;
     width: 500px;
     height: 600px;
-    padding: 20px;
+    padding: 10px 20px;
+    overflow-y: auto;
 }
 .FormDangKy {
     text-align: center;
@@ -258,6 +259,71 @@
     margin-top:12px;
 }
 
+/* ***************************************
+***************SWIPER TAP**************
+*********************************** */
+.swiper-tap-container {
+    max-width: 75%;
+    height: auto;
+    margin-left: 3rem;
+    align-self: center;
+    bottom: 0;
+    flex: 2;
+}
+
+.swiper-tap-product {
+    width: 100%;
+    height: 100%;
+}
+
+.tab-product {
+    height: 100%;
+}
+
+    .tab-product .swiper-pagination {
+        transform: translate(-50%, 120%) !important;
+    }
+
+.product-choice-swiper {
+    margin-top: 5rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-blog-container {
+    margin-top: 5rem;
+}
+
+.swiper-slide {
+    position: relative;
+}
+
+
+/***************************************/
+/* MAIN_HERO_SECTION */
+/***************************************/
+
+.hero-data-slides {
+    list-style: none;
+}
+
+.hero-slide img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.hero-slide img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.swiper-slide {
+    position: relative;
+}
 
 .footer{
     width: 90%;
@@ -565,32 +631,31 @@
     color: #333;
     line-height: 20px;
 }
-.ChiTiet .SoLuong {
-    margin: 10px 0;
+.SoLuong {
+    display: flex;
+    flex-wrap: nowrap;
 }
-.SoLuong input[type="button"] {
-    padding: 0 7px 1px;
+.SoLuong .btnsoluong {
+    padding: 1px 7px 1px;
     background-color: #58ABF3;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 400;
     border: 1px solid #333;
     opacity: 0.8;
 }
-.SoLuong input[type="button"]:hover {
+.SoLuong .btnsoluong:hover {
     opacity: 1;
 }
-.SoLuong input[type="button"]:last-child {
-    margin-left: -4px;
-}
-.SoLuong input[type="button"]:first-child {
-    padding: 0 10px 1px;
+
+.SoLuong .btnsoluong:first-child {
+    padding: 1px 10px 1px;
     margin-right: -4px;
 }
 .SoLuong input[type="text"] {
     text-align: center;
-    width: 60px;
-    font-size: 19px;
-    
+    width: 40px;
+    font-size: 18px;
+    margin-right: -6px;
 }
 
 .ChiTiet .button input[type='submit']{
@@ -893,11 +958,13 @@
     margin-bottom: 8px;
 }
  .TenSanPham{
+     font-size: 18px;
     font-weight: bold;
     color: #333;
 }
-.DivChiTietDonHang .chitiet{
-    font-size: 16px;
+.DivChiTietDonHang .chitiet {
+    font-size: 14px;
+    color: #30b3ef;
 }
 .center {
     display: flex;
@@ -992,17 +1059,15 @@
 
 .GioHang {
     margin: 0 auto;
-}
-.GioHang .divflex{
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
-.GioHang .divheader{
-    margin-top: 20px;
-    background-color: #c6f2f5;
-    padding: 10px;
-}
+    .GioHang .divheader {
+        margin-top: 20px;
+        background-color: #bdc6ce26;
+        padding: 10px;
+    }
 .GioHang .checkbox input[type="checkbox"] {
     width: 20px;
     height: 20px;
@@ -1012,22 +1077,160 @@
     font-size: 20px;
 }
 .GioHang .title span{
-    margin-right: 80px;
+    margin-right: 24px;
 }
 
-.GioHang .divchitiet {
-    border: 1px solid #6dc3f6;
-    padding: 6px 6px 6px 12px;
-    border-radius: 6px;
+    .GioHang .divchitiet {
+        width: 100%;
+        border: 1px solid #6dc3f6;
+        padding: 6px 6px 6px 12px;
+        border-radius: 6px;
+    }
+    .GioHang .divThongTin {
+        background-color: #bdc6ce26;
+        margin-top: 20px;
+    }
+.GioHang .danhsach_sc{
+    width: 100%;
+    height: 600px;
+    overflow-y: auto;
 }
-.GioHang .divThongTin {
-    background-color: #c6f2f5;
-    margin-top: 20px;
-}
-.column{
-    margin-right:80px;
-}
-.divThongTin .checkbox input[type="checkbox"]{
+    .GioHang .footergh {
+        margin-left: 10px;
+        margin-top: 20px;
+        height: 200px;
+        background-color: #6dc3f6;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        padding: 6px 10px;
+        border-radius: 20px;
+    }
+        .GioHang .footergh .thanhtoan {
+            border-radius: 20px;
+            background-color: #FFF;
+            padding: 10px;
+        }
+            .GioHang .footergh .thanhtoan .margin-tong {
+                margin-top: 2px;
+                padding-top: 10px;
+                border-top: 1px solid #ccc;
+            }
+            .GioHang .footergh .thanhtoan p {
+                margin-bottom: 10px;
+                text-align: center;
+                background-color: #fff;
+                display: inline-block;
+            }
+        .GioHang .footergh .thanhtoan .total-p {
+            color: #000;
+            opacity: 0.8;
+        }
+        .GioHang .footergh .thanhtoan p.tamtinh {
+            font-size: 14px;
+        }
+        .GioHang .footergh .thanhtoan p.thanhtien{
+        
+            color: red;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        .GioHang .footergh .btn-mua {
+            width: 100%;
+        }
+            .GioHang .footergh .btn-mua input {
+                margin-top: 6px;
+                color: aqua;
+                padding: 10px 20px;
+                background: red;
+                width: 100%;
+                color: #fff;
+                font-size: 18px;
+                font-weight: 600;
+                border: none;
+                box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+                cursor: pointer;
+                display: block;
+                opacity: 0.7;
+                transition: .1s;
+                border-radius: 8px;
+            }
+                .GioHang .footergh .btn-mua input:hover {
+                    opacity:1;
+                }
+                .column {
+                    margin: 14px;
+                }
+                .GioHang .giagoc{
+                    text-decoration: line-through;
+                    font-size: 14px;
+                }
+                .GioHang .giakm {
+                    color: red;
+                    font-size: 18px;
+                    font-weight: bold;
+                }
+.divThongTin .checkbox input[type="checkbox"] {
     width: 16px;
     height: 16px;
+}
+
+.emptypng {
+    margin-right: 6px;
+    background-image: url('../../Image/starempty.png');
+    width: 32px;
+    height: 32px;
+}
+
+.smileypng {
+    margin-right: 6px;
+    background-image: url('../../Image/starcolor.png');
+    width: 32px;
+    height: 32px;
+}
+
+.donesmileypng {
+    margin-right: 6px;
+    background-image: url('../../Image/starempty.png');
+    width: 32px;
+    height: 32px;
+}
+.dialog-body_danhgia h1{
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    font-weight: 400;
+}
+.dialog-body_danhgia .divflex{
+    margin-bottom: 12px;
+}
+.dialog-body_danhgia img{
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+}
+.dialog-body_danhgia .tensach{
+    font-size: 20px;
+    
+}
+.dialog-body_danhgia .tacgia {
+    font-size: 16px;
+    color: #494444;
+    margin-bottom: 4px;
+}
+.dialog-body_danhgia .star {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 10px auto;
+}
+.dialog-body_danhgia .row {
+    background-color:#fff;
+    padding: 8px 8px;
+    width: 100%;
+    margin: 8px;
+    border-radius: 4px;
+
+}
+.dialog-body_danhgia textarea{
+    width: 100%;
+    padding: 6px;
 }

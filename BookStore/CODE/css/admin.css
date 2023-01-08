@@ -37,6 +37,8 @@
 .AdminNavbar {
     height: 40px;
     background-color: #d7e6ff;
+    position: relative;
+    z-index: 10;
 }
 
 .AdminNavbar a{
@@ -175,7 +177,7 @@ table.tableThemMoi select, table.tableThemMoi input {
 .btnThem:hover{
     color: aqua;
 }
-/*
+
 .divbaocao{
     padding: 2px;
     background-color:lavender;
@@ -213,29 +215,16 @@ table.tableThemMoi select, table.tableThemMoi input {
 .divdate {
     margin-bottom: 12px;
     position: relative;
+    width: 800px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    background-color: #eff8f9;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.divdate .divcalendar {
-    position: absolute;
-    z-index: 10;
-}
-.divdate .divcalendar1 {
-    left: 10px;
-}
-.divdate .divcalendar2 {
-    left: 380px;
-}
-.divdate .lbcalendar {
-    text-align: right;
-    width: 160px;
-    padding: 6px 10px;
-    background-color: #ccc;
-    margin-left: 0px;
-}
-.divdate .btncalendar {
-    display: inline-block;
-    width: 190px;
-    padding: 6px 10px;
-    color: #fff;
-    background-color: #58AAF3;
-}*/
+
+
+

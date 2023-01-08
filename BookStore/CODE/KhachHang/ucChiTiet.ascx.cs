@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -82,11 +83,34 @@ namespace BookStore.CODE.KhachHang
 
         protected void btnThemVaoGioHang_Click(object sender, EventArgs e)
         {
-            dbGioHang = new DuLieu.GioHang();
-            string soLuong = tbsoluong.Text;
-            string idtk = Session["idtk"].ToString();
-            bool check = dbGioHang.ThemVaoGioHang(idtk, idSP, soLuong);
-           
+            if (Session["idtk"] != null)
+            {
+                dbGioHang = new DuLieu.GioHang();
+                string soLuong = tbsoluong.Text;
+                string idtk = Session["idtk"].ToString();
+                bool check = dbGioHang.ThemVaoGioHang(idtk, idSP, soLuong);
+            }
+            else
+            {
+                Response.Redirect("TrangChu.aspx?modul=ChiTiet?login=1");
+            }
+
+        }
+
+        protected void btnGiamSL_Click(object sender, EventArgs e)
+        {
+            int count = Int32.Parse(tbsoluong.Text);
+            if(count != 1)
+               count -= 1;
+            tbsoluong.Text = count+"";
+        }
+
+        protected void btnTangSL_Click(object sender, EventArgs e)
+        {
+            int count = Int32.Parse(tbsoluong.Text);
+            if (count != 10)
+                count += 1;
+            tbsoluong.Text = count + "";
         }
     }
 }

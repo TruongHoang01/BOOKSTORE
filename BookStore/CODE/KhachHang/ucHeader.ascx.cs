@@ -11,13 +11,23 @@ namespace BookStore.CODE.KhachHang
 {
     public partial class ucHeader : System.Web.UI.UserControl
     {
-    
+        
         CODE.DuLieu.TaiKhoan knTaiKhoan;
         static String taiKhoan = "";
         static String matKhau = "";
         static string otp = "";
+        string login = "";
+        public ucHeader()
+        {
+
+        }
+    
         protected void Page_Load(object sender, EventArgs e)
         {
+            if(Request.QueryString["login"] != null)
+            {
+                btnDangNhap_Click(sender, e);
+            }
             knTaiKhoan = new CODE.DuLieu.TaiKhoan();
             LoadGiaoDien();
         }
@@ -133,7 +143,7 @@ namespace BookStore.CODE.KhachHang
         }
         public void giaoDienDangNhap()
         {
-            lbFormTitle.Text = "Đăng nhập";
+            this.lbFormTitle.Text = "Đăng nhập";
             btnCheckLog.Text = "Đăng nhập";
             lbFormQuestion.Text = "Bạn chưa có tài khoản?";
             btnChuyeNDoi.Text = "Đăng ký";
@@ -147,7 +157,7 @@ namespace BookStore.CODE.KhachHang
             modelDangNhapDangKy.Visible = true;
         }
 
-        protected void btnDangNhap_Click(object sender, EventArgs e)
+        public void btnDangNhap_Click(object sender, EventArgs e)
         {
             giaoDienDangNhap();
             modelDangNhapDangKy.Visible = true;
@@ -271,12 +281,12 @@ namespace BookStore.CODE.KhachHang
 
         protected void linkDonHang_Click(object sender, EventArgs e)
         {
-            Response.Redirect("TrangChu.aspx?modul=TaiKhoan&modulphu=DonHang");
+            Response.Redirect("TaiKhoan.aspx?modul=TaiKhoan&modulphu=DonHang");
         }
 
         protected void linkTaiKhoan_Click(object sender, EventArgs e)
         {
-            Response.Redirect("TrangChu.aspx?modul=TaiKhoan&modulphu=TaiKhoan");
+            Response.Redirect("TaiKhoan.aspx?modul=TaiKhoan&modulphu=TaiKhoan");
         }
 
         protected void linkGioHang_Click(object sender, EventArgs e)

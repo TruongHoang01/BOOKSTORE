@@ -72,7 +72,7 @@ namespace BookStore.CODE.DuLieu
 
         internal DataTable TimKiemTaiKhoan(string tuKhoa)
         {
-            string sql = "select * from TAIKHOAN where (SDT='" + tuKhoa + "' or Email='" + tuKhoa + "') and TinhTrang=0";
+            string sql = "select TK.ID, Email, SDT, MatKhau, Hoten, GioiTinh, DiaChi, AnhDaiDien, TenQuyen, TinhTrang from taikhoan tk, Quyen Q where Q.ID=TK.MaQuyen and (TinhTrang=0 or TinhTrang=1) and (SDT='" + tuKhoa + "' or Email='" + tuKhoa + "')";
             return ketNoi.getDataTable(sql);
         }
 

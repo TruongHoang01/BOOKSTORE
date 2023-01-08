@@ -47,7 +47,7 @@
                 </div>
             </div>
         </div>
-        <div class="dialog overlay " id="modelDangNhapDangKy" runat="server" visible="false">
+            <div class="dialog overlay " id="modelDangNhapDangKy" runat="server" visible="false">
             <div class="dialog-body dialog-body_dangky-dangnhap">
                    <asp:ImageButton CssClass="imgClose" ID="imgCloseDN" OnClick="imgClose_Click" ImageUrl="../../Image/close.jpeg" runat="server" />
                 <div class="FormDangKy">

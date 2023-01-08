@@ -238,11 +238,13 @@ input[type="image"] + input[type="image"] {
 .divthemmoi .rowthemmoi{
     margin-bottom: 12px;
     position: relative;
+    display: flex;
+    align-items: center;
 }
 
 .divthemmoi input[type="text"], .divthemmoi select {
     font-size: 20px;
-    width: 70%;
+    width: 60%;
     padding: 2px 4px;
     color: #333030;
 }
@@ -271,26 +273,7 @@ input[type="image"] + input[type="image"] {
     padding: 2px 4px;
     color: #333030;
 }
-.divthemmoi .divcalendar {
-    position: absolute;
-    top: 0px;
-    right: 8px;
-    z-index: 10;
-}
-.divthemmoi .lbcalendar {
-    text-align: right;
-    width: 160px;   
-    padding: 6px 10px;
-    background-color: #ccc;
-    margin-left: 0px;
-}
-.divthemmoi .btncalendar {
-    display: inline-block;
-    width: 190px;
-    padding: 6px 10px;
-    color: #fff;
-    background-color: #58AAF3;
-}
+
 
 .divthemmoi .divsanphamkhuyenmai {
     font-size: 18px;

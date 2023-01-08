@@ -19,21 +19,22 @@
                         <asp:TextBox ID="tbTiLe" runat="server" />
                     </div>
                     <div class="rowthemmoi">
-                        <span>Ngày bắt đầu: </span>
-                        <asp:Label CssClass="lbcalendar" ID="lbcalendar1" Text="12-12-2022" runat="server" />
-                        <asp:LinkButton ID="btnCalendar1" OnClick="btnCalendar1_Click" CssClass="btncalendar" Text="Chọn ngày bắt đầu" runat="server" />
-                        <div runat="server" class="divcalendar" id="divcaledar1" visible="false">
-                            <asp:Calendar ID="calendar1" runat="server" BackColor="#3399FF" ForeColor="White" Height="280px" TabIndex="10" Width="352px" OnSelectionChanged="calendar1_SelectionChanged"></asp:Calendar>
-                        </div>
+                        <span>Từ ngày: </span>
+                        <asp:TextBox ID="from_date" runat="server" Enabled="false" />
+                        <asp:ImageButton ID="btn_fromdate" ImageUrl="../../../Image/calendar.png" runat="server"/>
+                        <asp:ScriptManager runat="server" />
+                        <ajaxToolkit:CalendarExtender ID="CalendarExtender1" runat="server" 
+                            TargetControlID="from_date" PopupButtonID="btn_fromdate" Format="dd/MM/yyyy">
+                        </ajaxToolkit:CalendarExtender>
                     </div>
                     <div class="rowthemmoi">
-                        <span>Ngày kết thúc: </span>
-                        <asp:Label CssClass="lbcalendar" ID="lbcalendar2" Text="12-12-2022" runat="server" TabIndex="1" />
-                        <asp:LinkButton ID="btnCalendar2" OnClick="btnCalendar2_Click" CssClass="btncalendar" Text="Chọn ngày kết thúc" runat="server" />
-                        <div runat="server" class="divcalendar" id="divcaledar2" visible="false">
-                            <asp:Calendar ID="calendar2" runat="server" BackColor="#3399FF" ForeColor="White" Height="280px" TabIndex="10" Width="352px" OnSelectionChanged="calendar2_SelectionChanged" ></asp:Calendar>
-                        </div>
-                    </div>
+                        <span>Đến ngày ngày: </span>
+                        <asp:TextBox ID="end_date" runat="server" Enabled="false" />
+                        <asp:ImageButton ID="end_datebtn" ImageUrl="../../../Image/calendar.png" runat="server"/>
+                        <ajaxToolkit:CalendarExtender ID="CalendarExtender3" runat="server" 
+                            TargetControlID="end_date" PopupButtonID="end_datebtn" Format="dd/MM/yyyy">
+                        </ajaxToolkit:CalendarExtender>
+                    </div>                   
                     <div class="linkbutton ">
                         <asp:CheckBoxList ID="CheckBoxList2" runat="server"></asp:CheckBoxList>
                     </div>
