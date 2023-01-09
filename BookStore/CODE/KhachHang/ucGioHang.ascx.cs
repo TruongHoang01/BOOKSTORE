@@ -98,5 +98,34 @@ namespace BookStore.CODE.KhachHang
         protected void btnGiamSL_Click(object sender, EventArgs e)
         {
         }
+
+        protected void btnMuaHang_Click(object sender, EventArgs e)
+        {
+            int count = 0;
+            foreach(DataListItem rowCH in dlCuaHang.Items)
+            {
+                DataList listSP = rowCH.FindControl("dlSanPham") as DataList;
+                foreach (DataListItem rowSP in listSP.Items)
+                {
+                    CheckBox cbkSP = rowSP.FindControl("cbkSanPham") as CheckBox;
+                   
+                    if(cbkSP.Checked == true) {
+                        HiddenField hfID = rowSP.FindControl("hfID") as HiddenField;
+                        string idsp = hfID.Value;
+                        dbGioHang.CapNhatSanPhamDuocChon(idtk, idsp);
+                        count++;
+                    }
+                }
+                
+            }
+            if(count != 0)
+            {
+                Response.Redirect("TrangChu.aspx?modul=DatHang");
+            }
+            else
+            {
+                lbThongBao.Text = "Chưa chọn sản phẩm!";
+            }
+        }
     }
 }

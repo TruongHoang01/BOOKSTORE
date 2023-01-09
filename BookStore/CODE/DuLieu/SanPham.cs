@@ -42,6 +42,30 @@ namespace BookStore.CODE.DuLieu
             return ketNoi.getDataTable(sql);
         }
 
+        internal DataTable LaySanPhamTheoNhaXuatBan(string id)
+        {
+            string sql = "select TOP 8 S.ID as IDSP, HinhAnh, TenSach, MaKM, TenTG, FORMAT(GiaBia, 'N0', 'en-us') AS GiaBia, FORMAT((GiaBia-GiaBia*TiLe/100), 'N0', 'en-us') AS GiaBan, TiLe from SACH S, TACGIA TG, KHUYENMAI KM where S.MaKM=KM.ID and S.MaTG=TG.ID and S.TinhTrang=0 and MaNXB=" + id + " ORDER BY NEWID()";
+            return ketNoi.getDataTable(sql);
+        }
+
+        internal DataTable LaySanPhamTheoTacGia(string id)
+        {
+            string sql = "select TOP 8 S.ID as IDSP, HinhAnh, TenSach, MaKM, TenTG, FORMAT(GiaBia, 'N0', 'en-us') AS GiaBia, FORMAT((GiaBia-GiaBia*TiLe/100), 'N0', 'en-us') AS GiaBan, TiLe from SACH S, TACGIA TG, KHUYENMAI KM where S.MaKM=KM.ID and S.MaTG=TG.ID and S.TinhTrang=0 and MaTG=" + id + " ORDER BY NEWID()";
+            return ketNoi.getDataTable(sql);
+        }
+
+        internal DataTable LaySanPhamTheoChuDe(string id)
+        {
+            string sql = "select TOP 8 S.ID as IDSP, HinhAnh, TenSach, MaKM, TenTG, FORMAT(GiaBia, 'N0', 'en-us') AS GiaBia, FORMAT((GiaBia-GiaBia*TiLe/100), 'N0', 'en-us') AS GiaBan, TiLe from SACH S, TACGIA TG, KHUYENMAI KM where S.MaKM=KM.ID and S.MaTG=TG.ID and S.TinhTrang=0 and MaCD=" + id + " ORDER BY NEWID()";
+            return ketNoi.getDataTable(sql);
+        }
+
+        internal DataTable LaySanPhamTheoDanhMuc(string id)
+        {
+            string sql = "select TOP 8 S.ID as IDSP, HinhAnh, TenSach, MaKM, TenTG, FORMAT(GiaBia, 'N0', 'en-us') AS GiaBia, FORMAT((GiaBia-GiaBia*TiLe/100), 'N0', 'en-us') AS GiaBan, TiLe from SACH S, TACGIA TG, KHUYENMAI KM where S.MaKM=KM.ID and S.MaTG=TG.ID and S.TinhTrang=0 and MaDM="+id+" ORDER BY NEWID()";
+            return ketNoi.getDataTable(sql);
+        }
+
         public DataTable DanhChoBan()
         {
             string sql = "select TOP 8 S.ID as IDSP, HinhAnh, TenSach, MaKM, TenTG, FORMAT(GiaBia, 'N0', 'en-us') AS GiaBia, FORMAT((GiaBia-GiaBia*TiLe/100), 'N0', 'en-us') AS GiaBan, TiLe from SACH S, TACGIA TG, KHUYENMAI KM where S.MaKM=KM.ID and S.MaTG=TG.ID and S.TinhTrang=0 ORDER BY NEWID()";

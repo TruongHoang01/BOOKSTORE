@@ -78,11 +78,15 @@ a {
 .width80 {
     flex: 8;
 }
-
+.width90{
+    flex: 10;
+}
 .width40 {
     flex: 4;
 }
+.width50{
 
+}
 .width60 {
     flex: 6;
 }
@@ -237,32 +241,32 @@ a {
     border: 2px solid lavender;
 }
 
-    .divbaocao .col:first-child {
-        border-radius: 20px 0 0 20px;
-    }
+.divbaocao .col:first-child {
+    border-radius: 20px 0 0 20px;
+}
 
-    .divbaocao .col:last-child {
-        border-radius: 0 20px 20px 0;
-    }
+.divbaocao .col:last-child {
+    border-radius: 0 20px 20px 0;
+}
 
-    .divbaocao .col i {
-        font-size: 30px;
-        color: #4FAAFB;
-    }
+.divbaocao .col i {
+    font-size: 30px;
+    color: #4FAAFB;
+}
 
-    .divbaocao .col span {
-        display: block;
-        margin: 8px 0;
-        font-size: 40px;
-        font-weight: bold;
-        color: black;
-    }
+.divbaocao .col span {
+    display: block;
+    margin: 8px 0;
+    font-size: 40px;
+    font-weight: bold;
+    color: black;
+}
 
-    .divbaocao .col .danhmuc {
-        font-size: 16px;
-        font-weight: bold;
-        color: #aaa;
-    }
+.divbaocao .col .danhmuc {
+    font-size: 16px;
+    font-weight: bold;
+    color: #aaa;
+}
 
 
 .divdate {
@@ -303,3 +307,4 @@ a {
     width: 120px;
     margin: 0 8px;
 }
+

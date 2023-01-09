@@ -14,16 +14,17 @@
         </div>
         <div>
             <div class="flex divtimkiemdonhang">
-                <asp:dropdownlist runat="server">
-                    <asp:listitem text="Mã đơn hàng" />
-                    <asp:listitem text="Tên người mua" />
-                    <asp:listitem text="Số điện thoại" />
+                <asp:dropdownlist runat="server" ID="ddlTimKiem">
+                    <asp:listitem Value="1" text="Mã đơn hàng" />
+                    <asp:listitem Value="2" text="Tên người mua" />
+                    <asp:listitem Value="3" text="Số điện thoại" />
                 </asp:dropdownlist>
-                <asp:textbox runat="server" textmode="search" placeholder="Tìm kiếm..."/>
-                <asp:linkbutton text="Tìm kiếm" runat="server" />
+                <asp:textbox runat="server" textmode="search" ID="tbTuKhoa" placeholder="Tìm kiếm..."/>
+                <asp:linkbutton ID="btnTimKiem" OnClick="btnTimKiem_Click" text="Tìm kiếm" runat="server" />
             </div>
         </div>
-    
+        <div>
+            <asp:Label Text="" ID="lbThongBao" style="color: red; text-align:center; font-size: 18px;" runat="server" /></div>
         <div>
             <asp:GridView ID="grDonHang" CssClass="kbhtable" runat="server" AutoGenerateColumns="false">
                 <Columns>

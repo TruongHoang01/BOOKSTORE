@@ -11,7 +11,7 @@
         <div class="listDanhMuc">
             <asp:DataList runat="server" ID="dlDanhMuc1">
                 <ItemTemplate>
-                    <asp:LinkButton Text='<%#Eval("TenDM") %>' CommandArgument='<%#Eval("ID") %>' runat="server" />
+                    <asp:LinkButton OnClick="danhMuc_Click" Text='<%#Eval("TenDM") %>' CommandArgument='<%#Eval("ID") %>' runat="server" />
                 </ItemTemplate>
             </asp:DataList>
         </div>
@@ -21,7 +21,7 @@
         <div>
             <asp:DataList runat="server" ID="dlChuDe">
                 <ItemTemplate>
-                    <asp:LinkButton Text='<%#Eval("TenCD") %>' CommandArgument='<%#Eval("ID") %>' runat="server" />
+                    <asp:LinkButton OnClick="chuDe_Click"  Text='<%#Eval("TenCD") %>' CommandArgument='<%#Eval("ID") %>' runat="server" />
                 </ItemTemplate>
             </asp:DataList>
            
@@ -32,7 +32,7 @@
         <div>
             <asp:DataList runat="server" ID="dlTacGia">
                 <ItemTemplate>
-                    <asp:LinkButton Text='<%#Eval("TenTG") %>' CommandArgument='<%#Eval("ID") %>' runat="server" />
+                    <asp:LinkButton OnClick="chuDe_Click" Text='<%#Eval("TenTG") %>' CommandArgument='<%#Eval("ID") %>' runat="server" />
                 </ItemTemplate>
             </asp:DataList>
            
@@ -44,7 +44,7 @@
         <div>
             <asp:DataList runat="server" ID="dlNhaXuatBan">
                 <ItemTemplate>
-                    <asp:LinkButton Text='<%#Eval("TenNXB") %>' CommandArgument='<%#Eval("ID") %>' runat="server" />
+                    <asp:LinkButton OnClick="nhaXuatBan_Click" Text='<%#Eval("TenNXB") %>' CommandArgument='<%#Eval("ID") %>' runat="server" />
                 </ItemTemplate>
             </asp:DataList>
          

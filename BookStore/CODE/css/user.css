@@ -1,7 +1,8 @@
 ﻿body {
     font-size: 16px;
 }
-.div800px{
+
+.div800px {
     width: 800px;
     margin: 0 auto;
 }
@@ -12,24 +13,27 @@
     padding-top: 14px;
     color: #fff;
 }
+
 .headerflex, .rowflex {
     display: flex;
     justify-content: space-around;
 }
 
-.header .divTimKiem{
+.header .divTimKiem {
     margin-left: 30px;
     line-height: 50px;
 }
-.header .divTimKiem input[type="text"] {
-    width: 500px;
-    height: 40px;
-    padding-left: 8px;
-    outline: none;
-    font-size: 16px;
-    border-radius: 4px;
-    border: 1px solid #000;
-}
+
+    .header .divTimKiem input[type="text"] {
+        width: 500px;
+        height: 40px;
+        padding-left: 8px;
+        outline: none;
+        font-size: 16px;
+        border-radius: 4px;
+        border: 1px solid #000;
+    }
+
 .header .linkheader {
     color: #fff;
     padding: 2px 6px;
@@ -37,20 +41,24 @@
     background-color: #58ABF3;
     opacity: 1;
 }
-.lbtitletimkiem{
+
+.lbtitletimkiem {
     font-size: 20px;
     display: block;
     color: #333;
     margin-bottom: 6px;
 }
+
 .header .linkheader:hover {
     background-color: #3a7ab1;
 }
+
 .header .divTimKiem a:hover {
     background-color: rgb(13, 92, 182, 0.5);
 }
+
 .header .divTimKiem a {
-    color:#fff;
+    color: #fff;
     display: inline-block;
     height: 40px;
     padding: 0 6px;
@@ -60,16 +68,19 @@
     margin-right: 28px;
     border-radius: 4px;
 }
-.header .divTaiKhoan{
+
+.header .divTaiKhoan {
     margin-top: 6px;
     margin-right: 24px;
     position: relative;
 }
-.header .divTaiKhoan .icon{
-   width: 42px;
-   border-radius: 50%;
-   border: 1px solid #000;
-}
+
+    .header .divTaiKhoan .icon {
+        width: 42px;
+        border-radius: 50%;
+        border: 1px solid #000;
+    }
+
 .danhmuccontaikhoan {
     display: none;
     position: absolute;
@@ -79,70 +90,82 @@
     background-color: #fff;
     z-index: 10;
 }
-.danhmuccontaikhoan::before{
-    content: "";
-    display: block;
-    border-width: 10px 10px;
-    border-style: solid;
-    border-color: transparent transparent #fff transparent;
-    position: absolute;
-    top: -20px;
-    left: 20px;
-}
-.danhmuccontaikhoan::after {
-    content: "";
-    display: block;
-    height: 20px;
-    width: 140px;
-    position: absolute;
-    top: -20px;
-}
-.danhmuccontaikhoan a {
-    display: block;
-    color: #333;
-    padding: 8px 16px;
-}
-.divhovertaikhoan:hover{
+
+    .danhmuccontaikhoan::before {
+        content: "";
+        display: block;
+        border-width: 10px 10px;
+        border-style: solid;
+        border-color: transparent transparent #fff transparent;
+        position: absolute;
+        top: -20px;
+        left: 20px;
+    }
+
+    .danhmuccontaikhoan::after {
+        content: "";
+        display: block;
+        height: 20px;
+        width: 140px;
+        position: absolute;
+        top: -20px;
+    }
+
+    .danhmuccontaikhoan a {
+        display: block;
+        color: #333;
+        padding: 8px 16px;
+    }
+
+.divhovertaikhoan:hover {
     cursor: pointer;
 }
-.divhovertaikhoan:hover .danhmuccontaikhoan {
-    display: block;
-}
+
+    .divhovertaikhoan:hover .danhmuccontaikhoan {
+        display: block;
+    }
+
 .danhmuccontaikhoan a:hover {
     background-color: #f5f6f4;
 }
+
 .header .divGioHang {
     margin-top: 6px;
 }
-.header .divDangKyBanHang{
+
+.header .divDangKyBanHang {
     line-height: 32px;
-    height:32px;
+    height: 32px;
     float: left;
 }
-.header .divDangKyBanHang a{
-    margin-right:20px;
-}
 
-.header .divDangKyBanHang .icon {
-    width: 14px;
-}
+    .header .divDangKyBanHang a {
+        margin-right: 20px;
+    }
+
+    .header .divDangKyBanHang .icon {
+        width: 14px;
+    }
+
 .dialog-body {
     margin-top: 18vh;
     border-radius: 4px;
-   
 }
+
 .dialog-body_dangky-dangnhap {
     margin-top: 18vh;
     border-radius: 4px;
     width: 400px;
     height: 400px;
 }
+
 .dialog-body_xacnhanemail {
     margin-top: 18vh;
     border-radius: 4px;
     width: 600px;
     height: 300px;
 }
+
 .dialog-body_danhgia {
     margin-top: 60px;
     border-radius: 4px;
@@ -151,69 +174,82 @@
     padding: 10px 20px;
     overflow-y: auto;
 }
+
 .FormDangKy {
     text-align: center;
     padding: 20px;
 }
-.FormDangKy .title {
-    font-size: 24px;
-    font-weight: 600;
-    margin-bottom: 16px;
-}
-.FormDangKy input{
-    width: 90%;
-    margin-bottom:  16px;
-    font-size: 16px;
-    padding: 6px 8px;
-}
-.FormDangKy .button {
-    display: block;
-    margin: 16px auto 0;
-    font-size: 16px;
-    padding: 8px;
-    background-color: #1A94FF;
-    color: #fff;
-    margin-bottom: 12px;
-}
-.FormDangKy .btnDangKy{
-    width: 90%;
-}
 
-.FormDangKy .lbThongBao{
-    color: red;
-    font-size: 16px;
-}
-.FormXacNhanGmail{
+    .FormDangKy .title {
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 16px;
+    }
+
+    .FormDangKy input {
+        width: 90%;
+        margin-bottom: 16px;
+        font-size: 16px;
+        padding: 6px 8px;
+    }
+
+    .FormDangKy .button {
+        display: block;
+        margin: 16px auto 0;
+        font-size: 16px;
+        padding: 8px;
+        background-color: #1A94FF;
+        color: #fff;
+        margin-bottom: 12px;
+    }
+
+    .FormDangKy .btnDangKy {
+        width: 90%;
+    }
+
+    .FormDangKy .lbThongBao {
+        color: red;
+        font-size: 16px;
+    }
+
+.FormXacNhanGmail {
     padding: 20px;
 }
-.FormXacNhanGmail p{
-    padding: 10px;
-    font-size: 18px;
-    color: #333;
-    background-color: aqua;
-    border-radius: 6px;
-}
-.div + .div{
+
+    .FormXacNhanGmail p {
+        padding: 10px;
+        font-size: 18px;
+        color: #333;
+        background-color: aqua;
+        border-radius: 6px;
+    }
+
+.div + .div {
     margin-top: 16px;
 }
-.FormXacNhanGmail input[type="text"]{
+
+.FormXacNhanGmail input[type="text"] {
     width: 60%;
     padding: 4px 8px;
     font-size: 18px;
     margin-bottom: 4px;
 }
+
 .FormXacNhanGmail .btnxacnhan {
     padding: 8px 14px;
     background-color: #0093D6;
     color: #fff;
     border-radius: 4px;
 }
-.FormXacNhanGmail span{
+
+.FormXacNhanGmail span {
     color: red;
 }
+
 .FormXacNhanGmail .linkbaoloi {
     color: #0093D6;
 }
+
 .FormXacNhanGmail .btnguilaima {
     padding: 5px 12px;
     background-color: #fff;
@@ -221,6 +257,7 @@
     border-radius: 4px;
     border: 1px solid #0093D6;
 }
+
 .dialog-body .imgClose {
     position: absolute;
     top: -8px;
@@ -238,25 +275,28 @@
     border: 1px solid #ccc;
     color: #fff;
 }
+
 .trangChu table {
     border: 1px solid #ccc;
     margin-bottom: 12px;
     width: 100%;
+}
 
-}
-.trangChu table td {
+    .trangChu table td {
+    }
 
-}
-.trangChu table td a {
-    color: #000;
-    display: block;
-    padding: 4px 18px;
-}
-.trangChu table td a:hover {
-    background-color: #ccc;
-}
-.mt12{
-    margin-top:12px;
+        .trangChu table td a {
+            color: #000;
+            display: block;
+            padding: 4px 18px;
+        }
+
+            .trangChu table td a:hover {
+                background-color: #ccc;
+            }
+
+.mt12 {
+    margin-top: 12px;
 }
 
 /* ***************************************
@@ -325,93 +365,107 @@
     position: relative;
 }
 
-.footer{
+.footer {
     width: 90%;
     margin: 0 auto;
     margin-top: 200px;
 }
-.footer table{
-    width: 100%;
-}
-.footer table td{
-    width: 25%;
-}
-.footer table th {
-   text-align: left;
-}
-.footer  a{
-    color: #000;
-}
-.footer a:hover{
-    color: blue;
-}
+
+    .footer table {
+        width: 100%;
+    }
+
+        .footer table td {
+            width: 25%;
+        }
+
+        .footer table th {
+            text-align: left;
+        }
+
+    .footer a {
+        color: #000;
+    }
+
+        .footer a:hover {
+            color: blue;
+        }
+
 .imgFooter {
     margin: 7px 44px 50px;
 }
-.dangKyBanHang{
+
+.dangKyBanHang {
     width: 100%;
 }
-.dangKyBanHang h1{
-    margin-top: 4px;
-}
- .imgBookStore{
+
+    .dangKyBanHang h1 {
+        margin-top: 4px;
+    }
+
+.imgBookStore {
     width: 500px;
     height: 500px;
 }
 
-.tableDangKy{
+.tableDangKy {
     margin-left: 60px;
     margin-top: 88px;
 }
 
-.tableDangKy .head{
-    font-size: 18px;
-    color: #000;
-    font-weight: bold;
-    margin-bottom: 8px;
-}
-.tableDangKy .lable{
-    font-size: 16px;
-    color: #000;
-    margin-bottom: 2px;
-    margin-top: 8px;
-    font-weight: 400;
-}
+    .tableDangKy .head {
+        font-size: 18px;
+        color: #000;
+        font-weight: bold;
+        margin-bottom: 8px;
+    }
 
-.tableDangKy input[type="text"]{
-    font-size: 16px;
-    padding: 2px 4px;
-    width: 400px;
-}
-.tableDangKy a {
-    display: block;
-    margin-top: 30px;
-    font-size: 16px;
-    padding: 6px 0;
-    background-color: #1BA8FF;
-    width: 60%;
-    color: #FFF;
+    .tableDangKy .lable {
+        font-size: 16px;
+        color: #000;
+        margin-bottom: 2px;
+        margin-top: 8px;
+        font-weight: 400;
+    }
 
-    text-align:center;
-}
-.divbutton{
+    .tableDangKy input[type="text"] {
+        font-size: 16px;
+        padding: 2px 4px;
+        width: 400px;
+    }
+
+    .tableDangKy a {
+        display: block;
+        margin-top: 30px;
+        font-size: 16px;
+        padding: 6px 0;
+        background-color: #1BA8FF;
+        width: 60%;
+        color: #FFF;
+        text-align: center;
+    }
+
+.divbutton {
     display: flex;
     justify-content: space-evenly;
 }
 
-.rowflex .row1{
-    width: 360px ;
+.rowflex .row1 {
+    width: 360px;
     text-align: justify;
 }
-.row1 .title{
+
+.row1 .title {
     color: #000;
     font-weight: bold;
-    margin-bottom:4px;
+    margin-bottom: 4px;
 }
-.row1 img{
+
+.row1 img {
     width: 240px;
     height: 240px;
 }
+
 .lableCapCha {
     float: right;
     display: inline-block;
@@ -421,9 +475,10 @@
     margin-left: 16px;
     background-image: url('../../Image/bg6.png');
 }
-.lableCapCha::after{
-    float:unset;
-}
+
+    .lableCapCha::after {
+        float: unset;
+    }
 
 .FormDangKy .lableCapCha {
     height: 36px;
@@ -437,24 +492,23 @@
     background-color: #fff;
     padding: 10px;
     position: relative;
-
 }
 
-.itemsp:hover,
-.itemsp:hover .itemsp-img {
-    background-color: rgb(245, 239, 239);
-}
+    .itemsp:hover,
+    .itemsp:hover .itemsp-img {
+        background-color: rgb(245, 239, 239);
+    }
 
 .itemsp-img {
     text-align: center;
 }
 
-.itemsp-img input[type="image"] {
-    width: 170px;
-    height: 280px;
-    object-fit: contain;
-    margin: 0 auto;
-}
+    .itemsp-img input[type="image"] {
+        width: 170px;
+        height: 280px;
+        object-fit: contain;
+        margin: 0 auto;
+    }
 
 .itemsp-ten {
     white-space: nowrap;
@@ -480,7 +534,7 @@
 .itemsp-gia {
     display: inline-block;
     text-align: center;
-    margin-bottom:6px;
+    margin-bottom: 6px;
 }
 
 
@@ -517,40 +571,48 @@
     padding: 6px 0;
     border: 2px solid red;
 }
-.itemsp-btngiohang:hover{
-    background-color:red;
-    color: #fff;
-}
-.giaodiensanpham{
+
+    .itemsp-btngiohang:hover {
+        background-color: red;
+        color: #fff;
+    }
+
+.giaodiensanpham {
     margin: 10px 6px;
 }
-.giaodiensanpham .tendanhmuc {
-    font-size: 30px;
-    color: #58ABF3;
-    font-weight: bold;
-}
-.giaodiensanpham .btnxemtatca {
-    display: inline-block;
-    margin: 0 auto;
-    padding: 6px 12px;
-    background-color: #58ABF3;
-    color: #fff;
-    z-index: 1;
-}
-.giaodiensanpham .tbsanpham{
-    width: 100%;
-}
-.giaodiensanpham .tbsanpham td {
-    padding-left: 10px;
-}
+
+    .giaodiensanpham .tendanhmuc {
+        font-size: 30px;
+        color: #58ABF3;
+        font-weight: bold;
+    }
+
+    .giaodiensanpham .btnxemtatca {
+        display: inline-block;
+        margin: 0 auto;
+        padding: 6px 12px;
+        background-color: #58ABF3;
+        color: #fff;
+        z-index: 1;
+    }
+
+    .giaodiensanpham .tbsanpham {
+        width: 100%;
+    }
+
+        .giaodiensanpham .tbsanpham td {
+            padding-left: 10px;
+        }
+
 .divxemtatca {
     display: flex;
     justify-content: center;
 }
 
-.relative{
+.relative {
     position: relative;
 }
+
 .hr {
     position: absolute;
     top: -15px;
@@ -560,140 +622,161 @@
     background-color: #58ABF3;
     height: 2px;
 }
-.DuongDan{
+
+.DuongDan {
     height: 40px;
     background-color: #ccc;
 }
+
 .ChiTietSanPham {
     background-color: #F5F3F3;
     padding: 20px 6px;
 }
-.ChiTietSanPham .DivAnhSP {
-    display: flex;
-    align-items: center;
-    border-radius: 4px;
-    border: 1px solid #58ABF3;
-    background-color: #87c7fc;
-    text-align: center;
-    height: 400px;
-    flex: 3;
-}
-.ChiTietSanPham .flex, .TaiKhoan .flex{
-    width: 100%;
-    justify-content: space-between;
-    display: flex;
-}
-.ChiTietSanPham .ChiTiet {
-    margin-left: 6px;
-    background-color: #fff;
-    margin-right: 6px;
-    border: 1px solid #58ABF3;
-    flex: 5;
-    border-radius: 4px;
-    padding-left: 10px;
-}
-.ChiTietSanPham .CuaHang {
-    flex: 2;
-}
-.ChiTietSanPham .DivAnhSP img {
-    margin: 0 auto;
-    width: 80%;
-    height: auto;
-    object-fit: fill;
-}
-.ChiTietSanPham .TenSanPham {
-    font-size: 23px;
-    color: #006195;
-    text-transform: capitalize;
-}
-.ChiTietSanPham .TacGia {
-    color: #1A94FF;
-    font-size: 16px;
-}
-.ChiTietSanPham .GiaBan {
-    font-size: 24px;
-    color: red;
-    font-weight: bold;
-}
-.ChiTiet{
+
+    .ChiTietSanPham .DivAnhSP {
+        display: flex;
+        align-items: center;
+        border-radius: 4px;
+        border: 1px solid #58ABF3;
+        background-color: #87c7fc;
+        text-align: center;
+        height: 400px;
+        flex: 3;
+    }
+
+    .ChiTietSanPham .flex, .TaiKhoan .flex {
+        width: 100%;
+        justify-content: space-between;
+        display: flex;
+    }
+
+    .ChiTietSanPham .ChiTiet {
+        margin-left: 6px;
+        background-color: #fff;
+        margin-right: 6px;
+        border: 1px solid #58ABF3;
+        flex: 5;
+        border-radius: 4px;
+        padding-left: 10px;
+    }
+
+    .ChiTietSanPham .CuaHang {
+        flex: 2;
+    }
+
+    .ChiTietSanPham .DivAnhSP img {
+        margin: 0 auto;
+        width: 80%;
+        height: auto;
+        object-fit: fill;
+    }
+
+    .ChiTietSanPham .TenSanPham {
+        font-size: 23px;
+        color: #006195;
+        text-transform: capitalize;
+    }
+
+    .ChiTietSanPham .TacGia {
+        color: #1A94FF;
+        font-size: 16px;
+    }
+
+    .ChiTietSanPham .GiaBan {
+        font-size: 24px;
+        color: red;
+        font-weight: bold;
+    }
+    .ChiTietSanPham .button{
+        margin-top: 20px;
+    }
+.ChiTiet {
     padding-right: 20px;
     position: relative;
 }
-.ChiTiet p {
-    font-size: 15px;
-    color: #3c3b3b;
-    line-height: 30px;
-}
-.TietKiem span, .TinhTrang span{
+
+    .ChiTiet p {
+        font-size: 15px;
+        color: #3c3b3b;
+        line-height: 30px;
+    }
+
+.TietKiem span, .TinhTrang span {
     color: red;
 }
-.ChiTiet .The{
+
+.ChiTiet .The {
     color: #333;
     line-height: 20px;
 }
-.SoLuong {
-    display: flex;
-    flex-wrap: nowrap;
-}
-.SoLuong .btnsoluong {
-    padding: 1px 7px 1px;
-    background-color: #58ABF3;
-    font-size: 18px;
-    font-weight: 400;
-    border: 1px solid #333;
-    opacity: 0.8;
-}
-.SoLuong .btnsoluong:hover {
-    opacity: 1;
-}
 
-.SoLuong .btnsoluong:first-child {
-    padding: 1px 10px 1px;
-    margin-right: -4px;
-}
-.SoLuong input[type="text"] {
-    text-align: center;
-    width: 40px;
-    font-size: 18px;
-    margin-right: -6px;
-}
+    .SoLuong .btnsoluong {
+        padding: 1px 7px 1px;
+        background-color: #58ABF3;
+        font-size: 18px;
+        font-weight: 400;
+        border: 1px solid #333;
+        opacity: 0.8;
+    }
 
-.ChiTiet .button input[type='submit']{
+        .SoLuong .btnsoluong:hover {
+            opacity: 1;
+        }
+
+        .SoLuong .btnsoluong:first-child {
+            padding: 1px 10px 1px;
+            margin-right: -4px;
+        }
+
+    .SoLuong input[type="text"] {
+        text-align: center;
+        width: 40px;
+        font-size: 18px;
+        margin-right: -6px;
+    }
+
+.ChiTiet .button a{
     border: 1px solid red;
     border-radius: 10px;
     padding: 14px;
     text-align: center;
     font-size: 20px;
- 
+    display: inline-block;
 }
+
 .ChiTiet .bottom {
     position: absolute;
     left: 10px;
     bottom: 10px;
 }
-.ChiTiet .button input[type='submit']:first-child {
+
+.ChiTiet .button a:first-child {
     background-color: #FFF;
     color: red;
     margin-right: 20px;
 }
-.ChiTiet .button input[type='submit']:first-child:hover{
+
+.ChiTiet .button a:first-child:hover {
     color: #fff;
-    background-color:red;
+    background-color: red;
 }
-.ChiTiet .button input[type='submit']:last-child {
+
+.ChiTiet .button a:last-child {
     background-color: red;
     color: #fff;
     opacity: 0.8;
 }
-.CuaHang .divflex, .TaiKhoan .divflex{
+
+.CuaHang .divflex, .TaiKhoan .divflex {
     display: flex;
     justify-content: flex-start;
     align-content: center;
- 
 }
-.ChiTiet .button input[type='submit']:last-child:hover {
+
+.ChiTiet .button a:last-child:hover {
     opacity: 1;
 }
+
 .CuaHang {
     padding: 10px;
     border: 1px solid #58ABF3;
@@ -701,39 +784,47 @@
     height: 400px;
     background-color: #fff;
 }
-.CuaHang .divHinhAnh img {
-    width: 60px;
-    height: 60px;
-    margin-right: 12px;
-}
- .CuaHang .divTenCuaHang span{
-     line-height: 60px;
-     font-size: 20px;
-     font-weight: 600;
-     color: #777;
- }
-.CuaHang .divThongKe .star {
-    color: yellow;
-}
-.CuaHang .Button {
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-.CuaHang .Button a {
-    display: inline-block;
-    min-width: 100px;
-    padding: 8px 10px;
-    border-radius: 4px;
-    border: 1px solid #58ABF3;
-    color: #58ABF3;
-}
-.CuaHang .Button a:hover{
-    background-color: #e1f0f8;
-}
-.CuaHang .divUuDai i {
-    color: #58ABF3;
-    font-size: 20px;
-}
+
+    .CuaHang .divHinhAnh img {
+        width: 60px;
+        height: 60px;
+        margin-right: 12px;
+    }
+
+    .CuaHang .divTenCuaHang span {
+        line-height: 60px;
+        font-size: 20px;
+        font-weight: 600;
+        color: #777;
+    }
+
+    .CuaHang .divThongKe .star {
+        color: yellow;
+    }
+
+    .CuaHang .Button {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+        .CuaHang .Button a {
+            display: inline-block;
+            min-width: 100px;
+            padding: 8px 10px;
+            border-radius: 4px;
+            border: 1px solid #58ABF3;
+            color: #58ABF3;
+        }
+
+            .CuaHang .Button a:hover {
+                background-color: #e1f0f8;
+            }
+
+    .CuaHang .divUuDai i {
+        color: #58ABF3;
+        font-size: 20px;
+    }
+
 .divThongTinChiTiet {
     margin-top: 20px;
     background-color: #fff;
@@ -741,32 +832,37 @@
     border: 1px solid #58ABF3;
     border-radius: 4px;
 }
-.divThongTinChiTiet h1{
-    font-size: 18px;
-    font-weight: normal;
-    color: black;
-    padding: 8px 0;
-}
-.divThongTinChiTiet p {
-    font-size: 16px;
-}
-.divThongTinChiTiet p .span1 {
-    display: inline-block;
-    color: #333;
-    padding: 12px 20px;
-    min-width: 200px;
-    background-color: #6dc3f6;
-    font-weight: 500;
-    border: 1px solid #ccc;
-}
-.divThongTinChiTiet p span:last-child {
-    display: inline-block;
-    background-color: #edf9fb;
-    font-weight: 300;
-    border: 1px solid #ccc;
-    padding: 12px 20px;
-    width: calc(100% - 204px);
-}
+
+    .divThongTinChiTiet h1 {
+        font-size: 18px;
+        font-weight: normal;
+        color: black;
+        padding: 8px 0;
+    }
+
+    .divThongTinChiTiet p {
+        font-size: 16px;
+    }
+
+        .divThongTinChiTiet p .span1 {
+            display: inline-block;
+            color: #333;
+            padding: 12px 20px;
+            min-width: 200px;
+            background-color: #6dc3f6;
+            font-weight: 500;
+            border: 1px solid #ccc;
+        }
+
+        .divThongTinChiTiet p span:last-child {
+            display: inline-block;
+            background-color: #edf9fb;
+            font-weight: 300;
+            border: 1px solid #ccc;
+            padding: 12px 20px;
+            width: calc(100% - 204px);
+        }
+
 .divSanPhamCungLoai {
     background-color: #fff;
     margin-top: 20px;
@@ -774,11 +870,12 @@
     border-radius: 4px;
     border: 1px solid #6dc3f6;
 }
-.divSanPhamCungLoai h1 {
-    font-size: 20px;
-    color: #333;
-    padding: 8px 0;
-}
+
+    .divSanPhamCungLoai h1 {
+        font-size: 20px;
+        color: #333;
+        padding: 8px 0;
+    }
 
 .divthongbao {
     top: 50%;
@@ -796,110 +893,132 @@
     animation: animat 2s linear;
     animation-iteration-count: 1;
 }
-.divthongbao img{
-    width: 100px;
-    height: 100px;
-}
-.divthongbao p{
-    color: #fff;
-    margin-top: 20px;
-}
 
-@keyframes animat{
-    0%{
+    .divthongbao img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .divthongbao p {
+        color: #fff;
+        margin-top: 20px;
+    }
+
+@keyframes animat {
+    0% {
         opacity: 0;
     }
-    30%{
+
+    30% {
         opacity: 0.9;
     }
-    60%{
+
+    60% {
         opacity: 0;
     }
 }
-.TaiKhoan {
-    background-color: #e9e9e9   ;
-    padding: 20px 10px;
-}
-.TaiKhoan .CotTrai {
-    background-color: #fff;
-    border: 1px solid #6dc3f6;
-    padding: 20px 10px;
-    border-radius: 4px;
-    margin-right: 12px;
-    height: 200px;
-}
-.TaiKhoan .CotTrai img{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-right: 10px;
-}
-.TaiKhoan .CotTrai .divChinhSua {
-    font-size: 16px;
-    color: #333;
-}
-.TaiKhoan .CotTrai .divChinhSua a {
-    font-size: 14px;
-    color: #333;
-}
-.TaiKhoan .link{
-    display: block;
-    padding: 8px 20px;
-    color: #333;
 
+.TaiKhoan {
+    background-color: #e9e9e9;
+    padding: 20px 10px;
 }
-.TaiKhoan .link:hover{
-    background-color: #d5f4f7;
-}
-.TaiKhoan .link i {
-    color: #58ABF3;
-    margin-right: 6px;
-}
-.TaiKhoan .CotPhai {
-    background-color: #fff;
-    padding: 20px;
-}
-.CapNhatTaiKhoan .DivHoSoCuaToi{
+
+    .TaiKhoan .CotTrai {
+        background-color: #fff;
+        border: 1px solid #6dc3f6;
+        padding: 20px 10px;
+        border-radius: 4px;
+        margin-right: 12px;
+        height: 200px;
+    }
+
+        .TaiKhoan .CotTrai img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .TaiKhoan .CotTrai .divChinhSua {
+            font-size: 16px;
+            color: #333;
+        }
+
+            .TaiKhoan .CotTrai .divChinhSua a {
+                font-size: 14px;
+                color: #333;
+            }
+
+    .TaiKhoan .link {
+        display: block;
+        padding: 8px 20px;
+        color: #333;
+    }
+
+        .TaiKhoan .link:hover {
+            background-color: #d5f4f7;
+        }
+
+        .TaiKhoan .link i {
+            color: #58ABF3;
+            margin-right: 6px;
+        }
+
+    .TaiKhoan .CotPhai {
+        background-color: #fff;
+        padding: 20px;
+    }
+
+.CapNhatTaiKhoan .DivHoSoCuaToi {
     padding-bottom: 12px;
     border-bottom: 1px solid #ccc;
     margin-bottom: 20px;
 }
-.CapNhatTaiKhoan .DivHoSoCuaToi h1 {
-    font-size: 20px;
-    color: #333;
-    font-weight: 500;
-    padding-bottom: 8px;
-}
+
+    .CapNhatTaiKhoan .DivHoSoCuaToi h1 {
+        font-size: 20px;
+        color: #333;
+        font-weight: 500;
+        padding-bottom: 8px;
+    }
+
 .CapNhatTaiKhoan .divAnhDaiDien {
     width: 180px;
     height: 260px;
 }
-.CapNhatTaiKhoan .divAnhDaiDien{
+
+.CapNhatTaiKhoan .divAnhDaiDien {
     text-align: center;
 }
-.CapNhatTaiKhoan .divAnhDaiDien .AnhDaiDien{
-    width: 180px;
-    height: auto;
-    border-radius: 50%;
-}
-.CapNhatTaiKhoan .row{
+
+    .CapNhatTaiKhoan .divAnhDaiDien .AnhDaiDien {
+        width: 180px;
+        height: auto;
+        border-radius: 50%;
+    }
+
+.CapNhatTaiKhoan .row {
     margin: 10px 0;
 }
-.CapNhatTaiKhoan .row span {
-    min-width: 100px;
-    font-size: 16px;
-    display: inline-block;
-    padding: 4px;
-}
-.CapNhatTaiKhoan .row input[type="text"] {
-    font-size: 16px;
-    width: 300px;
-    padding: 4px;
-}
-.CapNhatTaiKhoan .row input[type="radio"]{
-    margin-right: 4px;
-    margin-left: 20px;
-}
+
+    .CapNhatTaiKhoan .row span {
+        min-width: 100px;
+        font-size: 16px;
+        display: inline-block;
+        padding: 4px;
+    }
+
+    .CapNhatTaiKhoan .row input[type="text"] {
+        font-size: 16px;
+        width: 300px;
+        padding: 4px;
+    }
+
+    .CapNhatTaiKhoan .row input[type="radio"] {
+        margin-right: 4px;
+        margin-left: 20px;
+    }
+
 .CapNhatTaiKhoan input[type="submit"] {
     padding: 6px 12px;
     background-color: #58ABF3;
@@ -909,72 +1028,86 @@
     border-radius: 2px;
     opacity: 0.8;
 }
-.CapNhatTaiKhoan input[type="submit"]:hover{
-    opacity: 1;
-}
+
+    .CapNhatTaiKhoan input[type="submit"]:hover {
+        opacity: 1;
+    }
+
 .DonHang {
     margin: -20px;
     background-color: #E9E9E9;
     border: 1px solid #E9E9E9;
 }
-.DonHang .divlink {
-    display: flex;
-    background-color: #fff;
-    margin-bottom: 20px;
-}
-.DonHang .divlink a {
-    display: inline-block;
-    font-size: 18px;
-    color: #333;
-    padding: 10px 30px;
-}
-.DonHang .divlink a:hover{
-    background-color: #ccc;
-    color: #fff;
-}
-.ThongTin{
+
+    .DonHang .divlink {
+        display: flex;
+        background-color: #fff;
+        margin-bottom: 20px;
+    }
+
+        .DonHang .divlink a {
+            display: inline-block;
+            font-size: 18px;
+            color: #333;
+            padding: 10px 30px;
+        }
+
+            .DonHang .divlink a:hover {
+                background-color: #ccc;
+                color: #fff;
+            }
+
+.ThongTin {
     background-color: #fff;
     border-radius: 12px;
     padding: 0 20px;
     margin-bottom: 20px;
 }
- .DivCuaHang{
+
+.DivCuaHang {
     padding: 4px;
     border-bottom: 1px solid #ccc;
 }
+
 .ThongTin h1 {
     font-size: 18px;
     color: #333;
     padding: 8px;
-
 }
- .ThongTin .AnhSanPham{
+
+.ThongTin .AnhSanPham {
     width: 100px;
     height: 100px;
 }
- .ThongTin .DivChiTietDonHang {
+
+.ThongTin .DivChiTietDonHang {
     padding-top: 12px;
     border-bottom: 1px solid #ccc;
     margin-bottom: 8px;
 }
- .TenSanPham{
-     font-size: 18px;
+
+.TenSanPham {
+    font-size: 18px;
     font-weight: bold;
     color: #333;
 }
+
 .DivChiTietDonHang .chitiet {
     font-size: 14px;
     color: #30b3ef;
 }
+
 .center {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+
 .DonHang .flex-end {
     display: flex;
     justify-content: flex-end
 }
+
 .DonHang .btnHuy {
     padding: 6px 12px;
     background-color: red;
@@ -984,11 +1117,13 @@
     margin: 8px 0 12px;
     font-size: 18px;
 }
-.DonHang .thanhtien{
+
+.DonHang .thanhtien {
     color: red;
     font-size: 20px;
     font-weight: bold;
 }
+
 .DonHang .Gia span:first-child {
     font-size: 14px;
     color: #ccc;
@@ -1009,9 +1144,9 @@
     resize: none;
 }
 
-.textarea textarea:focus {
-    border-color: #444;
-}
+    .textarea textarea:focus {
+        border-color: #444;
+    }
 
 .btn {
     height: 45px;
@@ -1019,24 +1154,24 @@
     margin: 15px 0;
 }
 
-.btn input[type="submit"] {
-    height: 100%;
-    width: 100%;
-    border: 1px solid #444;
-    outline: none;
-    background: #26afee;
-    opacity: 0.8;
-    color: #fff;
-    font-size: 17px;
-    font-weight: 500;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
+    .btn input[type="submit"] {
+        height: 100%;
+        width: 100%;
+        border: 1px solid #444;
+        outline: none;
+        background: #26afee;
+        opacity: 0.8;
+        color: #fff;
+        font-size: 17px;
+        font-weight: 500;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
 
-.btn input[type="submit"]:hover {
-    opacity: 1;
-}
+        .btn input[type="submit"]:hover {
+            opacity: 1;
+        }
 
 
 .Star {
@@ -1063,22 +1198,26 @@
     display: flex;
     justify-content: space-between;
 }
+
     .GioHang .divheader {
         margin-top: 20px;
         background-color: #bdc6ce26;
         padding: 10px;
     }
-.GioHang .checkbox input[type="checkbox"] {
-    width: 20px;
-    height: 20px;
-    margin-right: 20px;
-}
-.GioHang .checkbox label{
-    font-size: 20px;
-}
-.GioHang .title span{
-    margin-right: 24px;
-}
+
+    .GioHang .checkbox input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+        margin-right: 20px;
+    }
+
+    .GioHang .checkbox label {
+        font-size: 20px;
+    }
+
+    .GioHang .title span {
+        margin-right: 24px;
+    }
 
     .GioHang .divchitiet {
         width: 100%;
@@ -1086,56 +1225,66 @@
         padding: 6px 6px 6px 12px;
         border-radius: 6px;
     }
+
     .GioHang .divThongTin {
         background-color: #bdc6ce26;
         margin-top: 20px;
     }
-.GioHang .danhsach_sc{
-    width: 100%;
-    height: 600px;
-    overflow-y: auto;
-}
+
+    .GioHang .danhsach_sc {
+        width: 100%;
+        height: 600px;
+        overflow-y: auto;
+    }
+
     .GioHang .footergh {
         margin-left: 10px;
         margin-top: 20px;
-        height: 200px;
+        height: 250px;
         background-color: #6dc3f6;
         box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
         padding: 6px 10px;
         border-radius: 20px;
     }
+
         .GioHang .footergh .thanhtoan {
             border-radius: 20px;
             background-color: #FFF;
             padding: 10px;
         }
+
             .GioHang .footergh .thanhtoan .margin-tong {
                 margin-top: 2px;
                 padding-top: 10px;
                 border-top: 1px solid #ccc;
             }
+
             .GioHang .footergh .thanhtoan p {
                 margin-bottom: 10px;
                 text-align: center;
                 background-color: #fff;
                 display: inline-block;
             }
-        .GioHang .footergh .thanhtoan .total-p {
-            color: #000;
-            opacity: 0.8;
-        }
-        .GioHang .footergh .thanhtoan p.tamtinh {
-            font-size: 14px;
-        }
-        .GioHang .footergh .thanhtoan p.thanhtien{
-        
-            color: red;
-            font-size: 16px;
-            font-weight: 600;
-        }
+
+            .GioHang .footergh .thanhtoan .total-p {
+                color: #000;
+                opacity: 0.8;
+            }
+
+            .GioHang .footergh .thanhtoan p.tamtinh {
+                font-size: 14px;
+            }
+
+            .GioHang .footergh .thanhtoan p.thanhtien {
+                color: red;
+                font-size: 16px;
+                font-weight: 600;
+            }
+
         .GioHang .footergh .btn-mua {
             width: 100%;
         }
+
             .GioHang .footergh .btn-mua input {
                 margin-top: 6px;
                 color: aqua;
@@ -1153,21 +1302,26 @@
                 transition: .1s;
                 border-radius: 8px;
             }
+
                 .GioHang .footergh .btn-mua input:hover {
-                    opacity:1;
+                    opacity: 1;
                 }
-                .column {
-                    margin: 14px;
-                }
-                .GioHang .giagoc{
-                    text-decoration: line-through;
-                    font-size: 14px;
-                }
-                .GioHang .giakm {
-                    color: red;
-                    font-size: 18px;
-                    font-weight: bold;
-                }
+
+.column {
+    margin: 14px;
+}
+
+.GioHang .giagoc {
+    text-decoration: line-through;
+    font-size: 14px;
+}
+
+.GioHang .giakm {
+    color: red;
+    font-size: 18px;
+    font-weight: bold;
+}
+
 .divThongTin .checkbox input[type="checkbox"] {
     width: 16px;
     height: 16px;
@@ -1193,44 +1347,95 @@
     width: 32px;
     height: 32px;
 }
-.dialog-body_danhgia h1{
+
+.dialog-body_danhgia h1 {
     text-align: center;
     color: #333;
     font-size: 24px;
     font-weight: 400;
 }
-.dialog-body_danhgia .divflex{
+
+.dialog-body_danhgia .divflex {
     margin-bottom: 12px;
 }
-.dialog-body_danhgia img{
+
+.dialog-body_danhgia img {
     width: 80px;
     height: 80px;
     margin-right: 10px;
 }
-.dialog-body_danhgia .tensach{
+
+.dialog-body_danhgia .tensach {
     font-size: 20px;
-    
 }
+
 .dialog-body_danhgia .tacgia {
     font-size: 16px;
     color: #494444;
     margin-bottom: 4px;
 }
+
 .dialog-body_danhgia .star {
     width: 100%;
     display: flex;
     justify-content: center;
     margin: 10px auto;
 }
+
 .dialog-body_danhgia .row {
-    background-color:#fff;
+    background-color: #fff;
     padding: 8px 8px;
     width: 100%;
     margin: 8px;
     border-radius: 4px;
-
 }
-.dialog-body_danhgia textarea{
+
+.dialog-body_danhgia textarea {
     width: 100%;
     padding: 6px;
 }
+
+.dathang input[type="text"], .dathang textarea {
+    font-size: 14px;
+    width: 100%;
+    padding: 6px 4px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.thongbaochitiet {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #08070773;
+    display: none;
+
+}
+.thongbaochitiet .thongbaodiv {
+    width: 300px;
+    height: 150px;
+    background-color: #000;
+    margin: 0 auto;
+    border-radius: 6px;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+  
+}
+.thongbaochitiet .thongbaodiv img{
+    width: 80px;
+    height: 80px;
+    margin: 12px;
+}
+.thongbaochitiet .thongbaodiv p{
+    color: #fff;
+}
+
+

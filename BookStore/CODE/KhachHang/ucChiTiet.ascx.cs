@@ -90,10 +90,6 @@ namespace BookStore.CODE.KhachHang
                 string idtk = Session["idtk"].ToString();
                 bool check = dbGioHang.ThemVaoGioHang(idtk, idSP, soLuong);
             }
-            else
-            {
-                Response.Redirect("TrangChu.aspx?modul=ChiTiet?login=1");
-            }
 
         }
 

@@ -36,6 +36,9 @@ namespace BookStore.CODE.KhachHang
                 case "DangKyBanHang":
                     plUserControl.Controls.Add(LoadControl("ucDangKyBanHang.ascx"));
                     break;
+                case "DatHang":
+                    plUserControl.Controls.Add(LoadControl("ucDatHang.ascx"));
+                    break;
                 default:
                     plUserControl.Controls.Add(LoadControl("ucTrangChu.ascx"));
                     break;

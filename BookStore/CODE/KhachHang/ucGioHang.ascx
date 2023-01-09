@@ -24,6 +24,7 @@
                                 <ItemTemplate>
                                     <div class='center DivChiTietDonHang'>
                                         <div class=" divflex divchitiet">
+                                            <asp:HiddenField ID="hfID" Value='<%#Eval("ID") %>' runat="server" />
                                             <div class="center checkbox">
                                                  <asp:CheckBox ID="cbkSanPham" AutoPostBack="true" Text="" runat="server" />
                                                 <div>
@@ -48,7 +49,7 @@
                                                         <asp:TextBox ID="tbsoluong" Text="1" runat="server" />
                                                         <asp:Button  CssClass="btnsoluong btntang button"  OnClick="btnTangSL_Click" ID="btnTangSL" Text="+" runat="server"/>
                                                 </div>
-                                                <div  class=" column Gia giakm"><span><%#Eval("ThanhTien") %>đ</span></div>
+                                                <div  class="column Gia giakm" style="min-width: 80px; text-align: right"><span><%#Eval("ThanhTien") %>đ</span></div>
                                                 <div class="column ThaoTac"> <asp:ImageButton ImageUrl="../../Image/delete.png" Width="40" Height="40" runat="server" /></div>
                                             </div>
                                 </ItemTemplate>
@@ -75,7 +76,9 @@
                 </div>
             </div>
             <div class="btn-mua">
-                <asp:Button Text="Mua hàng" runat="server" />
+                <p>
+                    <asp:Label Text="" ID="lbThongBao" style="color:red; text-align:center;display: block; margin-top: 4px" runat="server" /></p>
+                <asp:Button ID="btnMuaHang" OnClick="btnMuaHang_Click" Text="Mua hàng" runat="server" />
             </div>
        
         </div>

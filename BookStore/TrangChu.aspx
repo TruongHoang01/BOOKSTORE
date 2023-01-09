@@ -12,7 +12,6 @@
     <link href="CODE/css/general.css" rel="stylesheet" />
     <link href="CODE/css/styleus.css" rel="stylesheet" />
     <link href="CODE/css/swiper-bundle.min.css" rel="stylesheet" />
-
     <script src="https://kit.fontawesome.com/8deb314de0.js" crossorigin="anonymous"></script>
 </head>
 <body>

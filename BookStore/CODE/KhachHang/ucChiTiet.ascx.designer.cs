@@ -33,13 +33,13 @@ namespace BookStore.CODE.KhachHang
         protected global::System.Web.UI.WebControls.Literal ltChiTiet;
 
         /// <summary>
-        /// btnGiamSL control.
+        /// btnGiamSL1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnGiamSL;
+        protected global::System.Web.UI.WebControls.LinkButton btnGiamSL1;
 
         /// <summary>
         /// tbsoluong control.
@@ -51,22 +51,22 @@ namespace BookStore.CODE.KhachHang
         protected global::System.Web.UI.WebControls.TextBox tbsoluong;
 
         /// <summary>
-        /// btnTangSL control.
+        /// btnTangSL1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnTangSL;
+        protected global::System.Web.UI.WebControls.LinkButton btnTangSL1;
 
         /// <summary>
-        /// btnThemVaoGioHang control.
+        /// btnThemVaoGioHang1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnThemVaoGioHang;
+        protected global::System.Web.UI.WebControls.LinkButton btnThemVaoGioHang1;
 
         /// <summary>
         /// ltrChiTiet2 control.
@@ -85,14 +85,5 @@ namespace BookStore.CODE.KhachHang
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DataList dlSanPhamCungLoai;
-
-        /// <summary>
-        /// divthongbao control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divthongbao;
     }
 }

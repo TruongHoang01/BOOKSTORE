@@ -52,5 +52,22 @@ namespace BookStore.CODE.DuLieu
             string sql = "Select SUM(C.SoLuong*C.GiaBan) from DONHANG D, CHITIETDONHANG C where  C.ID_DH=D.ID  and D.ID="+iddh + " GROUP BY D.ID";
             return (int)ketNoi.getScalar(sql);
         }
+
+        internal DataTable TimKiemDonHang(string idCH, string tuKhoa, string tinhTrang, string loaiTimKiem)
+        {
+            string sql = "select ID, HoTen, SDT, DiaChi, format(NgayTao,'dd-MM-yyyy') as NgayTao from DonHang where ID_CH=" + idCH + " and TinhTrang=" + tinhTrang;
+            if (loaiTimKiem == "1")
+            {
+                int iout;
+                if (Int32.TryParse(tuKhoa, out iout))
+                    sql += " and ID ='" + tuKhoa + "'";
+                else return null;
+            }
+            else if (loaiTimKiem == "2")
+                sql += " and HoTen like N'%" + tuKhoa + "%  '";
+            else if (loaiTimKiem == "3")
+                sql += " and SDT='" + tuKhoa + "'";
+            return ketNoi.getDataTable(sql);
+        }
     }
 }

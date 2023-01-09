@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ucChiTiet.ascx.cs" Inherits="BookStore.CODE.KhachHang.ucChiTiet" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ucChiTiet.ascx.cs" Inherits="BookStore.CODE.KhachHang.ucChiTiet" ClientIDMode="Static" %>
 
 
 <div class="DuongDan">
@@ -8,22 +8,23 @@
     <div class="flex">
         <asp:Literal Text="" ID="ltChiTiet" runat="server" />
         <div class="bottom">
-            <asp:ScriptManager runat="server" />
-            <asp:UpdatePanel runat="server">
-                <ContentTemplate>
+       <%--     <asp:ScriptManager runat="server" />
+            <asp:UpdatePanel runat="server">--%>
+         <%--       <ContentTemplate>--%>
                     <div class="SoLuong">
                         Số lượng:   
-                        <asp:Button type="button" CssClass="btnsoluong btngiam button" OnClick="btnGiamSL_Click" ID="btnGiamSL" Text="-" runat="server" />
+                        <asp:LinkButton CssClass="btnsoluong btngiam button" OnClick="btnGiamSL_Click" ID="btnGiamSL1" Text="-" runat="server" />
                         <asp:TextBox ID="tbsoluong" Text="1" runat="server" ReadOnly="true"/>
-                        <asp:Button CssClass="btnsoluong btntang button" OnClick="btnTangSL_Click" ID="btnTangSL" Text="+" runat="server" />
+                        <asp:LinkButton CssClass="btnsoluong btntang button" OnClick="btnTangSL_Click" ID="btnTangSL1" Text="+" runat="server" />
                     </div>
-                </ContentTemplate>
-            </asp:UpdatePanel>
+               
 
-            <div class="button">
-                <asp:Button CssClass="button1" ID="btnThemVaoGioHang" OnClick="btnThemVaoGioHang_Click" Text="Thêm vào giỏ hàng" runat="server" />
-                <asp:Button CssClass="button" Text="Mua ngay" runat="server" />
-            </div>
+                    <div class="button">
+                        <asp:LinkButton CssClass="button1" ID="btnThemVaoGioHang1" OnClick="btnThemVaoGioHang_Click" Text="Thêm vào giỏ hàng" runat="server" />
+                        <asp:LinkButton CssClass="button" Text="Mua ngay" runat="server" />
+                    </div>
+              <%--       </ContentTemplate>
+            </asp:UpdatePanel>--%>
         </div>
     </div>
     <div class="CuaHang">
@@ -98,9 +99,23 @@
         </ItemTemplate>
     </asp:DataList>
 </div>
-
-<div class="divthongbao" id="divthongbao" runat="server" visible="false">
-    <div>
-        <img src="../../Image/success.png" /></div>
-    <p>Sản phẩm đã được thêm vào giỏ hàng</p>
+<div  class="thongbaochitiet" id="divthongbao">
+    <div class="thongbaodiv divflex" >
+        <img src="../../Image/success.png" />
+        <p>Đã thêm vào thành công</p>
+    </div>
 </div>
+
+<script>
+    const btnThem = document.getElementById("btnThemVaoGioHang1");
+    const eleThongBao = document.querySelector('.thongbaochitiet')
+    
+    btnThem.addEventListener("click", (e) => {
+        e.preventDefault()
+        eleThongBao.style.display = "block"
+        setTimeout(() => {
+            eleThongBao.style.display = "none"
+        }, 700)
+        
+    })
+</script>

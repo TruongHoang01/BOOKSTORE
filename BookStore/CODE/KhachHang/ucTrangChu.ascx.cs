@@ -66,13 +66,24 @@ namespace BookStore.CODE.KhachHang
         }
         protected void danhMuc_Click(object sender, EventArgs e)
         {
-
+            string id = ((LinkButton)sender).CommandArgument;
+            Response.Redirect("TrangChu.aspx?modul=TimKiem&thaotac=dm" + id);
         }
-
-        protected void btnXemDm_Click(object sender, EventArgs e)
+       
+        protected void tacGia_Click(object sender, EventArgs e)
         {
-
+            string id = ((LinkButton)sender).CommandArgument;
+            Response.Redirect("TrangChu.aspx?modul=TimKiem&thaotac=tg" + id);
         }
-      
+        protected void chuDe_Click(object sender, EventArgs e)
+        {
+            string id = ((LinkButton)sender).CommandArgument;
+            Response.Redirect("TrangChu.aspx?modul=TimKiem&thaotac=cd" + id);
+        }
+        protected void nhaXuatBan_Click(object sender, EventArgs e)
+        {
+            string id = ((LinkButton)sender).CommandArgument;
+            Response.Redirect("TrangChu.aspx?modul=TimKiem&thaotac=xb" + id);
+        }
     }
 }

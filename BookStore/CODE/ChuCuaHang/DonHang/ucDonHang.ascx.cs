@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -110,6 +111,22 @@ namespace BookStore.CODE.ChuCuaHang.DonHang
             chuDeThongBao.InnerText = chuDe;
             noiDungThongBao.InnerText = noiDung;
             ThongBao.Visible = true;
+        }
+
+        protected void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            string kieuTimKiem = ddlTimKiem.SelectedValue;
+            string tuKhoa = tbTuKhoa.Text;
+            DataTable tbDonHang = dbDonHang.TimKiemDonHang(idCH, tuKhoa, tinhTrang, kieuTimKiem);
+            if (tbDonHang == null)
+                lbThongBao.Text = "Không tìm thấy đơn hàng liên quan";
+            else
+            {
+                lbThongBao.Text = "";
+                grDonHang.DataSource = tbDonHang;
+                grDonHang.DataBind();
+            }
+           
         }
     }
 }
