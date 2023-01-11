@@ -57,7 +57,7 @@ namespace BookStore.CODE.KhachHang
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        public global::System.Web.UI.WebControls.LinkButton btnDangKy;
+        protected global::System.Web.UI.WebControls.LinkButton btnDangKy;
 
         /// <summary>
         /// btnDangNhap control.
@@ -129,7 +129,7 @@ namespace BookStore.CODE.KhachHang
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        public global::System.Web.UI.HtmlControls.HtmlGenericControl modelDangNhapDangKy;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl modelDangNhapDangKy;
 
         /// <summary>
         /// imgCloseDN control.
@@ -138,7 +138,7 @@ namespace BookStore.CODE.KhachHang
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        public global::System.Web.UI.WebControls.ImageButton imgCloseDN;
+        protected global::System.Web.UI.WebControls.ImageButton imgCloseDN;
 
         /// <summary>
         /// lbFormTitle control.
@@ -231,13 +231,13 @@ namespace BookStore.CODE.KhachHang
         public global::System.Web.UI.HtmlControls.HtmlGenericControl DivXacNhanEmail;
 
         /// <summary>
-        /// ImageButton1 control.
+        /// imgClose control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        public global::System.Web.UI.WebControls.ImageButton ImageButton1;
+        protected global::System.Web.UI.WebControls.ImageButton imgClose;
 
         /// <summary>
         /// tbOtp control.

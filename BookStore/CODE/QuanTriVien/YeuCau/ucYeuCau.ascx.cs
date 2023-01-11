@@ -36,6 +36,8 @@ namespace BookStore.CODE.QuanTriVien.YeuCau
             tbNgayTao.Text = row["NgayTao"].ToString();
             tbTrangThai.Text = row["TinhTrang"].ToString();
             model.Visible = true;
+            if (row["TinhTrang"].ToString() == "1")
+                btnPhanHoi.Visible = false;
         }
 
         protected void btnOK_Click(object sender, EventArgs e)

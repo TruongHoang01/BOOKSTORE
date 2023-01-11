@@ -8,23 +8,17 @@
     <div class="flex">
         <asp:Literal Text="" ID="ltChiTiet" runat="server" />
         <div class="bottom">
-       <%--     <asp:ScriptManager runat="server" />
-            <asp:UpdatePanel runat="server">--%>
-         <%--       <ContentTemplate>--%>
+            
                     <div class="SoLuong">
                         Số lượng:   
                         <asp:LinkButton CssClass="btnsoluong btngiam button" OnClick="btnGiamSL_Click" ID="btnGiamSL1" Text="-" runat="server" />
                         <asp:TextBox ID="tbsoluong" Text="1" runat="server" ReadOnly="true"/>
                         <asp:LinkButton CssClass="btnsoluong btntang button" OnClick="btnTangSL_Click" ID="btnTangSL1" Text="+" runat="server" />
                     </div>
-               
-
                     <div class="button">
                         <asp:LinkButton CssClass="button1" ID="btnThemVaoGioHang1" OnClick="btnThemVaoGioHang_Click" Text="Thêm vào giỏ hàng" runat="server" />
                         <asp:LinkButton CssClass="button" Text="Mua ngay" runat="server" />
                     </div>
-              <%--       </ContentTemplate>
-            </asp:UpdatePanel>--%>
         </div>
     </div>
     <div class="CuaHang">

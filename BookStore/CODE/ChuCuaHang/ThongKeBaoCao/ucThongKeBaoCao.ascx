@@ -1,9 +1,10 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ucThongKeBaoCao.ascx.cs" Inherits="BookStore.CODE.ChuCuaHang.ThongKeBaoCao.ucThongKeBaoCao" %>
+<%@ Register Assembly="System.Web.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Namespace="System.Web.UI.DataVisualization.Charting" TagPrefix="asp" %>
 <div class="divdate mt20">
         <div class="divdaterow">
             <span>Từ ngày: </span>
-            <asp:TextBox ID="from_date" runat="server" Enabled="false" />
-            <asp:ImageButton ID="btn_fromdate" ImageUrl="../../../Image/calendar.png" runat="server"/>
+            <asp:TextBox ID="from_date" runat="server"/>
+            <asp:ImageButton ID="btn_fromdate" ImageUrl="../../../Image/calendar.png" runat="server" />
             <asp:ScriptManager runat="server" />
             <ajaxToolkit:CalendarExtender ID="CalendarExtender1" runat="server" 
                 TargetControlID="from_date" PopupButtonID="btn_fromdate" Format="dd/MM/yyyy">
@@ -12,13 +13,13 @@
         </div> 
         <div class="divdaterow">   
             <span>Đến ngày: </span>
-            <asp:TextBox ID="date_end" runat="server" Enabled="false"   />
+            <asp:TextBox ID="date_end" runat="server"   />
             <asp:ImageButton ID="btn_enddate" ImageUrl="../../../Image/calendar.png" runat="server" />
             <ajaxToolkit:CalendarExtender ID="CalendarExtender2" runat="server" 
-                TargetControlID="date_end" PopupButtonID="btn_enddate" Format="dd/MM/yyyy">
+                TargetControlID="date_end" PopupButtonID="btn_enddate" Format="dd/MM/yyyy" >
             </ajaxToolkit:CalendarExtender>
         </div>
-        <asp:Button CssClass="btncalendar"  Text="Xem dữ liệu" runat="server" />
+        <asp:LinkButton CssClass="btncalendar" Onclick="btnXemDuLieu_Click" Text="Xem dữ liệu" runat="server" />
 </div>
 <div>
   
@@ -46,3 +47,4 @@
         </div>
     </div>
 </div>
+

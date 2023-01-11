@@ -21,12 +21,13 @@ namespace BookStore.CODE.QuanTriVien.DanhMuc
         }
         public void hienThiDanhSachDropDownListDanhMuc()
         {
-            DataTable dt = danhMuc.layDanhSachDuLieu();
+            DataTable dtDanhMuc = danhMuc.layDanhSachDuLieu();
             ddlDanhMucCha.Items.Clear();
-            ddlDanhMucCha.DataSource = dt;
-            ddlDanhMucCha.DataValueField = "ID";
-            ddlDanhMucCha.DataTextField = "TenDM";
-            ddlDanhMucCha.DataBind();
+            ddlDanhMucCha.Items.Add(new ListItem("Chọn danh mục", "0"));
+            foreach(DataRow row in dtDanhMuc.Rows)
+            {
+                ddlDanhMucCha.Items.Add(new ListItem(row["TenDM"].ToString(), row["ID"].ToString()));
+            }
         }
         public void hienThiDanhSachDanhMuc()
         {
@@ -35,9 +36,7 @@ namespace BookStore.CODE.QuanTriVien.DanhMuc
             tbDanhMuc.DataBind();
         
         }
-        protected void imgExpend_Click(object sender, ImageClickEventArgs e)
-        {
-        }
+ 
 
         protected void editDM_Click(object sender, ImageClickEventArgs e)
         {
@@ -52,23 +51,97 @@ namespace BookStore.CODE.QuanTriVien.DanhMuc
                 lbID.Text = dt.Rows[0]["ID"].ToString();
             }
         }
+  
+        public String validateDanhMuc(string tenDM, string maDmCha)
+        {
+            if (tenDM == "" && maDmCha == "0")
+                return "Chưa chọn danh mục cha và nhập tên danh mục!";
+            else if (tenDM == "")
+                return "Chưa nhập tên danh mục!";
+            else if (maDmCha == "0")
+                return "Chưa chọn danh mục cha!";
+            else return String.Empty;
+        }
+        protected void btnThem_Click(object sender, EventArgs e)
+        {
+            string id = lbID.Text;
+            string tenDM = tbTenDanhMuc.Text;
+            string maDmCha = ddlDanhMucCha.SelectedValue;
+            bool check = false;
+            string validate = validateDanhMuc(tenDM, maDmCha);
+            if (validate != String.Empty)
+                lbThongBao.Text = validate;
+            else
+            {
+                if (btnThem.Text == "Cập nhật")
+                {
+                    if (danhMuc.capNhatDanhMuc(id, tenDM, maDmCha))
+                    {
+                        check = true;
+                    }
+                }
+                else if (btnThem.Text == "Thêm mới")
+                {
+                    if (danhMuc.themMoiDanhMuc(tenDM, maDmCha))
+                    {
+                        check = true;
+                    }
+                }
+                if (check)
+                {
+                    btnHuy_Click(sender, e);
+                    hienThiDanhSachDanhMuc();
+                    thongBao(1, "Thành công", "Thao tác thực hiện thành công!");
+                    lbThongBao.Text = "";
+                }
+                else
+                {
+                    thongBao(2, "Thất bại", "Thao tác không được thực hiện!");
+                }
+                
+            }
+        }
 
+
+
+        protected void btnHuy_Click(object sender, EventArgs e)
+        {
+            lbThem.Text = "THÊM MỚI DANH MỤC";
+            btnThem.Text = "Thêm mới";
+            ddlDanhMucCha.SelectedValue = "0";
+            tbTenDanhMuc.Text = "";
+            lbThongBao.Text = "";
+        }
         protected void deleteDM_Click(object sender, ImageClickEventArgs e)
         {
-            string id = ((ImageButton)sender).CommandArgument;
-            bool check = false;
-            if (danhMuc.xoaDanhMuc(id))
+            Session["iddm"] = ((ImageButton)sender).CommandArgument;
+            btnCancel.Visible = true;
+            btnOK.Text = "Xác nhận";
+            thongBao(3, "Cảnh báo", "Xác nhận xóa!");
+
+        }
+        protected void btnOK_Click(object sender, EventArgs e)
+        {
+
+            if (btnOK.Text == "OK")
             {
-                check = true;
-            }
-            if (check)
-            {
-                hienThiDanhSachDanhMuc();
-                thongBao(1, "Thành công", "Thao tác thực hiện thành công!");
+                ThongBao.Visible = false;
             }
             else
             {
-                thongBao(2, "Thất bại", "Thao tác không được thực hiện!");
+                string id = Session["iddm"].ToString();
+                btnOK.Text = "OK";
+                btnCancel.Visible = false;
+                if (danhMuc.xoaDanhMuc(id))
+                {
+                    hienThiDanhSachDanhMuc();
+                    thongBao(1, "Thành công", "Thao tác thực hiện thành công!");
+                }
+                else
+                {
+                    thongBao(2, "Thất bại", "Thao tác không được thực hiện!");
+                }
+
             }
         }
         public void thongBao(int trangThai, string chuDe, string noiDung)
@@ -81,54 +154,18 @@ namespace BookStore.CODE.QuanTriVien.DanhMuc
                 case 2:
                     imgThongBao.ImageUrl = "../../../Image/error.jpeg";
                     break;
+                case 3:
+                    imgThongBao.ImageUrl = "../../../Image/warning.jpeg";
+                    break;
             }
             chuDeThongBao.InnerText = chuDe;
             noiDungThongBao.InnerText = noiDung;
             ThongBao.Visible = true;
         }
-        protected void btnThem_Click(object sender, EventArgs e)
-        {
-            string id = lbID.Text;
-            string tenDM = tbTenDanhMuc.Text;
-            string maDmCha = ddlDanhMucCha.SelectedValue;
-            bool check = false;
-            if(btnThem.Text == "Cập nhật")
-            {
-                if(danhMuc.capNhatDanhMuc(id, tenDM, maDmCha))
-                {
-                    check = true;
-                }
-            }
-            else if(btnThem.Text == "Thêm mới")
-            {
-                if (danhMuc.themMoiDanhMuc(tenDM, maDmCha))
-                {
-                    check = true;
-                }
-            }
-            if (check)
-            {
-                btnHuy_Click(sender, e);
-                hienThiDanhSachDanhMuc();
-                thongBao(1, "Thành công", "Thao tác thực hiện thành công!");
-            }
-            else
-            {
-                thongBao(2, "Thất bại", "Thao tác không được thực hiện!");
-            }
-        }
 
-        protected void btnOK_Click(object sender, EventArgs e)
+        protected void btnCancel_Click(object sender, EventArgs e)
         {
             ThongBao.Visible = false;
-        }
-
-        protected void btnHuy_Click(object sender, EventArgs e)
-        {
-            lbThem.Text = "THÊM MỚI DANH MỤC";
-            btnThem.Text = "Thêm mới";
-            ddlDanhMucCha.SelectedValue = "0";
-            tbTenDanhMuc.Text = "";
         }
     }
 }

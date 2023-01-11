@@ -51,6 +51,15 @@ namespace BookStore.CODE.QuanTriVien.SanPham
         protected global::System.Web.UI.WebControls.Label lbID;
 
         /// <summary>
+        /// lbThongBao control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbThongBao;
+
+        /// <summary>
         /// btnThem control.
         /// </summary>
         /// <remarks>
@@ -112,5 +121,14 @@ namespace BookStore.CODE.QuanTriVien.SanPham
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton btnOK;
+
+        /// <summary>
+        /// btnCancel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton btnCancel;
     }
 }

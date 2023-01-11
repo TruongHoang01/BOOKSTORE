@@ -13,7 +13,8 @@
 </div>
 <div class="divTable">
     <div class="HeaderText">DANH SÁCH TÀI KHOẢN</div>
-    <asp:GridView ID="grTaiKhoan"  CssClass="tableAdmin" runat="server" AutoGenerateColumns="false">
+    <div class="scroll">
+         <asp:GridView ID="grTaiKhoan"  CssClass="tableAdmin" runat="server" AutoGenerateColumns="false">
         <Columns>
             <asp:BoundField ItemStyle-CssClass="col20" HeaderText="Email" DataField="Email" runat="server" /> 
             <asp:BoundField ItemStyle-CssClass="col10 TextCenter" HeaderText="SDT" DataField="SDT" runat="server" />
@@ -31,6 +32,8 @@
             </asp:TemplateField>
         </Columns>
     </asp:GridView>
+    </div>
+   
 </div>
 <div class="ThongBao"  id="ThongBao" runat="server">
         <div class="divflex  flexThongBao">

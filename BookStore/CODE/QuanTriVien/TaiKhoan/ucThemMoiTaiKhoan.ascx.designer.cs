@@ -33,6 +33,24 @@ namespace BookStore.CODE.QuanTriVien.TaiKhoan
         protected global::System.Web.UI.WebControls.TextBox tbEmail;
 
         /// <summary>
+        /// RequiredFieldValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+
+        /// <summary>
+        /// RegularExpressionValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator1;
+
+        /// <summary>
         /// tbSDT control.
         /// </summary>
         /// <remarks>
@@ -40,6 +58,24 @@ namespace BookStore.CODE.QuanTriVien.TaiKhoan
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tbSDT;
+
+        /// <summary>
+        /// RequiredFieldValidator2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
+
+        /// <summary>
+        /// RegularExpressionValidator2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator2;
 
         /// <summary>
         /// tbMatKhau control.
@@ -51,6 +87,15 @@ namespace BookStore.CODE.QuanTriVien.TaiKhoan
         protected global::System.Web.UI.WebControls.TextBox tbMatKhau;
 
         /// <summary>
+        /// RequiredFieldValidator3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
+
+        /// <summary>
         /// tbHoTen control.
         /// </summary>
         /// <remarks>
@@ -58,6 +103,15 @@ namespace BookStore.CODE.QuanTriVien.TaiKhoan
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tbHoTen;
+
+        /// <summary>
+        /// RequiredFieldValidator4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator4;
 
         /// <summary>
         /// rdGioiTinh control.
@@ -96,6 +150,15 @@ namespace BookStore.CODE.QuanTriVien.TaiKhoan
         protected global::System.Web.UI.WebControls.TextBox tbDiaChi;
 
         /// <summary>
+        /// RequiredFieldValidator5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator5;
+
+        /// <summary>
         /// ddlQuyen control.
         /// </summary>
         /// <remarks>
@@ -105,13 +168,13 @@ namespace BookStore.CODE.QuanTriVien.TaiKhoan
         protected global::System.Web.UI.WebControls.DropDownList ddlQuyen;
 
         /// <summary>
-        /// rowNgayTao control.
+        /// divNgayTao control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTableRow rowNgayTao;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divNgayTao;
 
         /// <summary>
         /// tbNgayTao control.
@@ -123,13 +186,13 @@ namespace BookStore.CODE.QuanTriVien.TaiKhoan
         protected global::System.Web.UI.WebControls.TextBox tbNgayTao;
 
         /// <summary>
-        /// rowCapNhat control.
+        /// divCapNhat control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTableRow rowCapNhat;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divCapNhat;
 
         /// <summary>
         /// tbNgayCapNhat control.
@@ -238,14 +301,5 @@ namespace BookStore.CODE.QuanTriVien.TaiKhoan
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl noiDungThongBao;
-
-        /// <summary>
-        /// btnOK control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnOK;
     }
 }

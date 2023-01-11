@@ -1,109 +1,132 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ucThemMoiTaiKhoan.ascx.cs" Inherits="BookStore.CODE.QuanTriVien.TaiKhoan.ucThemMoiTaiKhoan" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ucThemMoiTaiKhoan.ascx.cs " Inherits="BookStore.CODE.QuanTriVien.TaiKhoan.ucThemMoiTaiKhoan" ClientIDMode="Static" %>
 <div class="FormThemMoi FormThemTaiKhoan divflex">
     <div class="col80">
-        <table class="tableThemMoi ">
-            <tr>
-                <th colspan="2">
-                    <asp:Label ID="lbThem" Text="THÊM MỚI TÀI KHOẢN" runat="server" />
-                </th>
-            </tr>
-            <tr>
-                <td>Email</td>
-                <td>
-                    <asp:TextBox runat="server" ID="tbEmail" />
-                </td>
-            </tr>
-            <tr>
-                <td>SDT</td>
-                <td>
-                    <asp:TextBox runat="server" ID="tbSDT" />
-                </td>
-            </tr>
-              <tr>
-                <td>Mật khẩu</td>
-                <td>
-                    <asp:TextBox runat="server" ID="tbMatKhau" />
-                </td>
-            </tr>
-            <tr>
-                <td>Họ và Tên</td>
-                <td>
-                    <asp:TextBox runat="server" ID="tbHoTen" />
-                </td>
-            </tr>
-            <tr>
-                <td>Giới Tính</td>
-                <td>
+        <div class="formTaiKhoan">
+            <p class="title"> <asp:Label ID="lbThem" Text="THÊM MỚI TÀI KHOẢN" runat="server" /></p>
+        <div class="row">
+            <p>Email</p>
+            <div>
+                <asp:TextBox runat="server" ID="tbEmail" PlaceHolder ="example@gmail.com" />
+                <div>
+                    <asp:RequiredFieldValidator CssClass="validate" ID="RequiredFieldValidator1" runat="server" ErrorMessage="Email không được để trống" Display="Dynamic" ControlToValidate="tbEmail"></asp:RequiredFieldValidator>
+                    <asp:RegularExpressionValidator CssClass="validate" ID="RegularExpressionValidator1" runat="server" ErrorMessage="Email không hợp lệ" ControlToValidate="tbEmail" Display="Dynamic" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+                </div>
+            </div>
+        </div>
+            <div class="row">
+                <p>Số điện thoại</p>
+                <div>
+                      <asp:TextBox runat="server" ID="tbSDT" PlaceHolder="Số điện thoại"/>
+                    <div>
+                         <asp:RequiredFieldValidator CssClass="validate" ID="RequiredFieldValidator2" runat="server" ErrorMessage="Số điện thoại không được để trống" ControlToValidate="tbSDT"  Display="Dynamic"></asp:RequiredFieldValidator>
+                    <asp:RegularExpressionValidator CssClass="validate"  Display="Dynamic" ID="RegularExpressionValidator2" ControlToValidate="tbSDT" runat="server" ErrorMessage="Số điện thoại không hợp lệ" ValidationExpression="(84|0[3|5|7|8|9])+([0-9]{8})"></asp:RegularExpressionValidator>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <p>Mật khẩu</p>
+                <div>
+                     <asp:TextBox runat="server" ID="tbMatKhau" TextMode="Password" PlaceHolder="Mật khẩu"/>
+                    <div>
+                         <asp:RequiredFieldValidator CssClass="validate" ID="RequiredFieldValidator3" runat="server" ControlToValidate="tbMatKhau" ErrorMessage="Mật khẩu không được để trống" Display="Dynamic" ></asp:RequiredFieldValidator>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <p>Họ và tên</p>
+                <div>
+                     <asp:TextBox runat="server" ID="tbHoTen"  PlaceHolder="Họ và tên"/>
+                    <div>
+                            <asp:RequiredFieldValidator CssClass="validate" ID="RequiredFieldValidator4" ControlToValidate="tbHoTen" runat="server" ErrorMessage="Họ tên không được để trống " Display="Dynamic" ></asp:RequiredFieldValidator>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                Giới Tính
+           
                     <asp:RadioButtonList OnSelectedIndexChanged="rdGioiTinh_SelectedIndexChanged" AutoPostBack="true" ID="rdGioiTinh" runat="server" RepeatDirection="Horizontal">
                         <asp:ListItem Selected="true" ID="rbNam" Value="0" Text="Nam" />
                         <asp:ListItem ID="rbNu" Value="1" Text="Nữ" />
                     </asp:RadioButtonList>
-                </td>
-            </tr>
-            <tr>
-                <td>Địa Chỉ</td>
-                <td>
-                    <asp:TextBox runat="server" ID="tbDiaChi" TextMode="MultiLine" Rows="4" Columns="59" />
-                </td>
-            </tr>
-            <tr>
-                <td>Quyền</td>
-                <td>
+              
+            </div>
+            <div class="row">
+                <p>Địa Chỉ</p>
+                <div>
+                    <asp:TextBox runat="server" ID="tbDiaChi" TextMode="MultiLine" Rows="4" Columns="59" PlaceHolder="Địa chỉ" />
+                    <div>
+                         <asp:RequiredFieldValidator CssClass="validate" ID="RequiredFieldValidator5" ControlToValidate="tbDiaChi" runat="server" ErrorMessage="Địa chỉ không được để trống" Display="Dynamic"></asp:RequiredFieldValidator>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <p>Quyền</p>
+                <div>
                     <asp:DropDownList ID="ddlQuyen" runat="server">
                     </asp:DropDownList>
-                </td>
-            </tr>
-            <tr id="rowNgayTao" runat="server">
-                <td>Ngày tạo</td>
-                <td>
-                    <asp:TextBox ReadOnly="true" runat="server" ID="tbNgayTao" />
-                </td>
-            </tr>
-            <tr id="rowCapNhat" runat="server">
-                <td>Ngày cập nhật</td>
-                <td>
+                </div>
+            </div>
+            <div class="row" id="divNgayTao" runat="server">
+                <p>Ngày tạo</p>
+                <div><asp:TextBox ReadOnly="true" runat="server" ID="tbNgayTao" /></div>
+
+            </div>
+            <div class="row" id="divCapNhat" runat="server">
+                <p>Ngày cập nhật</p>
+                <div>
                     <asp:TextBox ReadOnly="true"  ID="tbNgayCapNhat" runat="server" />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <asp:Label ID="lbAnhDaiDienCu" Visible="false" runat="server" />
-                    <asp:Label ID="lbID" Visible="false" Text="" runat="server" />
-                </td>
-            </tr>
-            <tr>
-                <td>&nbsp</td>
-                <td>
-                    <asp:CheckBox ID="cbCheck" Text="Tạo tài khoản mới sau khi tạo tài khoản này." runat="server" />
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2" class="TextCenter ">
-                    <asp:LinkButton CssClass="btnThem" OnClick="btnThem_Click" ID="btnThem" Text="Thêm mới" runat="server" />
+                </div>
+            </div>
+                <asp:Label ID="lbAnhDaiDienCu" Visible="false" runat="server" />
+                <asp:Label ID="lbID" Visible="false" Text="" runat="server" />
+            <div class="row TextCenter  ">
+                  <asp:CheckBox ID="cbCheck" Text="Tạo tài khoản mới sau khi tạo tài khoản này." runat="server" />
+            </div>
+            <div class="TextCenter "> 
+                <asp:LinkButton CssClass="btnThem" OnClick="btnThem_Click" ID="btnThem" Text="Thêm mới" runat="server" />
                     <asp:LinkButton CssClass="btnThem" OnClick="btnHuy_Click" ID="btnHuy" Text="Hủy" runat="server" />
-                </td>
-            </tr>
-        </table>
+            </div>
+            </div>
     </div>
     <div class="divHinhAnh col20">
-        <asp:Image Width="180" Height="220" ID="imgAnhDaiDien" ImageUrl="../../../Image/anhdaidiennam.jpg" runat="server" />
-        <asp:FileUpload runat="server" ID="flAnhDaiDien" />
+        <asp:Image  Width="180" Height="220" ID="imgAnhDaiDien" ImageUrl="../../../Image/anhdaidiennam.jpg" runat="server" />
+        <asp:FileUpload CssClass="upLoadFile" runat="server" name="file" ID="flAnhDaiDien" onchange="onFileSelected(event)" />
+        <label for="flAnhDaiDien" class="labelAnh">Chọn ảnh</label>
     </div>
 </div>
 
-<div class="ThongBao" visible="false"  id="ThongBao" runat="server">
+<div class="ThongBao" id="ThongBao" runat="server" visible="false">
         <div class="divflex  flexThongBao">
             <div>
                 <asp:Image ID="imgThongBao" Width="60" Height="60" imageurl="../../../Image/success.png" runat="server" />
             </div>
             <div class="content">
                 <div>
+               
                     <p class="chuDeThongBao" id="chuDeThongBao" runat="server">Thành công</p>
                     <p id="noiDungThongBao" runat="server">Bạn đã thêm danh mục thành công!</p>
                 </div>
             </div>
         </div>
         <div class="btnOK">
-            <asp:LinkButton OnClick="btnOK_Click" ID="btnOK" Text="OK" runat="server" />
-        </div>
+           
+                     <asp:LinkButton Text="OK" OnClick="btnClick_Click" runat="server" CausesValidation="False"/>
+                
+           
+        </div> 
 </div>
+<script>
+    function onFileSelected(event) {
+        var selectedFile = event.target.files[0];
+        var reader = new FileReader();
+
+        var imgtag = document.getElementById("imgAnhDaiDien");
+        imgtag.title = selectedFile.name;
+
+        reader.onload = function (event) {
+            imgtag.src = event.target.result;
+        };
+
+        reader.readAsDataURL(selectedFile);
+    }
+</script>

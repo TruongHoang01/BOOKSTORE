@@ -2,7 +2,7 @@
 
 <div class="mt20">
     <div class="divflex">
-    <div class="width60">
+    <div class="width60 scroll">
         <div class="HeaderText">DANH SÁCH DANH MỤC</div>
         <asp:GridView CssClass="tbDanhMuc tableAdmin" ID="tbDanhMuc" runat="server" AutoGenerateColumns="false">
             <Columns>
@@ -40,9 +40,12 @@
                     <asp:TextBox runat="server" ID="tbTenDanhMuc"/>
                 </td>
             </tr>
-            <tr>
-                <td>
-                    <asp:Label ID="lbID" Visible="false" Text="" runat="server" />
+         
+            <tr>  
+                <td colspan="2" class="TextCenter" > 
+                    <asp:Label ID="lbID" Visible="false" Text="" runat="server" />  
+                    <asp:Label Text="" ID="lbThongBao" style="color: red; display: block; text-align:center; " runat="server" />
+
                 </td>
             </tr>
             <tr>
@@ -56,20 +59,20 @@
     </div>
 </div>
 </div>
-<div class="ThongBao"  id="ThongBao" runat="server">
+<div class="ThongBao" visible="false"  id="ThongBao" runat="server">
         <div class="divflex  flexThongBao">
             <div>
-                <asp:Image ID="imgThongBao" Width="60" Height="60" imageurl="../../../Image/success.png" runat="server" />
+                <asp:Image ID="imgThongBao" Width="60" Height="60"  runat="server" />
             </div>
             <div class="content">
                 <div>
-                    <p class="chuDeThongBao" id="chuDeThongBao" runat="server">Thành công</p>
-                    <p id="noiDungThongBao" runat="server">Bạn đã thêm danh mục thành công!</p>
+                    <p class="chuDeThongBao" id="chuDeThongBao" runat="server"></p>
+                    <p id="noiDungThongBao" runat="server"></p>
                 </div>
             </div>
         </div>
         <div class="btnOK">
             <asp:LinkButton OnClick="btnOK_Click" ID="btnOK" Text="OK" runat="server" />
+            <asp:LinkButton Visible="false" OnClick="btnCancel_Click" ID="btnCancel" Text="Hủy" runat="server" />
         </div>
 </div>
-

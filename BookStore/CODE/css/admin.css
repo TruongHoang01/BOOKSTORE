@@ -40,7 +40,10 @@
     position: relative;
     z-index: 10;
 }
-
+.scroll {
+    height: 500px;
+    overflow: auto;
+}
 .AdminNavbar a{
     width: 240px;
     height: 40px;
@@ -115,8 +118,8 @@ table.tableAdmin tr:hover {
     color: white;
 }
 .FormThemMoi {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
     margin-top: 28px;
-    background-color: #f3e7e7;
 }
 table.tableThemMoi th, table.tableThemMoi td {
     padding: 10px 20px;
@@ -224,7 +227,27 @@ table.tableThemMoi select, table.tableThemMoi input {
     align-items: center;
     justify-content: space-between;
 }
-
-
+.formTaiKhoan{
+    padding: 20px;
+}
+.formTaiKhoan p{
+    color: #333;
+}
+.formTaiKhoan .title {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+}
+.formTaiKhoan .row{
+    margin-bottom: 12px;    
+}
+.formTaiKhoan input[type="text"], .formTaiKhoan input[type="password"], .formTaiKhoan textarea, 
+.formTaiKhoan select {
+    width: 90%;
+    padding: 4px 6px;
+    font-size: 16px;
+    border-radius: 4px;
+}
 
 

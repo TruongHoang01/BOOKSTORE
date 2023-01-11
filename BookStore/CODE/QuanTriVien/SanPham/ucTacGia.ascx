@@ -2,7 +2,7 @@
 
 <div class="mt20">
     <div class="divflex">
-    <div class="width60">
+    <div class="width60 scroll">
         <div class="HeaderText">DANH SÁCH TÁC GIẢ</div>
         <asp:GridView CssClass="tbDanhMuc tableAdmin" ID="tbTacGia" runat="server" AutoGenerateColumns="false">
             <Columns>
@@ -27,14 +27,15 @@
                 </th>
             </tr>
             <tr>
-                <td>Tên giả</td>
+                <td>Tên tác giả</td>
                 <td>
                     <asp:TextBox runat="server" ID="tbTenTG"/>
                 </td>
             </tr>
             <tr>
-                <td>
+                <td colspan="2" class="TextCenter">
                     <asp:Label ID="lbID" Visible="false" Text="" runat="server" />
+                 <asp:Label Text="" ID="lbThongBao" style="color: red; display: block; text-align:center; " runat="server" />
                 </td>
             </tr>
             <tr>
@@ -51,7 +52,7 @@
 <div class="ThongBao" visible="false"  id="ThongBao" runat="server">
         <div class="divflex  flexThongBao">
             <div>
-                <asp:Image ID="imgThongBao" Width="60" Height="60" imageurl="../../../Image/success.png" runat="server" />
+                <asp:Image ID="imgThongBao" Width="60" Height="60"  runat="server" />
             </div>
             <div class="content">
                 <div>
@@ -62,5 +63,6 @@
         </div>
         <div class="btnOK">
             <asp:LinkButton OnClick="btnOK_Click" ID="btnOK" Text="OK" runat="server" />
+            <asp:LinkButton Visible="false" OnClick="btnCancel_Click" ID="btnCancel" Text="Hủy" runat="server" />
         </div>
 </div>

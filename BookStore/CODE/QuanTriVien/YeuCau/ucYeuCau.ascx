@@ -6,9 +6,9 @@
     <div class="HeaderText">DANH SÁCH YÊU CẦU</div>
     <asp:GridView ID="grYeuCau" CssClass="tableAdmin" runat="server" AutoGenerateColumns="false">
         <Columns>
-            <asp:BoundField ItemStyle-CssClass="col5 TextCenter" HeaderText="Mã Khách Hàng" DataField="ID_KH" runat="server" />
+            <asp:BoundField ItemStyle-CssClass="col10 TextCenter" HeaderText="Mã KH" DataField="ID_KH" runat="server" />
             <asp:BoundField ItemStyle-CssClass="col20 " HeaderText="Chủ Đề" DataField="ChuDe" runat="server" />
-            <asp:BoundField ItemStyle-CssClass="col50" HeaderText="Nội Dung" DataField="NoiDung" runat="server" />
+            <asp:BoundField ItemStyle-CssClass="col40" HeaderText="Nội Dung" DataField="NoiDung" runat="server" />
             <asp:BoundField ItemStyle-CssClass="col10" HeaderText="Ngày Gửi" DataField="NgayTao" runat="server" />
             <asp:BoundField ItemStyle-CssClass="col5 TextCenter" HeaderText="Tình Trạng" DataField="TinhTrang" runat="server" />
             <asp:TemplateField HeaderText="Thao tác" ItemStyle-CssClass="TextCenter">
@@ -84,7 +84,6 @@
             <tr>
                 <td  class="TextCenter" colspan="2">
                     <asp:LinkButton CssClass="btnThem" ID="btnPhanHoi" Onclick="btnPhanHoi_Click" Text="Duyệt" runat="server" />
-              
                     <asp:LinkButton  CssClass="btnThem"  ID="btnQuayLai" OnClick="btnQuayLai_Click" Text="Quay lại" runat="server" />
                 </td>
             </tr>

@@ -82,16 +82,18 @@ namespace BookStore.CODE.KhachHang
 
         protected void btnCheckLog_Click(object sender, EventArgs e)
         {
-            //taiKhoan = tbTaiKhoan.Text;
-            //matKhau = tbMatKhau.Text;
-            taiKhoan = "caohuuhieu";
-            matKhau = "1234";
+            taiKhoan = tbTaiKhoan.Text;
+            matKhau = tbMatKhau.Text;
+            //taiKhoan = "caohuuhieu";
+            //matKhau = "1234";
             string captCha = tbCaptCha.Text;
             string captChaLB = lbCapCha.Text;
             captCha = captChaLB;
-            lbThongBao.Visible = true;
             if (captCha != captChaLB)
+            {
+                lbThongBao.Visible = true;
                 lbThongBao.Text = "Mã captcha không trùng khớp!";
+            }
             else if (btnCheckLog.Text == "Đăng nhập")
             {
                 if (knTaiKhoan.TimKiemTaiKhoan(taiKhoan).Rows.Count > 0)

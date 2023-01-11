@@ -32,47 +32,43 @@ namespace BookStore.CODE.QuanTriVien.SanPham
             lbID.Text = tb.Rows[0]["ID"].ToString();
         }
 
-        protected void imgDelete_Click(object sender, ImageClickEventArgs e)
-        {
-            string id = ((ImageButton)sender).CommandArgument;
-            if (knNhaXuatBan.xoaNhaXuatBan(id))
-            {
-                loadDanhSachNhaXuatBan();
-                thongBao(1, "Thành công", "Tác giả đã được xóa");
-            }
-            else
-            {
-                thongBao(2, "Thất bại", "Thao tác không được thực hiện");
-            }
-        }
+     
 
         protected void btnThem_Click(object sender, EventArgs e)
         {
             string tenNXB = tbNhaXuatBan.Text;
             string id = lbID.Text;
-            if (btnThem.Text == "Cập nhật")
-            {
-                if (knNhaXuatBan.capNhatNXB(id, tenNXB))
-                {
-                    thongBao(1, "Thành công", "Đã cập nhật thành công!");
-                }
-                else
-                {
-                    thongBao(2, "Thất bại", "Thao tác không được thực hiện!");
-                }
-            }
+            if (tenNXB == "")
+                lbThongBao.Text = "Chưa nhập tên nhà xuất bản!";
             else
             {
-                if (knNhaXuatBan.themMoiNXB(tenNXB))
+                if (btnThem.Text == "Cập nhật")
                 {
-
-                    thongBao(1, "Thành công", "Đã thêm mới một tác giả!");
+                    if (knNhaXuatBan.capNhatNXB(id, tenNXB))
+                    {
+                        thongBao(1, "Thành công", "Đã cập nhật thành công!");
+                    }
+                    else
+                    {
+                        thongBao(2, "Thất bại", "Thao tác không được thực hiện!");
+                    }
                 }
                 else
                 {
-                    thongBao(2, "Thất bại", "Thao tác không được thực hiện!");
+                    if (knNhaXuatBan.themMoiNXB(tenNXB))
+                    {
+
+                        thongBao(1, "Thành công", "Đã thêm mới một tác giả!");
+                    }
+                    else
+                    {
+                        thongBao(2, "Thất bại", "Thao tác không được thực hiện!");
+                    }
                 }
+                lbThongBao.Text = "";
+                tbNhaXuatBan.Text = "";
             }
+            
         }
 
         protected void btnHuy_Click(object sender, EventArgs e)
@@ -80,11 +76,41 @@ namespace BookStore.CODE.QuanTriVien.SanPham
             lbThem.Text = "THÊM MỚI NHÀ XUẤT BẢN";
             btnThem.Text = "Thêm mới";
             lbID.Text = "";
+            lbThongBao.Text = "";
+            tbNhaXuatBan.Text = "";
         }
 
+        protected void imgDelete_Click(object sender, ImageClickEventArgs e)
+        {
+            Session["idnxb"] = ((ImageButton)sender).CommandArgument;
+            btnCancel.Visible = true;
+            btnOK.Text = "Xác nhận";
+            thongBao(3, "Cảnh báo", "Xác nhận xóa!");
+
+        }
         protected void btnOK_Click(object sender, EventArgs e)
         {
-            ThongBao.Visible = false;
+
+            if (btnOK.Text == "OK")
+            {
+                ThongBao.Visible = false;
+            }
+            else
+            {
+                string id = Session["idnxb"].ToString();
+                btnOK.Text = "OK";
+                btnCancel.Visible = false;
+                if (knNhaXuatBan.xoaNhaXuatBan(id))
+                {
+                    loadDanhSachNhaXuatBan();
+                    thongBao(1, "Thành công", "Tác giả đã được xóa");
+                }
+                else
+                {
+                    thongBao(2, "Thất bại", "Thao tác không được thực hiện");
+                }
+
+            }
         }
         public void thongBao(int trangThai, string chuDe, string noiDung)
         {
@@ -96,10 +122,18 @@ namespace BookStore.CODE.QuanTriVien.SanPham
                 case 2:
                     imgThongBao.ImageUrl = "../../../Image/error.jpeg";
                     break;
+                case 3:
+                    imgThongBao.ImageUrl = "../../../Image/warning.jpeg";
+                    break;
             }
             chuDeThongBao.InnerText = chuDe;
             noiDungThongBao.InnerText = noiDung;
             ThongBao.Visible = true;
+        }
+
+        protected void btnCancel_Click(object sender, EventArgs e)
+        {
+            ThongBao.Visible = false;
         }
     }
 }

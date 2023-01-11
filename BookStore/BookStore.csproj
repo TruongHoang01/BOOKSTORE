@@ -51,6 +51,7 @@
       <HintPath>..\packages\Newtonsoft.Json.13.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web.DataVisualization" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -106,10 +107,13 @@
     <Content Include="Image\bg6.png" />
     <Content Include="Image\calendar.png" />
     <Content Include="Image\delete.png" />
+    <Content Include="Image\edit.jpeg" />
     <Content Include="Image\emptystar.png" />
+    <Content Include="Image\iconmokhoa.jpg" />
     <Content Include="Image\starcolor.png" />
     <Content Include="Image\starempty.png" />
     <Content Include="Image\WaitingStar.gif" />
+    <Content Include="Image\warning.jpeg" />
     <Content Include="Image\yellowstar.png" />
     <Content Include="KenhBanHang.aspx" />
     <Content Include="CODE\css\admin.css" />
@@ -123,7 +127,6 @@
     <Content Include="CODE\KhachHang\UserControl.ascx" />
     <Content Include="CODE\QuanTriVien\SanPham\ucChuDe.ascx" />
     <Content Include="CODE\QuanTriVien\SanPham\ucDanhMuc.ascx" />
-    <Content Include="CODE\QuanTriVien\QuanLyThue\ucThue.ascx" />
     <Content Include="CODE\QuanTriVien\SanPham\ucNhaXuatBan.ascx" />
     <Content Include="CODE\QuanTriVien\SanPham\ucTacGia.ascx" />
     <Content Include="CODE\QuanTriVien\TaiKhoan\ucDanhSachTaiKhoan.ascx" />
@@ -215,6 +218,7 @@
     <Compile Include="CODE\DuLieu\GioHang.cs" />
     <Compile Include="CODE\DuLieu\KhuyenMai.cs" />
     <Compile Include="CODE\DuLieu\SanPham.cs" />
+    <Compile Include="CODE\DuLieu\ThongKe.cs" />
     <Compile Include="CODE\KhachHang\SendMail.cs" />
     <Compile Include="CODE\KhachHang\ucCapNhatTaiKhoan.ascx.cs">
       <DependentUpon>ucCapNhatTaiKhoan.ascx</DependentUpon>
@@ -330,13 +334,6 @@
     </Compile>
     <Compile Include="CODE\QuanTriVien\SanPham\ucDanhMuc.ascx.designer.cs">
       <DependentUpon>ucDanhMuc.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="CODE\QuanTriVien\QuanLyThue\ucThue.ascx.cs">
-      <DependentUpon>ucThue.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="CODE\QuanTriVien\QuanLyThue\ucThue.ascx.designer.cs">
-      <DependentUpon>ucThue.ascx</DependentUpon>
     </Compile>
     <Compile Include="CODE\QuanTriVien\SanPham\ucNhaXuatBan.ascx.cs">
       <DependentUpon>ucNhaXuatBan.ascx</DependentUpon>

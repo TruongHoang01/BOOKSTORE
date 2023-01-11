@@ -16,7 +16,6 @@ namespace BookStore.CODE.QuanTriVien.TaiKhoan
         protected void Page_Load(object sender, EventArgs e)
         {
             knTaiKhoan = new DuLieu.TaiKhoan();
-
             loadDanhSachQuyen();
             if (Request.QueryString["thaotac"] != null)
             {
@@ -29,15 +28,32 @@ namespace BookStore.CODE.QuanTriVien.TaiKhoan
                     id = Request.QueryString["id"].ToString();
                 }
                 loadDuLieuCapNhat();
-                rowCapNhat.Visible = rowNgayTao.Visible = true;
+                divCapNhat.Visible = divNgayTao.Visible = true;
                 btnThem.Text = "Cập nhật";
                 lbThem.Text = "CẬP NHẬT TÀI KHOẢN";
             }
             else
             {
-                rowCapNhat.Visible = rowNgayTao.Visible = false;
+                divCapNhat.Visible = divNgayTao.Visible = false;
             }
 
+        }
+        public string validateTaiKhoan(string email, string sdt, string hoten, string matkhau, string diachi)
+        {
+            string strValid = "";
+            if (email == "" && sdt == "" && hoten == "" && matkhau == "" && diachi == "")
+                strValid = "Chưa nhập thông tin!";
+            else if (email == "")
+                strValid = "Email không được bỏ trống!";
+            else if (sdt == "")
+                strValid = "Số điện thoại không được để trống!";
+            else if (hoten == "")
+                strValid = "Họ tên không được để trống!";
+            else if (matkhau == "")
+                strValid = "Mật khẩu không được để trống!";
+            else if (diachi == "")
+                strValid = "Địa chỉ không được để trống!";
+            return strValid;
         }
         public void loadDuLieuCapNhat()
         {
@@ -108,6 +124,7 @@ namespace BookStore.CODE.QuanTriVien.TaiKhoan
             else
             {
                 string tenAnhDaiDien = "";
+                string tenanh = flAnhDaiDien.FileName;
                 if (flAnhDaiDien.FileContent.Length > 0)
                 {
                     if (flAnhDaiDien.FileName.EndsWith(".jpeg") || flAnhDaiDien.FileName.EndsWith(".jpg") || flAnhDaiDien.FileName.EndsWith(".png") || flAnhDaiDien.FileName.EndsWith(".gif"))
@@ -135,11 +152,16 @@ namespace BookStore.CODE.QuanTriVien.TaiKhoan
                 {
                     thongBao(2, "Thất bại", "Đã có lỗi xãy ra!");
                 }
+           
 
             }
 
         }
-
+        protected void btnClick_Click(object sender, EventArgs e)
+        {
+            ThongBao.Visible = true;
+            Response.Redirect("Admin.aspx?modul=TaiKhoan");
+        }
         protected void btnHuy_Click(object sender, EventArgs e)
         {
             Response.Redirect("Admin.aspx?modul=TaiKhoan");
@@ -157,10 +179,7 @@ namespace BookStore.CODE.QuanTriVien.TaiKhoan
             }
         }
 
-        protected void btnOK_Click(object sender, EventArgs e)
-        {
-            ThongBao.Visible = false;
-        }
+  
         public void thongBao(int trangThai, string chuDe, string noiDung)
         {
             switch (trangThai)

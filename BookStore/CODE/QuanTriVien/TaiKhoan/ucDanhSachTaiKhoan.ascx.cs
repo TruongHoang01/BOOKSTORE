@@ -43,21 +43,29 @@ namespace BookStore.CODE.QuanTriVien.QuanLyThue
         }
         protected void btnOK_Click(object sender, EventArgs e)
         {
-            ThongBao.Visible = false;
-            if(Session["idtkxoa"] != null)
+            if(btnOK.Text != "OK")
             {
-                string id = Session["idtkxoa"].ToString();
-                btnCancel.Visible = false;
-                if (knTaiKhoan.XoaTaiKhoan(id))
+                if (Session["idtkxoa"] != null)
                 {
-                    loadDanhSachTaiKhoan();
-                    thongBao(1, "Thành công", "Tài khoàn này đã bị khóa!");
-                }
-                else
-                {
-                    thongBao(2, "Thất bại", "Thao tác không được thực hiện!");
+                    string id = Session["idtkxoa"].ToString();
+                    btnCancel.Visible = false;
+                    if (knTaiKhoan.XoaTaiKhoan(id))
+                    {
+                        loadDanhSachTaiKhoan();
+                        thongBao(1, "Thành công", "Tài khoàn này đã bị khóa!");
+                    }
+                    else
+                    {
+                        thongBao(2, "Thất bại", "Thao tác không được thực hiện!");
+                    }
+                    btnOK.Text = "OK";
                 }
             }
+            else
+            {
+                ThongBao.Visible = false;
+            }
+       
            
         }
 
@@ -71,22 +79,29 @@ namespace BookStore.CODE.QuanTriVien.QuanLyThue
         {
             Session["idtkxoa"] = ((ImageButton)sender).CommandArgument;
             btnCancel.Visible = true;
+            btnOK.Text = "Xác nhận";
             thongBao(3, "Cảnh báo", "Xóa tài khoản?");
         }
 
         protected void btnTiemKiem_Click(object sender, EventArgs e)
         {
             string tuKhoa = tbTimKiem.Text;
-            DataTable tb = knTaiKhoan.TimKiemTaiKhoan(tuKhoa);
-            if(tb.Rows.Count > 0)
-            {
-                grTaiKhoan.DataSource = tb;
-                grTaiKhoan.DataBind();
-            }
+            if (tuKhoa == "")
+                tbTimKiem.BorderColor = System.Drawing.Color.Red;
             else
             {
-                thongBao(3, "Thông báo!", "Email hoặc sdt không tồn tại!");
+                DataTable tb = knTaiKhoan.TimKiemTaiKhoan(tuKhoa);
+                if (tb.Rows.Count > 0)
+                {
+                    grTaiKhoan.DataSource = tb;
+                    grTaiKhoan.DataBind();
+                }
+                else
+                {
+                    thongBao(3, "Thông báo!", "Email hoặc sdt không tồn tại!");
+                }
             }
+            
           
         }
 
