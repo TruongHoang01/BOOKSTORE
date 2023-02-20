@@ -33,8 +33,8 @@ namespace BookStore.CODE.QuanTriVien.ThongKeBaoCao
             int donHang = dbThongKe.LaySoLuongDonHang(ngayBD, ngayKT);
             lbDonHang.Text = donHang==-1?"0":donHang.ToString();
             int doanhThu = dbThongKe.LayTongDoanhThu(ngayBD, ngayKT);
-            lbDoanhThu.Text = doanhThu==-1?"0":doanhThu.ToString() + "vnđ";
-            lbThue.Text = doanhThu == -1?"0":(doanhThu*10/100).ToString()+"vnđ";
+            lbDoanhThu.Text = doanhThu==-1?"0":doanhThu.ToString();
+            lbThue.Text = doanhThu == -1?"0":(doanhThu*10/100).ToString();
         }
 
         protected void btnXemDuLieu_Click(object sender, EventArgs e)

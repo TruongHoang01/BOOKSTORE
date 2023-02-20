@@ -38,49 +38,49 @@ namespace BookStore.CODE.DuLieu
 
         internal DataTable LayDanhSachKhuyenMai()
         {
-            string sql = "select TOP 8 S.ID as IDSP, HinhAnh, TenSach, TenTG, FORMAT(GiaBia, 'N0', 'en-us') AS GiaBia, FORMAT((GiaBia-GiaBia*TiLe/100), 'N0', 'en-us') AS GiaBan, TiLe from SACH S, TACGIA TG, KHUYENMAI KM where S.MaKM=KM.ID and S.MaTG=TG.ID and S.TinhTrang=0 and MaKM <> 0 and KM.TinhTrang=0 ORDER BY NEWID()";
+            string sql = "select TOP 8 S.ID, HinhAnh, TenSach, TenTG, FORMAT(GiaBia, 'N0', 'en-us') AS GiaBia, FORMAT((GiaBia-GiaBia*TiLe/100), 'N0', 'en-us') AS GiaBan, TiLe from SACH S, TACGIA TG, KHUYENMAI KM where S.MaKM=KM.ID and S.MaTG=TG.ID and S.TinhTrang=0 and MaKM <> 0 and KM.TinhTrang=0 ORDER BY NEWID()";
             return ketNoi.getDataTable(sql);
         }
 
         internal DataTable LaySanPhamTheoNhaXuatBan(string id)
         {
-            string sql = "select TOP 8 S.ID as IDSP, HinhAnh, TenSach, MaKM, TenTG, FORMAT(GiaBia, 'N0', 'en-us') AS GiaBia, FORMAT((GiaBia-GiaBia*TiLe/100), 'N0', 'en-us') AS GiaBan, TiLe from SACH S, TACGIA TG, KHUYENMAI KM where S.MaKM=KM.ID and S.MaTG=TG.ID and S.TinhTrang=0 and MaNXB=" + id + " ORDER BY NEWID()";
+            string sql = "select TOP 8 S.ID, HinhAnh, TenSach, MaKM, TenTG, FORMAT(GiaBia, 'N0', 'en-us') AS GiaBia, FORMAT((GiaBia-GiaBia*TiLe/100), 'N0', 'en-us') AS GiaBan, TiLe from SACH S, TACGIA TG, KHUYENMAI KM where S.MaKM=KM.ID and S.MaTG=TG.ID and S.TinhTrang=0 and MaNXB=" + id + " ORDER BY NEWID()";
             return ketNoi.getDataTable(sql);
         }
 
         internal DataTable LaySanPhamTheoTacGia(string id)
         {
-            string sql = "select TOP 8 S.ID as IDSP, HinhAnh, TenSach, MaKM, TenTG, FORMAT(GiaBia, 'N0', 'en-us') AS GiaBia, FORMAT((GiaBia-GiaBia*TiLe/100), 'N0', 'en-us') AS GiaBan, TiLe from SACH S, TACGIA TG, KHUYENMAI KM where S.MaKM=KM.ID and S.MaTG=TG.ID and S.TinhTrang=0 and MaTG=" + id + " ORDER BY NEWID()";
+            string sql = "select TOP 8 S.ID , HinhAnh, TenSach, MaKM, TenTG, FORMAT(GiaBia, 'N0', 'en-us') AS GiaBia, FORMAT((GiaBia-GiaBia*TiLe/100), 'N0', 'en-us') AS GiaBan, TiLe from SACH S, TACGIA TG, KHUYENMAI KM where S.MaKM=KM.ID and S.MaTG=TG.ID and S.TinhTrang=0 and MaTG=" + id + " ORDER BY NEWID()";
             return ketNoi.getDataTable(sql);
         }
 
         internal DataTable LaySanPhamTheoChuDe(string id)
         {
-            string sql = "select TOP 8 S.ID as IDSP, HinhAnh, TenSach, MaKM, TenTG, FORMAT(GiaBia, 'N0', 'en-us') AS GiaBia, FORMAT((GiaBia-GiaBia*TiLe/100), 'N0', 'en-us') AS GiaBan, TiLe from SACH S, TACGIA TG, KHUYENMAI KM where S.MaKM=KM.ID and S.MaTG=TG.ID and S.TinhTrang=0 and MaCD=" + id + " ORDER BY NEWID()";
+            string sql = "select TOP 8 S.ID, HinhAnh, TenSach, MaKM, TenTG, FORMAT(GiaBia, 'N0', 'en-us') AS GiaBia, FORMAT((GiaBia-GiaBia*TiLe/100), 'N0', 'en-us') AS GiaBan, TiLe from SACH S, TACGIA TG, KHUYENMAI KM, CHUDE CD, SACH_CHUDE SCD where S.MaKM=KM.ID and S.MaTG=TG.ID and CD.id=SCD.ID_CD and SCD.ID_SACH=S.ID and S.TinhTrang=0 and CD.ID=" + id + " ORDER BY NEWID()";
             return ketNoi.getDataTable(sql);
         }
 
         internal DataTable LaySanPhamTheoDanhMuc(string id)
         {
-            string sql = "select TOP 8 S.ID as IDSP, HinhAnh, TenSach, MaKM, TenTG, FORMAT(GiaBia, 'N0', 'en-us') AS GiaBia, FORMAT((GiaBia-GiaBia*TiLe/100), 'N0', 'en-us') AS GiaBan, TiLe from SACH S, TACGIA TG, KHUYENMAI KM where S.MaKM=KM.ID and S.MaTG=TG.ID and S.TinhTrang=0 and MaDM="+id+" ORDER BY NEWID()";
+            string sql = "select TOP 8 S.ID, HinhAnh, TenSach, MaKM, TenTG, FORMAT(GiaBia, 'N0', 'en-us') AS GiaBia, FORMAT((GiaBia-GiaBia*TiLe/100), 'N0', 'en-us') AS GiaBan, TiLe from SACH S, TACGIA TG, KHUYENMAI KM where S.MaKM=KM.ID and S.MaTG=TG.ID and S.TinhTrang=0 and MaDM="+id+" ORDER BY NEWID()";
             return ketNoi.getDataTable(sql);
         }
 
         public DataTable DanhChoBan()
         {
-            string sql = "select TOP 8 S.ID as IDSP, HinhAnh, TenSach, MaKM, TenTG, FORMAT(GiaBia, 'N0', 'en-us') AS GiaBia, FORMAT((GiaBia-GiaBia*TiLe/100), 'N0', 'en-us') AS GiaBan, TiLe from SACH S, TACGIA TG, KHUYENMAI KM where S.MaKM=KM.ID and S.MaTG=TG.ID and S.TinhTrang=0 ORDER BY NEWID()";
+            string sql = "select TOP 8 S.ID , HinhAnh, TenSach, MaKM, TenTG, FORMAT(GiaBia, 'N0', 'en-us') AS GiaBia, FORMAT((GiaBia-GiaBia*TiLe/100), 'N0', 'en-us') AS GiaBan, TiLe from SACH S, TACGIA TG, KHUYENMAI KM where S.MaKM=KM.ID and S.MaTG=TG.ID and S.TinhTrang=0 ORDER BY NEWID()";
             return ketNoi.getDataTable(sql);
         }
 
         internal DataTable LayDanhSachChuDe(string idSP)
         {
-            string sql = "Select TenCD from CHUDE cd, SACH_CHUDE scd where ID_CD=cd.ID and ID_Sach=" + idSP;
+            string sql = "Select cd.ID, TenCD from CHUDE cd, SACH_CHUDE scd where ID_CD=cd.ID and ID_Sach=" + idSP;
             return ketNoi.getDataTable(sql);
         }
 
         public DataTable DanhSachBanChay()
         {
-            string sql = "select TOP 8 S.ID as IDSP, HinhAnh, TenSach, MaKM, TenTG, FORMAT(GiaBia, 'N0', 'en-us') AS GiaBia, FORMAT((GiaBia-GiaBia*TiLe/100), 'N0', 'en-us') AS GiaBan, TiLe from SACH S, TACGIA TG, KHUYENMAI KM where S.MaKM=KM.ID and S.MaTG=TG.ID and S.TinhTrang=0 order by DaBan";
+            string sql = "select TOP 8 S.ID, HinhAnh, TenSach, MaKM, TenTG, FORMAT(GiaBia, 'N0', 'en-us') AS GiaBia, FORMAT((GiaBia-GiaBia*TiLe/100), 'N0', 'en-us') AS GiaBan, TiLe from SACH S, TACGIA TG, KHUYENMAI KM where S.MaKM=KM.ID and S.MaTG=TG.ID and S.TinhTrang=0 order by DaBan";
             return ketNoi.getDataTable(sql);
         }
         public DataTable LayDanhSachSanPham(string idCH, string tinhTrang)
@@ -107,9 +107,9 @@ namespace BookStore.CODE.DuLieu
             else sql += " TinhTrang <> 2";
             return ketNoi.getScalar(sql);
         }
-        public bool ThemMoiSach(string tenSach, string hinhAnh, string maTG, string maDM, string maNXB, string namXB, string maCH, string maKM, string soTrang, string kichThuoc, string trongLuong, string soLuong, string giaBia, string daBan, string ngayTao, string ngayCapNhat)
+        public bool ThemMoiSach(string tenSach, string hinhAnh, string maTG, string maDM, string maNXB, string namXB, string maCH, string maKM, string soTrang, string kichThuoc, string trongLuong, string soLuong, string giaBia, string ngayTao, string ngayCapNhat)
         {
-           string sql = "insert into sach values(N'" + tenSach + "', N'" + hinhAnh + "'," + maTG + "," + maDM + "," + maNXB + "," + namXB + "," + maCH + "," + maKM +","+soTrang+ ",'" + kichThuoc + "','" + trongLuong + "'," + soLuong + "," + giaBia + "," + daBan + ",'" + ngayTao + "','" + ngayCapNhat + "',0)";
+           string sql = "insert into sach values(N'" + tenSach + "', N'" + hinhAnh + "'," + maTG + "," + maDM + "," + maNXB + "," + namXB + "," + maCH + "," + maKM +","+soTrang+ ",'" + kichThuoc + "','" + trongLuong + "'," + soLuong + "," + giaBia + ",0,'" + ngayTao + "','" + ngayCapNhat + "',0)";
             return ketNoi.AddDataToTable(sql);
         }
         public bool CapNhatSach(string id, string tenSach, string hinhAnh, string maTG, string maDM, string maNXB, string namXB, string maKM, string soTrang, string kichThuoc, string trongLuong, string soLuong, string giaBia, string daBan,  string ngayCapNhat)
@@ -131,7 +131,7 @@ namespace BookStore.CODE.DuLieu
 
         public DataTable LayDanhSachSanPhamCungLoai(string idDM)
         {
-            string sql = "select TOP 5 S.ID as IDSP, HinhAnh, TenSach, MaKM, TenTG, FORMAT(GiaBia, 'N0', 'en-us') AS GiaBia, FORMAT((GiaBia-GiaBia*TiLe/100), 'N0', 'en-us') AS GiaBan, TiLe from SACH S, TACGIA TG, KHUYENMAI KM where S.MaKM=KM.ID and S.MaTG=TG.ID and S.TinhTrang=0 and MaDM=" + idDM + " order by DaBan ";
+            string sql = "select TOP 5 S.ID, HinhAnh, TenSach, MaKM, TenTG, FORMAT(GiaBia, 'N0', 'en-us') AS GiaBia, FORMAT((GiaBia-GiaBia*TiLe/100), 'N0', 'en-us') AS GiaBan, TiLe from SACH S, TACGIA TG, KHUYENMAI KM where S.MaKM=KM.ID and S.MaTG=TG.ID and S.TinhTrang=0 and MaDM=" + idDM + " order by DaBan ";
             return ketNoi.getDataTable(sql);
         }
     }

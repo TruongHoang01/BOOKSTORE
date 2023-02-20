@@ -1,5 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ucThongKeBaoCao.ascx.cs" Inherits="BookStore.CODE.QuanTriVien.ThongKeBaoCao.ucThongKeBaoCao" %>
 <div class="divdate mt20">
+    <asp:ScriptManager runat="server" />
         <div class="divdaterow">
             <span>Từ ngày: </span>
             <asp:TextBox ID="from_date" runat="server"/>
@@ -62,13 +63,15 @@
         </div>
         <div class="width20 col">
             <p><i class="fa-solid fa-dollar-sign"></i></p>
-            <p><asp:Label Text="" ID="lbDoanhThu" runat="server" /></p>
+            <p><asp:Label Text="" ID="lbDoanhThu" runat="server" />
+             <span style="font-size: 20px; color: #333;">vnđ</span> 
+            </p>
             <p class="danhmuc">DOANH THU</p>
         </div>
         <div class="width20 col">
             <p><i class="fa-solid fa-money-bill-transfer"></i></p>
             <p>
-                <asp:Label Text="" ID="lbThue" runat="server" />
+                <asp:Label Text="" ID="lbThue" runat="server"></asp:Label><span style="font-size: 20px; color: #333;">vnđ</span>
             </p>
                <p class="danhmuc">THUẾ</p>
         </div>

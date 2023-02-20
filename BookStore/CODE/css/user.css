@@ -14,6 +14,12 @@
     color: #fff;
 }
 
+#modelDangNhapDangKy{
+    display: none;
+}
+#DivXacNhanEmail{
+    display: none;
+}
 .headerflex, .rowflex {
     display: flex;
     justify-content: space-around;
@@ -174,12 +180,19 @@
     padding: 10px 20px;
     overflow-y: auto;
 }
-
+.FormDangKy .span {
+    position: absolute;
+    top: -14px;
+    left: 20px;
+    font-size: 12px;
+}
 .FormDangKy {
     text-align: center;
     padding: 20px;
 }
-
+    .FormDangKy .rowdk {
+        position: relative;
+    }
     .FormDangKy .title {
         font-size: 24px;
         font-weight: 600;
@@ -260,6 +273,9 @@
 
 .dialog-body .imgClose {
     position: absolute;
+    background-color: #fff;
+    padding: 4px;
+    text-align: center;
     top: -8px;
     right: -8px;
     width: 28px;
@@ -275,7 +291,11 @@
     border: 1px solid #ccc;
     color: #fff;
 }
-
+.trangChu .listLeft {
+    overflow-y: auto;
+    max-height: 300px;
+    margin-bottom: 10px;
+}
 .trangChu table {
     border: 1px solid #ccc;
     margin-bottom: 12px;
@@ -474,15 +494,17 @@
     font-size: 20px;
     margin-left: 16px;
     background-image: url('../../Image/bg6.png');
+    margin-right: 4px;
 }
 
-    .lableCapCha::after {
-        float: unset;
-    }
+.lableCapCha::after {
+    float: unset;
+}
 
 .FormDangKy .lableCapCha {
-    height: 36px;
+    height: 34px;
     width: 100px;
+
 }
 
 
@@ -810,7 +832,7 @@
         .CuaHang .Button a {
             display: inline-block;
             min-width: 100px;
-            padding: 8px 10px;
+            padding: 8px 8px;
             border-radius: 4px;
             border: 1px solid #58ABF3;
             color: #58ABF3;
@@ -992,8 +1014,9 @@
 }
 
     .CapNhatTaiKhoan .divAnhDaiDien .AnhDaiDien {
-        width: 180px;
-        height: auto;
+        width: 220px;
+        height: 220px;
+        object-fit: cover;
         border-radius: 50%;
     }
 
@@ -1200,6 +1223,7 @@
 }
 
     .GioHang .divheader {
+        margin-bottom: 10px;
         margin-top: 20px;
         background-color: #bdc6ce26;
         padding: 10px;
@@ -1228,25 +1252,26 @@
 
     .GioHang .divThongTin {
         background-color: #bdc6ce26;
-        margin-top: 20px;
     }
 
-    .GioHang .danhsach_sc {
+    .GioHang .scroll {
         width: 100%;
-        height: 600px;
+        height: 500px;
         overflow-y: auto;
     }
 
     .GioHang .footergh {
         margin-left: 10px;
         margin-top: 20px;
-        height: 250px;
+        height: fit-content;
         background-color: #6dc3f6;
         box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
         padding: 6px 10px;
         border-radius: 20px;
     }
-
+    .pvalidate{
+        margin-top: -6px;
+    }
         .GioHang .footergh .thanhtoan {
             border-radius: 20px;
             background-color: #FFF;

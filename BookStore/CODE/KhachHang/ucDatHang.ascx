@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ucDatHang.ascx.cs" Inherits="BookStore.CODE.KhachHang.ucDatHang" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ucDatHang.ascx.cs" Inherits="BookStore.CODE.KhachHang.ucDatHang" ClientIDMode="Static" %>
 <div class="GioHang dathang">
     <div class="danhsach_sc width90">
         <div class="divflex divheader">
@@ -9,7 +9,7 @@
                 <span>Thành Tiền</span>
             </div>
         </div>
-        <div>
+        <div class="scroll">
             <asp:DataList runat="server" ID="dlCuaHang" Width="100%">
                 <ItemTemplate>
                     <div class="ThongTin divThongTin">
@@ -48,8 +48,8 @@
                             </ItemTemplate>
                         </asp:DataList>
                         <div class="center">
-                            <div class="width50">  <asp:TextBox CssClass="textghichu" runat="server" PlaceHolder="Ghi chú cho người bán..." TextMode="MultiLine"/></div>
-                            <div class="width50 TextRight ">Tổng tiền đơn hàng: <asp:Label ForeColor="Red" Font-Size="14" Font-Bold="true"   Text="120000đ" runat="server" /></div>
+                            <div class="width70">  <asp:TextBox ID="tbGhiChu" CssClass="textghichu" runat="server" PlaceHolder="Ghi chú cho người bán..." TextMode="MultiLine"/></div>
+                            <div class="width30 TextRight">Tổng tiền đơn hàng: <asp:Label ForeColor="Red" ID="lbtongtien" Font-Size="14" Font-Bold="true"   Text="0" runat="server" /></div>
                         </div>
                     </div>
                 </ItemTemplate>
@@ -60,19 +60,41 @@
         <div class="thanhtoan">
             <p style="display:block">Thông tin người nhận</p>
             <div>
-                <asp:TextBox runat="server" PlaceHolder="Họ và tên người nhận" />
+                <asp:TextBox ID="tbTenNguoiNhan" runat="server" PlaceHolder="Họ và tên người nhận" />
+                <p class="pvalidate"> <asp:RequiredFieldValidator CssClass="validate" ID="RequiredFieldValidator1" ControlToValidate="tbTenNguoiNhan" Display="Dynamic" runat="server" ErrorMessage="Họ tên không được để trống!"></asp:RequiredFieldValidator></p>
             </div>
             <div>
-                <asp:TextBox runat="server" PlaceHolder="Số điện thoại người nhận" />
+                <asp:TextBox ID="tbSDT" runat="server" PlaceHolder="Số điện thoại người nhận" />
+                <p  class="pvalidate"><asp:RequiredFieldValidator CssClass="validate" ID="RequiredFieldValidator2" ControlToValidate="tbSDT" Display="Dynamic" runat="server" ErrorMessage="Số điện thoại không được để trống!"></asp:RequiredFieldValidator></p> 
             </div>
             <div>
-                <asp:TextBox runat="server" PlaceHolder="Địa chỉ nhận hàng..." TextMode="MultiLine"/>
+                <asp:TextBox ID="tbDiaChi" runat="server" PlaceHolder="Địa chỉ nhận hàng..." TextMode="MultiLine"/>
+                <p  class="pvalidate">
+                    <asp:RequiredFieldValidator CssClass="validate" ID="RequiredFieldValidator3" ControlToValidate="tbDiaChi" Display="Dynamic" runat="server" ErrorMessage="Địa chỉ không được để trống!"></asp:RequiredFieldValidator>
+                </p>
             </div>
            
         </div>
          <div class="btn-mua">
              <asp:Label Text="" ID="lbThongBao" runat="server" />
-                <asp:Button Text="Đặt hàng" runat="server" />
+                <asp:Button ID="btnDatHang" OnClick="btnDatHang_Click" Text="Đặt hàng" runat="server" />
             </div>
     </div>
 </div>
+<div class="ThongBao" visible="false"  id="ThongBao" runat="server">
+        <div class="divflex  flexThongBao">
+            <div>
+                <asp:Image ID="imgThongBao" Width="60" Height="60" runat="server" />
+            </div>
+            <div class="content">
+                <div>
+                    <p class="chuDeThongBao" id="chuDeThongBao" runat="server"></p>
+                    <p id="noiDungThongBao" runat="server"></p>
+                </div>
+            </div>
+        </div>
+        <div class="btnOK">
+            <asp:LinkButton OnClick="btnOK_Click" ID="btnOK" Text="OK" runat="server" />
+        </div>
+</div>
+

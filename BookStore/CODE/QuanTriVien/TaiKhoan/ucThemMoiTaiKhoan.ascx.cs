@@ -16,27 +16,29 @@ namespace BookStore.CODE.QuanTriVien.TaiKhoan
         protected void Page_Load(object sender, EventArgs e)
         {
             knTaiKhoan = new DuLieu.TaiKhoan();
-            loadDanhSachQuyen();
             if (Request.QueryString["thaotac"] != null)
             {
                 thaoTac = Request.QueryString["thaotac"].ToString();
             }
-            if (thaoTac == "CapNhat")
+            if (Request.QueryString["id"] != null)
             {
-                if (Request.QueryString["id"] != null)
+                id = Request.QueryString["id"].ToString();
+            }
+            if (!IsPostBack)
+            {
+                loadDanhSachQuyen();
+                if (thaoTac == "CapNhat")
                 {
-                    id = Request.QueryString["id"].ToString();
+                    loadDuLieuCapNhat();
+                    divCapNhat.Visible = divNgayTao.Visible = true;
+                    btnThem.Text = "Cập nhật";
+                    lbThem.Text = "CẬP NHẬT TÀI KHOẢN";
                 }
-                loadDuLieuCapNhat();
-                divCapNhat.Visible = divNgayTao.Visible = true;
-                btnThem.Text = "Cập nhật";
-                lbThem.Text = "CẬP NHẬT TÀI KHOẢN";
+                else
+                {
+                    divCapNhat.Visible = divNgayTao.Visible = false;
+                }
             }
-            else
-            {
-                divCapNhat.Visible = divNgayTao.Visible = false;
-            }
-
         }
         public string validateTaiKhoan(string email, string sdt, string hoten, string matkhau, string diachi)
         {
@@ -152,21 +154,15 @@ namespace BookStore.CODE.QuanTriVien.TaiKhoan
                 {
                     thongBao(2, "Thất bại", "Đã có lỗi xãy ra!");
                 }
-           
-
             }
 
         }
-        protected void btnClick_Click(object sender, EventArgs e)
-        {
-            ThongBao.Visible = true;
-            Response.Redirect("Admin.aspx?modul=TaiKhoan");
-        }
+       
         protected void btnHuy_Click(object sender, EventArgs e)
         {
             Response.Redirect("Admin.aspx?modul=TaiKhoan");
         }
-
+ 
         protected void rdGioiTinh_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (rbNam.Selected == true)
@@ -178,8 +174,11 @@ namespace BookStore.CODE.QuanTriVien.TaiKhoan
                 imgAnhDaiDien.ImageUrl = "../../../Image/anhdaidiennu.jpg";
             }
         }
-
-  
+        protected void btnClick_Click(object sender, EventArgs e)
+        {
+            ThongBao.Visible = false;
+            Response.Redirect("Admin.aspx?modul=TaiKhoan");
+        }
         public void thongBao(int trangThai, string chuDe, string noiDung)
         {
             switch (trangThai)

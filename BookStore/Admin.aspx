@@ -15,9 +15,7 @@
     <script src="https://kit.fontawesome.com/8deb314de0.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <form id="form1" runat="server">
-        <asp:ScriptManager runat="server" />
-        <asp:UpdatePanel runat="server">
+    <form id="form1" runat="server"  >
             <ContentTemplate>
                   <div class="header">
                     <div class="div1300px">
@@ -51,9 +49,6 @@
                 <div class="div1300px">
                     <uc1:ucQuanTriVien runat="server" ID="ucQuanTriVien" />
                 </div>
-            </ContentTemplate>
-        </asp:UpdatePanel>
-      
     </form>
 </body>
 </html>

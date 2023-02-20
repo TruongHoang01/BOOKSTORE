@@ -53,7 +53,6 @@ namespace BookStore.CODE.QuanTriVien.SanPham
             btnCancel.Visible = true;
             btnOK.Text = "Xác nhận";
             thongBao(3, "Cảnh báo", "Xác nhận xóa!");
-
         }
         protected void btnOK_Click(object sender, EventArgs e)
         {

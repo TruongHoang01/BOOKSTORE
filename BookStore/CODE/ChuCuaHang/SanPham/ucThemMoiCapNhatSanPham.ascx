@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ucThemMoiCapNhatSanPham.ascx.cs" Inherits="BookStore.CODE.ChuCuaHang.SanPham.ucThemMoiCapNhatSanPham" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ucThemMoiCapNhatSanPham.ascx.cs" Inherits="BookStore.CODE.ChuCuaHang.SanPham.ucThemMoiCapNhatSanPham"  ClientIDMode="Static"%>
 
 <div class="containerdonhang">
     <div class="divdonhangphai">
@@ -49,21 +49,25 @@
                         <span>Ngày tạo: </span>
                         <asp:TextBox ID="tbNgayTao" runat="server" ReadOnly="true" />
                     </div>
-                </div>
-                <div class="divflexcon">
-                    <div class="rowthemmoi" style="display: flex; align-items: center">
-                        <span>Hình Ảnh: </span>
-
-                        <image src="" id="imgSach" style="width: 128px; height: 128px; background-color: #ccc" runat="server"/>
-                    </div>
-                    <div class="rowthemmoi">
-                         <span>&nbsp;</span>
-                         <asp:FileUpload ID="FileUpload1" runat="server" />
-                        </div>
-                    <div class="rowthemmoi" style="margin-bottom: 10px;">
+                       <div class="rowthemmoi" style="margin-bottom: 10px;">
                         <span>Năm xuất bản: </span>
                         <asp:TextBox ID="tbNamXuatBan" runat="server" />
                     </div>
+                </div>
+                <div class="divflexcon">
+                    <div class="rowthemmoi" style="display: flex; align-items: center">
+                       <span>Hình Ảnh: </span>
+                       <asp:Image Width="180" Height="204" ID="imgAnhDaiDien" runat="server" />
+                    </div>
+            
+                    <div class="rowthemmoi">
+                        <asp:Label Text="" ID="lbAnhDaiDienCu" Visible="false" runat="server" />
+                         <span>&nbsp;</span>
+                         <asp:FileUpload CssClass="upLoadFile"  runat="server" name="file" ID="flAnhDaiDien" onchange="onFileSelected(event)" />
+                         <label for="flAnhDaiDien" class="labelAnh">Chọn ảnh</label>
+                        <asp:Label CssClass="validate" Text="" ID="lbThongBaoAnhDaiDien" runat="server" />
+                        </div>
+                 
                     <div class="rowthemmoi">
                         <span>Số trang: </span>
                         <asp:TextBox ID="tbSoTrang" runat="server" />
@@ -107,3 +111,19 @@
             <asp:LinkButton OnClick="btnOK_Click" ID="btnOK" Text="OK" runat="server" />
         </div>
 </div>
+<script>
+    function onFileSelected(event) {
+        var selectedFile = event.target.files[0];
+        var reader = new FileReader();
+
+        var imgtag = document.getElementById("imgAnhDaiDien");
+        console.log(imgtag)
+        imgtag.title = selectedFile.name;
+       
+        reader.onload = function (event) {
+            imgtag.src = event.target.result;
+        };
+        reader.readAsDataURL(selectedFile);
+    }
+</script>
+<

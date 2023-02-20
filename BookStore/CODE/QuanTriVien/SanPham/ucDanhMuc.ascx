@@ -28,7 +28,7 @@
             </tr>
             <tr>
                 <td class="col30">Danh mục cha</td>
-                <td class="col70">
+                <td class="col60">
                     <asp:DropDownList ID="ddlDanhMucCha" runat="server">
                       
                     </asp:DropDownList>
@@ -44,7 +44,7 @@
             <tr>  
                 <td colspan="2" class="TextCenter" > 
                     <asp:Label ID="lbID" Visible="false" Text="" runat="server" />  
-                    <asp:Label Text="" ID="lbThongBao" style="color: red; display: block; text-align:center; " runat="server" />
+                    <asp:Label Text="" ID="lbThongBao" class="lbthongbao" runat="server" />
 
                 </td>
             </tr>

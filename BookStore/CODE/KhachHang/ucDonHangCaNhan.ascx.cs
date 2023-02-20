@@ -14,9 +14,11 @@ namespace BookStore
         string idtk = "";
         CODE.DuLieu.ChiTietDonHang dbChiTiet;
         CODE.DuLieu.DonHang dbDonHang;
+        CODE.DuLieu.DanhGia dbDanhGia;
         string tinhTrang = "0";
         protected void Page_Load(object sender, EventArgs e)
         {
+            dbDanhGia = new CODE.DuLieu.DanhGia();
             dbChiTiet = new CODE.DuLieu.ChiTietDonHang();
             dbDonHang = new CODE.DuLieu.DonHang();
             if (Session["idtk"] != null)
@@ -27,7 +29,7 @@ namespace BookStore
             {
                 tinhTrang = Request.QueryString["tinhtrang"].ToString();
             }
-         
+            if(!IsPostBack)
                 LoadGiaoDien();
         }
         public void LoadGiaoDien()
@@ -87,26 +89,73 @@ namespace BookStore
                 i++;
             }
         }
-
-        protected void btnXacNhanOTP_Click(object sender, EventArgs e)
-        {
-
-
-        }
+  
 
         protected void btnGui_Click(object sender, EventArgs e)
         {
-
+            bool check = true;
+            foreach (DataListItem rowSP in dlsanpham.Items)
+            {
+                string idsp = (rowSP.FindControl("hfID") as HiddenField).Value;
+                string soSao = (rowSP.FindControl("r1") as AjaxControlToolkit.Rating).CurrentRating.ToString();
+                string noiDungDanhGia = (rowSP.FindControl("txtDanhGia") as TextBox).Text;
+                if (noiDungDanhGia == "")
+                    noiDungDanhGia = "Khách hàng không viết điều gì.";
+                check = dbDanhGia.ThemMoiDanhGia(idsp, idtk, soSao, noiDungDanhGia);
+            }
+            if(check == false)
+            {
+                thongBao(2, "Lỗi", "Đánh giá không thành công");
+            }
+            else
+            {
+                thongBao(1, "Thành công", "Đã đánh giá sản phẩm");
+            }
 
         }
-
-        protected void Rating1_Changed(object sender, RatingEventArgs e)
+        protected void btnOK_Click(object sender, EventArgs e)
         {
 
+            if (btnOK.Text == "OK")
+            {
+                ThongBao.Visible = false;
+
+                DivXacNhanEmail.Visible = false;
+            }
+            else
+            {
+                string id = Session["iddh"].ToString();
+                btnOK.Text = "OK";
+                btnCancel.Visible = false;
+                if (dbDonHang.HuyDonHang(id))
+                {
+                    LoadGiaoDien();
+                    thongBao(1, "Thành công", "Đơn hàng đã được hủy");
+                }
+                else
+                {
+                    thongBao(2, "Thất bại", "Thao tác không được thực hiện");
+                }
+            }
         }
-
-
-
+        public void thongBao(int trangThai, string chuDe, string noiDung)
+        {
+            switch (trangThai)
+            {
+                case 1:
+                    imgThongBao.ImageUrl = "~/Image/success.png";
+                    break;
+                case 2:
+                    imgThongBao.ImageUrl = "~/Image/error.jpeg";
+                    break;
+                case 3:
+                    imgThongBao.ImageUrl = "~/Image/warning.jpeg";
+                    break;
+            }
+            chuDeThongBao.InnerText = chuDe;
+            noiDungThongBao.InnerText = noiDung;
+            ThongBao.Visible = true;
+        }
         protected void btnDanhGia_Click(object sender, EventArgs e)
         {
             string id = ((Button)sender).CommandArgument;
@@ -115,18 +164,20 @@ namespace BookStore
             dlsanpham.DataBind();
             DivXacNhanEmail.Visible = true;
         }
-
+        protected void btnCancel_Click(object sender, EventArgs e)
+        {
+            ThongBao.Visible = false;
+        }
         protected void btnHuy_DanhGia_Click(object sender, EventArgs e)
         {
             Button btnSender = ((Button)sender);
             string iddh = btnSender.CommandArgument;
             if(btnSender.Text == "Hủy đơn hàng")
             {
-                if (dbDonHang.HuyDonHang(iddh))
-                {
-                    //thongbaodahuy
-                    LoadGiaoDien();
-                }
+                Session["iddh"] = iddh;
+                btnCancel.Visible = true;
+                btnOK.Text = "Xác nhận";
+                thongBao(3, "Chú ý", "Bạn xác nhận hủy đơn hàng");
             }
             else
             {

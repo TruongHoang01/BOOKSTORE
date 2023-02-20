@@ -100,6 +100,8 @@ namespace BookStore.CODE.ChuCuaHang.SanPham
                 tbNgayTao.Text = ngayTao.ToString("dd-MM-yyyy");
                 DateTime ngayCapNhat = DateTime.Parse(row["NgayCapNhat"].ToString());
                 tbNgayCapNhat.Text = ngayCapNhat.ToString("dd-MM-yyyy");
+                imgAnhDaiDien.ImageUrl = "../../../Image/product/" + row["HinhAnh"].ToString();
+                lbAnhDaiDienCu.Text = row["HinhAnh"].ToString(); 
                 btnDatLai.Text = "Quay lại";
                 btnThemMoi.Text = "Cập nhật";
                 tbDaBan.Visible = true;
@@ -117,7 +119,7 @@ namespace BookStore.CODE.ChuCuaHang.SanPham
         protected void btnThemMoi_Click(object sender, EventArgs e)
         {
             string tenSach = tbTenSach.Text;
-            string hinhAnh = "sach1.jpg";
+            string hinhAnh = "";
             string maTG = ddlTacGia.SelectedValue;
             string maDM = ddlDanhMuc.SelectedValue;
             string maNXB = ddlNXB.SelectedValue;
@@ -129,13 +131,24 @@ namespace BookStore.CODE.ChuCuaHang.SanPham
             string soLuong = tbSoLuong.Text;
             string giaBia = tbGiaBia.Text;
             string daBan = tbDaBan.Text;
-
             string ngayCapNhat = DateTime.Today.ToString("MM-dd-yyyy");
-          
             if(btnThemMoi.Text == "Thêm mới")
             {
                 string ngayTao = DateTime.Today.ToString("MM-dd-yyyy");
-                if (dbSanPham.ThemMoiSach(tenSach, hinhAnh, maTG, maDM, maNXB, namXB, idCH, maKM, soTrang, kichThuoc, trongLuong, soLuong, giaBia, daBan,  ngayTao, ngayCapNhat))
+                if (flAnhDaiDien.FileContent.Length > 0)
+                {
+                    if (flAnhDaiDien.FileName.EndsWith(".jpeg") || flAnhDaiDien.FileName.EndsWith(".jpg") || flAnhDaiDien.FileName.EndsWith(".png") || flAnhDaiDien.FileName.EndsWith(".gif"))
+                    {
+                        flAnhDaiDien.SaveAs(Server.MapPath("Image/product/") + flAnhDaiDien.FileName);
+                        hinhAnh = flAnhDaiDien.FileName;
+                    }
+                }
+                else
+                {
+                    lbThongBaoAnhDaiDien.Text = "Chưa chọn ảnh sản phẩm.";
+                    return;
+                }
+                if (dbSanPham.ThemMoiSach(tenSach, hinhAnh, maTG, maDM, maNXB, namXB, idCH, maKM, soTrang, kichThuoc, trongLuong, soLuong, giaBia,  ngayTao, ngayCapNhat))
                 {
                     thongBao(1, "Thành công", "Thêm mới thành công!");
                     Response.Redirect("KenhBanHang.aspx?modul=SanPham&thaotac=DanhSach&tinhtrang=0");
@@ -147,6 +160,15 @@ namespace BookStore.CODE.ChuCuaHang.SanPham
             }
             else
             {
+                hinhAnh = lbAnhDaiDienCu.Text;
+                if (flAnhDaiDien.FileContent.Length > 0)
+                {
+                    if (flAnhDaiDien.FileName.EndsWith(".jpeg") || flAnhDaiDien.FileName.EndsWith(".jpg") || flAnhDaiDien.FileName.EndsWith(".png") || flAnhDaiDien.FileName.EndsWith(".PNG") || flAnhDaiDien.FileName.EndsWith(".gif"))
+                    {
+                        flAnhDaiDien.SaveAs(Server.MapPath("Image/product/") + flAnhDaiDien.FileName);
+                        hinhAnh = flAnhDaiDien.FileName;
+                    }
+                }
                 if (dbSanPham.CapNhatSach(idSach, tenSach, hinhAnh, maTG, maDM, maNXB, namXB, maKM, soTrang, kichThuoc, trongLuong, soLuong, giaBia, daBan,  ngayCapNhat))
                 {
                     thongBao(1, "Thành công", "Cập nhật thành công!");

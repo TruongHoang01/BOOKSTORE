@@ -11,8 +11,10 @@ namespace BookStore.CODE.KhachHang
     public partial class ucTranhChinh : System.Web.UI.UserControl
     {
         DuLieu.SanPham dbSanPham;
+        DuLieu.GioHang dbGioHang;
         protected void Page_Load(object sender, EventArgs e)
         {
+            dbGioHang = new DuLieu.GioHang();
             dbSanPham = new DuLieu.SanPham();
             if (!IsPostBack)
             {
@@ -52,17 +54,67 @@ namespace BookStore.CODE.KhachHang
             }
         }
 
-     
-
-        protected void linkTenSP_Click(object sender, EventArgs e)
+        protected void btnOK_Click(object sender, EventArgs e)
         {
-            String id = ((LinkButton)sender).CommandArgument;
+            ThongBao.Visible = false;
+        }
+        public void thongBao(int trangThai, string chuDe, string noiDung)
+        {
+            switch (trangThai)
+            {
+                case 1:
+                    imgThongBao.ImageUrl = "~/Image/success.png";
+                    break;
+                case 2:
+                    imgThongBao.ImageUrl = "~/Image/error.jpeg";
+                    break;
+                case 3:
+                    imgThongBao.ImageUrl = "~/Image/warning.jpeg";
+                    break;
+            }
+            chuDeThongBao.InnerText = chuDe;
+            noiDungThongBao.InnerText = noiDung;
+            ThongBao.Visible = true;
+        }
+        protected void imgHinhAnhSP_Click(object sender, ImageClickEventArgs e)
+        {
+            string id = ((ImageButton)sender).CommandArgument;
             Response.Redirect("TrangChu.aspx?modul=ChiTiet&id=" + id);
         }
 
-        protected void imgHinhAnhSP_Click(object sender, ImageClickEventArgs e)
+        protected void btnThemVaoGioHang_Click(object sender, EventArgs e)
         {
-            String id = ((ImageButton)sender).CommandArgument;
+            if (Session["idtk"] != null)
+            {
+                dbGioHang = new DuLieu.GioHang();
+                string idSP = ((LinkButton)sender).CommandArgument;
+                string soLuong = "1";
+                string idtk = Session["idtk"].ToString();
+                bool check;
+                if(dbGioHang.KiemTraGioHang(idtk, idSP))
+                {
+                    check = dbGioHang.CapNhatSoLuong(idtk, idSP, soLuong);
+                }
+                else
+                {
+                    check = dbGioHang.ThemVaoGioHang(idtk, idSP, soLuong);
+                }
+                if(check)
+                    thongBao(1, "Thành công", "Đã thêm vào giỏ hàng");
+                else
+                {
+                    thongBao(3, "Chú ý", "Thêm vào không thành công");
+                }
+            }
+            else
+            {
+                thongBao(3, "Chú ý", "Vui lòng đăng nhập tài khoản");
+            }
+        }
+
+        protected void linkTenSP_Click1(object sender, EventArgs e)
+        {
+            string id = ((LinkButton)sender).CommandArgument;
             Response.Redirect("TrangChu.aspx?modul=ChiTiet&id=" + id);
         }
     }

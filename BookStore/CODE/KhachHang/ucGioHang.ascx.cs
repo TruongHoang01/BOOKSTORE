@@ -12,14 +12,14 @@ namespace BookStore.CODE.KhachHang
     {
         string idtk = "";
         DuLieu.GioHang dbGioHang;
-        DataTable tbCuaHang;
-        DataTable tbSanPham;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             dbGioHang = new DuLieu.GioHang();
             if(Session["idtk"] != null)
             {
                 idtk = Session["idtk"].ToString();
+                dbGioHang.CapNhatSanPhamChuaDuocMua(idtk);
             }
             LoadGiaoDien();
         }
@@ -36,6 +36,7 @@ namespace BookStore.CODE.KhachHang
                 dlSanPham.DataBind();
                 i++;
             }
+            CapNhatChiPhi();
         }
 
         protected void cbkSelectAll_CheckedChanged(object sender, EventArgs e)
@@ -65,8 +66,37 @@ namespace BookStore.CODE.KhachHang
                 else
                     cbkSanPham.Checked = false;
             }
+            CapNhatChiPhi();
         }
+        public void CapNhatChiPhi()
+        {
+            int count = 0;
+            int sumGiamGia = 0;
+            int sumTamTinh = 0;
+            foreach (DataListItem rowCH in dlCuaHang.Items)
+            {
+                DataList listSP = rowCH.FindControl("dlSanPham") as DataList;
+                foreach (DataListItem rowSP in listSP.Items)
+                {
+                    CheckBox cbkSP = rowSP.FindControl("cbkSanPham") as CheckBox;
+                    if (cbkSP.Checked == true)
+                    {
+                        Label giaGoc = rowSP.FindControl("lbGiaGoc") as Label;
+                        Label giaKM = rowSP.FindControl("lbGiaKM") as Label;
+                        TextBox tbSl = rowSP.FindControl("tbsoluong") as TextBox;
+                        sumTamTinh += (Convert.ToInt32(giaGoc.Text)*Convert.ToInt32(tbSl.Text));
+                        sumGiamGia += (Convert.ToInt32(giaGoc.Text) - Convert.ToInt32(giaKM.Text))* Convert.ToInt32(tbSl.Text);
+                        count++;
+                    }
+                }
+            }
+            lbCount.Text = count + "";
+            lbTamTinh.Text = sumTamTinh + "";
+            lbKM.Text = sumGiamGia + "";
+            int thanhTien = (sumTamTinh - sumGiamGia);
+            lbThanhTien.Text = thanhTien + "";
 
+        }
         protected void btnTruSL_Click(object sender, EventArgs e)
         {
             DataListItem dlSanPham = ((Button)sender).Parent as DataListItem;
@@ -77,28 +107,36 @@ namespace BookStore.CODE.KhachHang
                 tbSL.Text = count +"";
             }
         }
-
-        protected void btnCongSL_Click(object sender, EventArgs e)
-        {
-             
-            DataListItem dlSanPham = ((Button)sender).Parent as DataListItem;
-            TextBox tbSL = dlSanPham.FindControl("textSL") as TextBox;
-            if (tbSL.Text != "10")
-            {
-                int count = Int32.Parse(tbSL.Text) + 1;
-                tbSL.Text = count + "";
-            }
-        }
-
         protected void btnTangSL_Click(object sender, EventArgs e)
         {
-
+            DataListItem dlSanPham = ((Button)sender).Parent as DataListItem;
+            TextBox tbSL = dlSanPham.FindControl("tbsoluong") as TextBox;
+            if (tbSL.Text != "10")
+            {
+                string idsp = (dlSanPham.FindControl("hfID") as HiddenField).Value;
+                int count = Int32.Parse(tbSL.Text) + 1;
+                tbSL.Text = count + "";
+                if (dbGioHang.CapNhatSoLuong(idtk, idsp, "1"))
+                {
+                    LoadGiaoDien();
+                }
+            }
         }
-
         protected void btnGiamSL_Click(object sender, EventArgs e)
         {
+            DataListItem dlSanPham = ((Button)sender).Parent as DataListItem;
+            TextBox tbSL = dlSanPham.FindControl("tbsoluong") as TextBox;
+            if (tbSL.Text != "1")
+            {
+                string idsp = (dlSanPham.FindControl("hfID") as HiddenField).Value;
+                int count = Int32.Parse(tbSL.Text) - 1;
+                tbSL.Text = count + "";
+                if (dbGioHang.CapNhatSoLuong(idtk, idsp, "-1"))
+                {
+                    LoadGiaoDien();
+                }
+            }
         }
-
         protected void btnMuaHang_Click(object sender, EventArgs e)
         {
             int count = 0;
@@ -108,7 +146,6 @@ namespace BookStore.CODE.KhachHang
                 foreach (DataListItem rowSP in listSP.Items)
                 {
                     CheckBox cbkSP = rowSP.FindControl("cbkSanPham") as CheckBox;
-                   
                     if(cbkSP.Checked == true) {
                         HiddenField hfID = rowSP.FindControl("hfID") as HiddenField;
                         string idsp = hfID.Value;
@@ -126,6 +163,21 @@ namespace BookStore.CODE.KhachHang
             {
                 lbThongBao.Text = "Chưa chọn sản phẩm!";
             }
+        }
+
+        protected void imgDelete_Click(object sender, ImageClickEventArgs e)
+        {
+            string idsp = ((ImageButton)sender).CommandArgument;
+            string idtk = Session["idtk"].ToString();
+            if(dbGioHang.XoaKhoiGioHang(idsp, idtk))
+            {
+                LoadGiaoDien();
+            }
+        }
+
+        protected void cbkSanPham_CheckedChanged(object sender, EventArgs e)
+        {
+            CapNhatChiPhi();
         }
     }
 }

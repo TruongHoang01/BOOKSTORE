@@ -51,24 +51,6 @@ namespace BookStore.CODE.KhachHang
         public global::System.Web.UI.HtmlControls.HtmlGenericControl divhiden;
 
         /// <summary>
-        /// btnDangKy control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnDangKy;
-
-        /// <summary>
-        /// btnDangNhap control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        public global::System.Web.UI.WebControls.LinkButton btnDangNhap;
-
-        /// <summary>
         /// lbName control.
         /// </summary>
         /// <remarks>
@@ -132,15 +114,6 @@ namespace BookStore.CODE.KhachHang
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl modelDangNhapDangKy;
 
         /// <summary>
-        /// imgCloseDN control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton imgCloseDN;
-
-        /// <summary>
         /// lbFormTitle control.
         /// </summary>
         /// <remarks>
@@ -177,13 +150,22 @@ namespace BookStore.CODE.KhachHang
         public global::System.Web.UI.WebControls.TextBox tbCaptCha;
 
         /// <summary>
-        /// lbCapCha control.
+        /// lbCaptCha control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        public global::System.Web.UI.WebControls.Label lbCapCha;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lbCaptCha;
+
+        /// <summary>
+        /// hfCaptCha control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hfCaptCha;
 
         /// <summary>
         /// lbThongBao control.
@@ -195,13 +177,13 @@ namespace BookStore.CODE.KhachHang
         public global::System.Web.UI.WebControls.Label lbThongBao;
 
         /// <summary>
-        /// btnCheckLog control.
+        /// buttonDangNhap control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        public global::System.Web.UI.WebControls.LinkButton btnCheckLog;
+        protected global::System.Web.UI.WebControls.LinkButton buttonDangNhap;
 
         /// <summary>
         /// lbFormQuestion control.
@@ -213,13 +195,13 @@ namespace BookStore.CODE.KhachHang
         public global::System.Web.UI.WebControls.Label lbFormQuestion;
 
         /// <summary>
-        /// btnChuyeNDoi control.
+        /// spanChuyenDoi control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        public global::System.Web.UI.WebControls.LinkButton btnChuyeNDoi;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl spanChuyenDoi;
 
         /// <summary>
         /// DivXacNhanEmail control.
@@ -247,15 +229,6 @@ namespace BookStore.CODE.KhachHang
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         public global::System.Web.UI.WebControls.TextBox tbOtp;
-
-        /// <summary>
-        /// btnXacNhanOTP control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        public global::System.Web.UI.WebControls.LinkButton btnXacNhanOTP;
 
         /// <summary>
         /// lbThongBaoXacNhanEmail control.
@@ -291,7 +264,7 @@ namespace BookStore.CODE.KhachHang
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        public global::System.Web.UI.HtmlControls.HtmlGenericControl ThongBao;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ThongBao;
 
         /// <summary>
         /// imgThongBao control.
@@ -300,7 +273,7 @@ namespace BookStore.CODE.KhachHang
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        public global::System.Web.UI.WebControls.Image imgThongBao;
+        protected global::System.Web.UI.WebControls.Image imgThongBao;
 
         /// <summary>
         /// chuDeThongBao control.
@@ -309,7 +282,7 @@ namespace BookStore.CODE.KhachHang
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        public global::System.Web.UI.HtmlControls.HtmlGenericControl chuDeThongBao;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl chuDeThongBao;
 
         /// <summary>
         /// noiDungThongBao control.
@@ -318,7 +291,7 @@ namespace BookStore.CODE.KhachHang
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        public global::System.Web.UI.HtmlControls.HtmlGenericControl noiDungThongBao;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl noiDungThongBao;
 
         /// <summary>
         /// btnOK control.
@@ -327,6 +300,6 @@ namespace BookStore.CODE.KhachHang
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        public global::System.Web.UI.WebControls.LinkButton btnOK;
+        protected global::System.Web.UI.WebControls.LinkButton btnOK;
     }
 }

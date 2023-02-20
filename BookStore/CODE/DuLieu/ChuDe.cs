@@ -13,12 +13,12 @@ namespace BookStore.CODE.DuLieu
         {
             ketNoi = new KetNoi();
         }
-
         public DataTable LayDanhSachChuDe()
         {
             string sql = "select * from CHUDE where TinhTrang = 0";
             return ketNoi.getDataTable(sql);
         }
+      
         public DataTable LayDanhSachChuDeTheoID(string id)
         {
             string sql = "select * from CHUDE where TinhTrang = 0 and id="+id;

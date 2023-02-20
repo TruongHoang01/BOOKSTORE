@@ -69,5 +69,11 @@ namespace BookStore.CODE.DuLieu
                 sql += " and SDT='" + tuKhoa + "'";
             return ketNoi.getDataTable(sql);
         }
+
+        internal bool ThemMoiDonHang(string iddh, string idtk, string maCH, string hoTen, string sdt, string diaChi, string ngayTao, string ghiChu)
+        {
+            string sql = "insert into DonHang values ("+iddh+", " + idtk + ", " + maCH + ", N'" + hoTen + "','" + sdt + "',N'" + diaChi + "','" + ngayTao + "',N'" + ghiChu + "',0)";
+            return ketNoi.AddDataToTable(sql);
+        }
     }
 }

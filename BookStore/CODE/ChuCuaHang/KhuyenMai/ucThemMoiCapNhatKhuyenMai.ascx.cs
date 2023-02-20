@@ -116,7 +116,7 @@ namespace BookStore.CODE.ChuCuaHang.KhuyenMai
         protected void btnOK_Click(object sender, EventArgs e)
         {
             ThongBao.Visible = false;
-            Response.Redirect("KenhBanHang.aspx?modul=KhuyenMai&thaotac=DanhSach");
+            Response.Redirect("KenhBanHang.aspx?modul=KhuyenMai&thaotac=DanhSach&tinhtrang=0");
         }
         public void thongBao(int trangThai, string chuDe, string noiDung)
         {

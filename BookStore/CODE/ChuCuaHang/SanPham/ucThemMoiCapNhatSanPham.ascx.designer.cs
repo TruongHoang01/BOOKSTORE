@@ -114,24 +114,6 @@ namespace BookStore.CODE.ChuCuaHang.SanPham
         protected global::System.Web.UI.WebControls.TextBox tbNgayTao;
 
         /// <summary>
-        /// imgSach control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl imgSach;
-
-        /// <summary>
-        /// FileUpload1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload FileUpload1;
-
-        /// <summary>
         /// tbNamXuatBan control.
         /// </summary>
         /// <remarks>
@@ -139,6 +121,42 @@ namespace BookStore.CODE.ChuCuaHang.SanPham
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tbNamXuatBan;
+
+        /// <summary>
+        /// imgAnhDaiDien control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image imgAnhDaiDien;
+
+        /// <summary>
+        /// lbAnhDaiDienCu control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbAnhDaiDienCu;
+
+        /// <summary>
+        /// flAnhDaiDien control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload flAnhDaiDien;
+
+        /// <summary>
+        /// lbThongBaoAnhDaiDien control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbThongBaoAnhDaiDien;
 
         /// <summary>
         /// tbSoTrang control.

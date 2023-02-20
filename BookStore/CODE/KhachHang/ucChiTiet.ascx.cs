@@ -55,7 +55,7 @@ namespace BookStore.CODE.KhachHang
             DataTable tbTag = this.dbSanPham.LayDanhSachChuDe(idSP);
             foreach (DataRow r in tbTag.Rows)
             {
-                strLiteral += r["TenCD"].ToString();
+                strLiteral += "<a href='TrangChu.aspx?modul=TimKiem&thaotac=cd"+ r["ID"].ToString()+"'>"+ r["TenCD"].ToString()+"</a>, ";
             }
             strLiteral += "</span></p>";
             ltChiTiet.Text = strLiteral;
@@ -81,24 +81,70 @@ namespace BookStore.CODE.KhachHang
             }
         }
 
-        protected void btnThemVaoGioHang_Click(object sender, EventArgs e)
+        protected void btnThemVaoGioHang1_Click(object sender, EventArgs e)
         {
             if (Session["idtk"] != null)
             {
                 dbGioHang = new DuLieu.GioHang();
                 string soLuong = tbsoluong.Text;
                 string idtk = Session["idtk"].ToString();
-                bool check = dbGioHang.ThemVaoGioHang(idtk, idSP, soLuong);
+                bool check;
+                if (dbGioHang.KiemTraGioHang(idtk, idSP))
+                {
+                    check = dbGioHang.CapNhatSoLuong(idtk, idSP, soLuong);
+                }
+                else
+                {
+                    check = dbGioHang.ThemVaoGioHang(idtk, idSP, soLuong);
+                }
+                if (check)
+                    thongBao(1, "Thành công", "Đã thêm vào giỏ hàng");
+                else
+                {
+                    thongBao(3, "Chú ý", "Thêm vào không thành công");
+                }
+            }
+            else
+            {
+                thongBao(3, "Chú ý", "Vui lòng đăng nhập tài khoản");
             }
 
         }
-
+        protected void btnThemVaoGioHang2_Click(object sender, EventArgs e)
+        {
+            if (Session["idtk"] != null)
+            {
+                string idtk = Session["idtk"].ToString();
+                dbGioHang = new DuLieu.GioHang();
+                string idSP = ((LinkButton)sender).CommandArgument;
+                string soLuong = "1";
+                bool check;
+                if(dbGioHang.KiemTraGioHang(idtk, idSP))
+                {
+                     check = dbGioHang.CapNhatSoLuong(idtk, idSP, soLuong);
+                }
+                else
+                {
+                    check = dbGioHang.ThemVaoGioHang(idtk, idSP, soLuong);
+                }
+                if (check)
+                    thongBao(1, "Thành công", "Đã thêm vào giỏ hàng");
+                else
+                {
+                    thongBao(3, "Chú ý", "Thêm vào không thành công");
+                }
+            }
+            else
+            {
+                thongBao(3, "Chú ý", "Vui lòng đăng nhập tài khoản");
+            }
+        }
         protected void btnGiamSL_Click(object sender, EventArgs e)
         {
             int count = Int32.Parse(tbsoluong.Text);
-            if(count != 1)
-               count -= 1;
-            tbsoluong.Text = count+"";
+            if (count != 1)
+                count -= 1;
+            tbsoluong.Text = count + "";
         }
 
         protected void btnTangSL_Click(object sender, EventArgs e)
@@ -107,6 +153,71 @@ namespace BookStore.CODE.KhachHang
             if (count != 10)
                 count += 1;
             tbsoluong.Text = count + "";
+        }
+        protected void btnOK_Click(object sender, EventArgs e)
+        {
+            ThongBao.Visible = false;
+        }
+        public void thongBao(int trangThai, string chuDe, string noiDung)
+        {
+            switch (trangThai)
+            {
+                case 1:
+                    imgThongBao.ImageUrl = "~/Image/success.png";
+                    break;
+                case 2:
+                    imgThongBao.ImageUrl = "~/Image/error.jpeg";
+                    break;
+                case 3:
+                    imgThongBao.ImageUrl = "~/Image/warning.jpeg";
+                    break;
+            }
+            chuDeThongBao.InnerText = chuDe;
+            noiDungThongBao.InnerText = noiDung;
+            ThongBao.Visible = true;
+        }
+        protected void imgHinhAnhSP_Click(object sender, ImageClickEventArgs e)
+        {
+            string id = ((ImageButton)sender).CommandArgument;
+            Response.Redirect("TrangChu.aspx?modul=ChiTiet&id=" + id);
+        }
+
+
+        protected void linkTenSP_Click1(object sender, EventArgs e)
+        {
+            string id = ((LinkButton)sender).CommandArgument;
+            Response.Redirect("TrangChu.aspx?modul=ChiTiet&id=" + id);
+        }
+
+        protected void btnMuaNgay_Click(object sender, EventArgs e)
+        {
+            if (Session["idtk"] != null)
+            {
+                dbGioHang = new DuLieu.GioHang();
+                string soLuong = tbsoluong.Text;
+                string idtk = Session["idtk"].ToString();
+                bool check;
+                if (dbGioHang.KiemTraGioHang(idtk, idSP))
+                {
+                    check = dbGioHang.CapNhatSoLuong(idtk, idSP, soLuong);
+                }
+                else
+                {
+                    check = dbGioHang.ThemVaoGioHang(idtk, idSP, soLuong);
+                }
+                if (check)
+                {
+                    dbGioHang.CapNhatSanPhamDuocChon(idtk, idSP);
+                    Response.Redirect("TrangChu.aspx?modul=DatHang");
+                }
+                   
+                    
+               
+            }
+            else
+            {
+                thongBao(3, "Chú ý", "Vui lòng đăng nhập tài khoản");
+            }
         }
     }
 }

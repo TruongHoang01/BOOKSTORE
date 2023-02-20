@@ -123,7 +123,7 @@ table.tableAdmin tr:hover {
 }
 table.tableThemMoi th, table.tableThemMoi td {
     padding: 10px 20px;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 table.tableThemMoi select, table.tableThemMoi input {
@@ -249,5 +249,9 @@ table.tableThemMoi select, table.tableThemMoi input {
     font-size: 16px;
     border-radius: 4px;
 }
-
-
+.lbthongbao {
+    font-size: 14px;
+    color: red;
+    display: block;
+    text-align: center;
+}

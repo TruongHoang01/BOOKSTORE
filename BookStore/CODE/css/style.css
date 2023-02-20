@@ -5,7 +5,7 @@
     font-family: Roboto,Helvetica,Arial,sans-serif;
 }
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 1px;
 }
 .upLoadFile{
     width: 0.1px;
@@ -16,9 +16,21 @@
     z-index: -1;
 
 }
+.dialog-body .imgClose {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 28px;
+    border-radius: 50%;
+    display: block;
+    background-color: #fff;
+    padding: 4px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+}
 .labelAnh {
     background-color:aqua;
-    color: red;
     padding: 5px 20px;
     margin-top: 10px, auto;
     display: block;
@@ -27,12 +39,11 @@
     cursor: pointer;
     border: 1px solid #999;
     border-radius: 4px;
-    font-weight: bold;
 }
 /* Track */
 ::-webkit-scrollbar-track {
     box-shadow: inset 0 0 5px grey;
-    border-radius: 10px;
+    border-radius: 6px;
 }
 
 /* Handle */
@@ -43,7 +54,7 @@
 
     /* Handle on hover */
     ::-webkit-scrollbar-thumb:hover {
-        background: #b30000;
+        background: #70def3;
     }
 body {
     position: relative;

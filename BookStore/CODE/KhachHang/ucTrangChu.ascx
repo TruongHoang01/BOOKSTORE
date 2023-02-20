@@ -8,7 +8,7 @@
         <div class="head">
             <i class="fa-solid fa-bars"></i>
             Danh mục</div>
-        <div class="listDanhMuc">
+        <div  class="listLeft">
             <asp:DataList runat="server" ID="dlDanhMuc1">
                 <ItemTemplate>
                     <asp:LinkButton OnClick="danhMuc_Click" Text='<%#Eval("TenDM") %>' CommandArgument='<%#Eval("ID") %>' runat="server" />
@@ -18,7 +18,7 @@
         <div class="head">
        <i class="fa-solid fa-tag"></i>
             Chủ đề</div>
-        <div>
+        <div class="listLeft">
             <asp:DataList runat="server" ID="dlChuDe">
                 <ItemTemplate>
                     <asp:LinkButton OnClick="chuDe_Click"  Text='<%#Eval("TenCD") %>' CommandArgument='<%#Eval("ID") %>' runat="server" />
@@ -29,10 +29,10 @@
         <div class="head">
             <i class="fa-solid fa-person-breastfeeding"></i>
             Tác giả</div>
-        <div>
-            <asp:DataList runat="server" ID="dlTacGia">
+        <div class="listLeft">
+            <asp:DataList runat="server"  ID="dlTacGia">
                 <ItemTemplate>
-                    <asp:LinkButton OnClick="chuDe_Click" Text='<%#Eval("TenTG") %>' CommandArgument='<%#Eval("ID") %>' runat="server" />
+                    <asp:LinkButton OnClick="tacGia_Click" Text='<%#Eval("TenTG") %>' CommandArgument='<%#Eval("ID") %>' runat="server" />
                 </ItemTemplate>
             </asp:DataList>
            
@@ -41,7 +41,7 @@
         <div class="head">
             <i class="fa-solid fa-clipboard"></i>
             Nhà xuất bản</div>
-        <div>
+        <div class="listLeft">
             <asp:DataList runat="server" ID="dlNhaXuatBan">
                 <ItemTemplate>
                     <asp:LinkButton OnClick="nhaXuatBan_Click" Text='<%#Eval("TenNXB") %>' CommandArgument='<%#Eval("ID") %>' runat="server" />

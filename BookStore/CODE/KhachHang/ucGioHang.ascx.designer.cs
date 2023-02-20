@@ -33,31 +33,40 @@ namespace BookStore.CODE.KhachHang
         protected global::System.Web.UI.WebControls.DataList dlCuaHang;
 
         /// <summary>
-        /// Label1 control.
+        /// lbTamTinh control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label lbTamTinh;
 
         /// <summary>
-        /// Label2 control.
+        /// lbKM control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
+        protected global::System.Web.UI.WebControls.Label lbKM;
 
         /// <summary>
-        /// Label3 control.
+        /// lbCount control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label3;
+        protected global::System.Web.UI.WebControls.Label lbCount;
+
+        /// <summary>
+        /// lbThanhTien control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbThanhTien;
 
         /// <summary>
         /// lbThongBao control.
